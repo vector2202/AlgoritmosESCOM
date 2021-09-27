@@ -22,13 +22,10 @@ int busquedaLineal(int array[], int size, int key)
 int main(int argc, char *argv[])
 {
     int size = atoi(argv[1]);
-    int i, key;
+    int i, key = atoi(argv[2]);
     int* array = (int *)malloc(size * sizeof(int));
     for (i = 0; i < size; i++)
 	scanf("%d", array+i);
-    printf("Ingrese el numero a buscar: ");
-    scanf("%d", &key);
-    
     int index = busquedaLineal(array, size, key);
     if (index != -1)
         printf("El numero %d se encontro en la posicion %d.\n", key, index);

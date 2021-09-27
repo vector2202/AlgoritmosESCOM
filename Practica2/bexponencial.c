@@ -30,22 +30,20 @@ int binaria(int array[],int l, int size, int key)
 }
 int exponencial(int array[], int size, int key)
 {
-    if(array[0] == 0)
+    if(array[0] == key)
 	return 0;
     int i = 1;
-    while(i < size && array[i] <= key)
+    while(i < size && array[i] < key)
 	i *= 2;
-    return binaria(array, i/2, min(i, size), key);
+    return binaria(array, i/2, min(i, size-1), key);
 }
 int main(int argc, char *argv[])
 {
     int size = atoi(argv[1]);
-    int i, key;
+    int i, key = atoi(argv[2]);
     int* array = (int *)malloc(size * sizeof(int));
     for (i = 0; i < size; i++)
 	scanf("%d", array+i);
-    printf("Ingrese el numero a buscar: ");
-    scanf("%d", &key);
     
     int index = exponencial(array, size, key);
     if (index != -1)

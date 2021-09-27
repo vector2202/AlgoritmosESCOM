@@ -94,15 +94,13 @@ int main(int argc, char* argv[]){
     double utime0, stime0, wtime0,utime1, stime1, wtime1; //Variables para medición de tiempos
     int i, element, key;
     int size = atoi(argv[1]); //Tamaño del arreglo que usaremos
-
     struct node* root = NULL; // Inicializar el arbol binario
     //Insertar los n de numeros en el arbol
     for (i = 0; i < size; i++) {
 	scanf("%d", &element);
 	root = push(element, root);
     }
-    printf("Ingrese el numero a buscar: ");
-    scanf("%d", &key);
+    
     //printf("\nOrdenamiento con arbol binario de busqueda n = %d.\n", size);
     uswtime(&utime0, &stime0, &wtime0); //Iniciamos el conteo
     search(root, key); //Realizar el ordenamiento
