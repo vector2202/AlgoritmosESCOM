@@ -1,9 +1,9 @@
 #!/bin/bash
 
 lista=$(cat $1)
-numero=$2
-numero1=$3
+size=$2
+key=$3
 for busqueda in $lista
 do
-    ./$busqueda $numero $numero1 < 10milloneso.txt
+    ./$busqueda $size $key < 10millonesord.txt
 done		
