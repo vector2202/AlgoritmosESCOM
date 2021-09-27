@@ -1,0 +1,5 @@
+abinario
+bbinaria
+bexponencial
+bfibonacci
+blineal

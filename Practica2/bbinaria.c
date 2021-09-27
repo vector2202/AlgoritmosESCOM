@@ -1,7 +1,7 @@
 /**
- * Titutlo Busqueda lineal
+ * Titutlo Busqueda binaria
  * 
- * este codigo busca un elemento en un arreglo usando el algoritmo de busqueda lineal
+ * este codigo busca un elemento en un arreglo usando el algoritmo de busqueda binaria
  *
  * @date 9/2021
  * @version 1
@@ -11,10 +11,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int min (int x, int y) {return (x <= y) ? x : y;}
-int binaria(int array[],int l, int size, int key)
+int binaria(int array[], int size, int key)
 {
-    int r = size - 1;
+    int l = 0, r = size - 1;
     int h;
     while(l <= r)
     {
@@ -28,15 +27,6 @@ int binaria(int array[],int l, int size, int key)
     }
     return -1;
 }
-int exponencial(int array[], int size, int key)
-{
-    if(array[0] == 0)
-	return 0;
-    int i = 1;
-    while(i < size && array[i] <= key)
-	i *= 2;
-    return binaria(array, i/2, min(i, size), key);
-}
 int main(int argc, char *argv[])
 {
     int size = atoi(argv[1]);
@@ -47,7 +37,7 @@ int main(int argc, char *argv[])
     printf("Ingrese el numero a buscar: ");
     scanf("%d", &key);
     
-    int index = exponencial(array, size, key);
+    int index = binaria(array, size, key);
     if (index != -1)
         printf("El numero %d se encontro en la posicion %d.\n", key, index);
     else
