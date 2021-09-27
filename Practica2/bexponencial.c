@@ -33,9 +33,9 @@ int exponencial(int array[], int size, int key)
     if(array[0] == 0)
 	return 0;
     int i = 1;
-    while(i < size && array[i] <= key)
+    while(i < size && array[i] < key)
 	i *= 2;
-    return binaria(array, i/2, min(i, size), key);
+    return binaria(array, i/2, min(i, size-1), key);
 }
 int main(int argc, char *argv[])
 {
