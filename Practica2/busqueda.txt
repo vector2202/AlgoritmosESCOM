@@ -1,4 +1,4 @@
-abinario2
+babinario
 bbinaria
 bexponencial
 bfibonacci
