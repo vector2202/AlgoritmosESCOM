@@ -1,0 +1,47 @@
+%%Ambiente
+\documentclass[12pt]{report}
+
+%% Paquetes
+\usepackage{hyperref}
+\usepackage[spanish, mexico]{babel}
+\usepackage{listings}
+
+\setlength{\parindent}{0cm}
+
+%%Titulo
+\title{Practica 2}
+%%Autor
+\author{Los utlimos}
+
+\maketitle
+%%Inicio del documento
+\begin{document}
+%% Casos
+\section*{Analsis de casos por codigo}
+\subsection*{Busqueda con Arbol Binario de busqueda}
+Operaciones basicas consideradas: comparacion entre la llave a buscar y el elemento del nodo, la comparacion entre el arbol auxiliar y nulo.\\
+Condiciones del mejor caso: que el elemento a buscar este en la raiz.\\
+Condiciones del peor caso: un arbol que tenga n niveles y el elemento este en el nodo hoja hoja.\\
+Funcion de complejidad temporal del mejor caso $= 1$\\
+Funcion de complejidad temporal del peor caso $= 3n$\\
+Funcion de complejidad temporal del caso medio $= \frac{3n+1+3log_2(n)}{3}$
+\subsection*{Busqueda Binaria}
+Operaciones basicas consideradas: comparaciones de la llave con elementos del arreglo, actualizacion de limite inferior y superior.\\
+Condiciones del mejor caso: cuando el numero a buscar esta en medio del arreglo.\\
+Condiciones del peor caso: cuando el numero a buscar esta al principio o al final del arreglo.\\
+Funcion de complejidad temporal del mejor caso $= 3$\\
+Funcion de complejidad temporal del peor caso $= 2log_2(n)$\\
+Funcion de complejidad temporal del caso medio $= \frac{2log_2(n) + 3}{2}-$
+\subsection*{Busqueda exponencial}
+
+\subsection*{Busqueda de fibonacci}
+
+\subsection*{Busqueda lineal}
+Operaciones consideradas: Comparaciones entre el elemento buscado y los elementos del arreglo.\\
+Condición de mejor caso: El número buscado está en la primera posición. \\
+Condiciones Peor caso: El número buscado está al final del areglo. \\
+Función de complejidad temporal del mejor caso : 1. \\
+Función complejidad temporal del peor caso: n. \\
+Función complejidad caso medio: $\frac{1}{n}+(n-1)$.\\
+
+\end{document}
