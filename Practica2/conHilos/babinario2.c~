@@ -125,9 +125,9 @@ int search(struct node* root, int key)
     while(!isempty(aux) && key != aux->data)
 	aux = (key < aux->data) ? aux->left : aux->right;
     if(isempty(aux))
-	return -1;
+	return 1;
     else
-        return 1;
+        return -1;
 }
 
 int main(int argc, char* argv[]){
@@ -140,6 +140,7 @@ int main(int argc, char* argv[]){
       for (i = 0; i < size/NumThreads; i++) {
         scanf("%d", &element);
         arrayTree[j] = push(element, arrayTree[j]);
+	printf("%p, puntero del arbol.\n", arrayTree[j]);
       }
     }
     printf("\nBusqueda arbol binario (key:%d size:%d threads:%d).\n\n", key, size, NumThreads);
