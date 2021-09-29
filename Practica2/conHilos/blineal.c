@@ -50,16 +50,28 @@ void* procesar(void* id)
     int indexfound = busquedaLineal(inicio, fin);
     if (indexfound != -1) {
       printf(
-          "El hilo %d encontro el numero %d se encontro en la posicion %d.\n",
+          "El hilo %d encontro el numero %d en la posicion %d.\n",
           n_thread, key, indexfound);
       keyfound = 1;
     }
 }
-
-int busquedaLineal(int l, int size)
+/**
+ *
+ * busquedaLineal
+ *
+ * Esta funcion busca un numero dentro de una lista.
+ *
+ * Se ingresa la posicion inicial del arreglo y su tamaño, compara cada elemento del arreglo desde la posicion inicial
+ * para verificar si existe el numero a buscar, enn caso de que el numero si este en el arreglo la funcion devuelve la
+ * posicion mas 1 donde se encuentra el numero, en caso contrario regresa un -1.
+ *
+ * @param posición inicial y el limite superior del pedazo de arreglo a buscar.
+ * @return la posicion donde se encontro el numero o si no se encontro un -1
+*/
+int busquedaLineal(int l, int r)
 {
     int i;
-    for (i = l; i <= size; i++)
+    for (i = l; i <= r; i++)
         if (array[i] == key)
             return i+1;
     return -1;
@@ -73,6 +85,8 @@ int main(int argc, char *argv[])
     int i;
     for (i = 0; i < size; i++)
 	scanf("%d", array+i);
+    printf("Busqueda lineal (key:%d size:%d threads:%d).\n", key, size, NumThreads);
+
     //******************************************************************
     //Iniciar el conteo del tiempo para las evaluaciones de rendimiento
     //******************************************************************

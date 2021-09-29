@@ -55,7 +55,7 @@ int isempty(struct node* root){return root == NULL;}
  * los elementos mas pequeños van en el subarbol izquierdo, y los mas grandes en el derecho.
  *
  * @param un arbol binario y el elemento a insertar
- * @return un arbol binario con el nuevo elemento.
+ * @return un arbol binario con el nuevo elemento insertado.
  */
 struct node* push(int dataToInsert,struct node* root)
 {
@@ -80,7 +80,7 @@ struct node* push(int dataToInsert,struct node* root)
  *
  * va comparando el elemento de la raiz con el numero a buscar y si es mas grande 
  * el nodo entonces recorre a su subarbol izquierdo y sino al derecho. asi hasta encontrar
- * el numero o llegar a un nodo vacio
+ * el numero o llegar a un nodo vacio, al final nos dice si el numero se encontro o no.
  *
  * @param un arbol binario y la llave a buscar
  * @return void
@@ -106,6 +106,8 @@ int main(int argc, char* argv[]){
 	scanf("%d", &element);
 	root = push(element, root);
     }
+    printf("Busqueda binaria (key:%d size:%d).\n", key, size);
+
     
     //printf("\nOrdenamiento con arbol binario de busqueda n = %d.\n", size);
     uswtime(&utime0, &stime0, &wtime0); //Iniciamos el conteo

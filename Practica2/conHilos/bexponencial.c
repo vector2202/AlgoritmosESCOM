@@ -52,7 +52,7 @@ void* procesar(void* id)
     int indexfound = exponencial(inicio, fin);
     if (indexfound != -1) {
       printf(
-          "El hilo %d encontro el numero %d se encontro en la posicion %d.\n",
+          "El hilo %d encontro el numero %d en la posicion %d.\n",
           n_thread, key, indexfound);
       keyfound = 1;
     }
@@ -69,8 +69,8 @@ void* procesar(void* id)
  * si el limite inferior es mayor al superior o viceversa quiere decir que ya analizo todas las posiciones 
  * posibles y no encontro la llave, por lo tanto el numero no esta en el arreglo.
  * 
- * @param un lower bound y un upper bound
- * @return el indice donde se encontro el numero o -1 si no se encontro
+ * @param un limite inferior y un limite superior
+ * @return la posicion donde se encontro el numero o si no se encontro un -1
 */
 int binaria(int l, int r)
 {
@@ -101,8 +101,8 @@ int binaria(int l, int r)
  * a solo esa seccion con parametros del i antes de su ultimo aumento y el minimo del limite superior
  * y la i en la que vamos y obtenemos el indice.
  * 
- * @param un lower bound y un upper bound
- * @return el indice donde se encontro el numero o -1 si no se encontro
+ * @param un limite inferior y un limite superior
+ * @return una busqueda binaria entre el i/2 y el minimo entre i y el limite superior
 */
 int exponencial(int l, int r)
 {
@@ -125,6 +125,8 @@ int main(int argc, char *argv[])
     int i;
     for (i = 0; i < size; i++)
 	scanf("%d", array+i);
+    printf("Busqueda exponencial (key:%d size:%d threads:%d).\n", key, size, NumThreads);
+
     //******************************************************************
     //Iniciar el conteo del tiempo para las evaluaciones de rendimiento
     //******************************************************************
