@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
     int i;
     for (i = 0; i < size; i++)
 	scanf("%d", array+i);
-    printf("Busqueda lineal (key:%d size:%d threads:%d).\n", key, size, NumThreads);
+    printf("\nBusqueda lineal (key:%d size:%d threads:%d).\n\n", key, size, NumThreads);
 
     //******************************************************************
     //Iniciar el conteo del tiempo para las evaluaciones de rendimiento
@@ -118,13 +118,13 @@ int main(int argc, char *argv[])
     uswtime(&utime1, &stime1, &wtime1);
     // Cálculo del tiempo de ejecución del programa
     printf("\n");
-    printf("real (Tiempo total)  %.10f s\n", wtime1 - wtime0);
-    printf("user (Tiempo de procesamiento en CPU's) %.10f s\n",
+    printf("real (Tiempo total)  %.10e s\n", wtime1 - wtime0);
+    printf("user (Tiempo de procesamiento en CPU's) %.10e s\n",
            utime1 - utime0);
     printf("%d threads (Tiempo de procesamiento aproximado por cada thread en "
-           "CPU) %.10f s\n",
+           "CPU) %.10e s\n",
            NumThreads, (utime1 - utime0) / NumThreads);
-    printf("sys (Tiempo en acciónes de E/S)  %.3f s\n", stime1 - stime0);
+    printf("sys (Tiempo en acciónes de E/S)  %.3e s\n", stime1 - stime0);
     printf("CPU/Wall   %.10f %% \n",
            100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
     printf("\n");

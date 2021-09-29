@@ -98,15 +98,15 @@ void search(struct node* root, int key)
 
 int main(int argc, char* argv[]){
     double utime0, stime0, wtime0,utime1, stime1, wtime1; //Variables para medición de tiempos
-    int i, element, key;
-    int size = atoi(argv[1]); //Tamaño del arreglo que usaremos
+    int i, element;
+    int size = atoi(argv[1]), key = atoi(argv[2]); //Tamaño del arreglo que usaremos
     struct node* root = NULL; // Inicializar el arbol binario
     //Insertar los n de numeros en el arbol
     for (i = 0; i < size; i++) {
 	scanf("%d", &element);
 	root = push(element, root);
     }
-    printf("Busqueda binaria (key:%d size:%d).\n", key, size);
+    printf("\nBusqueda binaria (key:%d size:%d).\n\n", key, size);
 
     
     //printf("\nOrdenamiento con arbol binario de busqueda n = %d.\n", size);
