@@ -1,440 +1,440 @@
-Busqueda arbol binario (key:322486 size:1000000):  5.0067901611e-06 s
+Busqueda arbol binario (key:322486 size:1000000):  3.0994415283e-06 s
 Busqueda arbol binario (key:14700764 size:1000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:3128036 size:1000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:6337399 size:1000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:61396 size:1000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:10393545 size:1000000):  9.0599060059e-06 s
+Busqueda arbol binario (key:3128036 size:1000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:6337399 size:1000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:61396 size:1000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:10393545 size:1000000):  1.9073486328e-06 s
 Busqueda arbol binario (key:2147445644 size:1000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:1295390003 size:1000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:450057883 size:1000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:187645041 size:1000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:1295390003 size:1000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:450057883 size:1000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:187645041 size:1000000):  1.9073486328e-06 s
 Busqueda arbol binario (key:1980098116 size:1000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:152503 size:1000000):  1.1920928955e-06 s
-Busqueda arbol binario (key:5000 size:1000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:152503 size:1000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:5000 size:1000000):  9.5367431641e-07 s
 Busqueda arbol binario (key:1493283650 size:1000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:214826 size:1000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:1843349527 size:1000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:214826 size:1000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:1843349527 size:1000000):  2.1457672119e-06 s
 Busqueda arbol binario (key:1360839354 size:1000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:2109248666 size:1000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:2147470852 size:1000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:2109248666 size:1000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:2147470852 size:1000000):  9.5367431641e-07 s
 Busqueda arbol binario (key:0 size:1000000):  9.5367431641e-07 s
-Promedio: 2.825260e-06
+Promedio: 2.205372e-06
 
-Busqueda arbol binario (key:322486 size:2000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:14700764 size:2000000):  2.1457672119e-06 s
-Busqueda arbol binario (key:3128036 size:2000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:6337399 size:2000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:61396 size:2000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:10393545 size:2000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:322486 size:2000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:14700764 size:2000000):  9.5367431641e-07 s
+Busqueda arbol binario (key:3128036 size:2000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:6337399 size:2000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:61396 size:2000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:10393545 size:2000000):  2.1457672119e-06 s
 Busqueda arbol binario (key:2147445644 size:2000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:1295390003 size:2000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:450057883 size:2000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:187645041 size:2000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:1980098116 size:2000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:1295390003 size:2000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:450057883 size:2000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:187645041 size:2000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:1980098116 size:2000000):  1.9073486328e-06 s
 Busqueda arbol binario (key:152503 size:2000000):  1.9073486328e-06 s
 Busqueda arbol binario (key:5000 size:2000000):  2.1457672119e-06 s
-Busqueda arbol binario (key:1493283650 size:2000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:214826 size:2000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:1493283650 size:2000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:214826 size:2000000):  1.9073486328e-06 s
 Busqueda arbol binario (key:1843349527 size:2000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:1360839354 size:2000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:2109248666 size:2000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:2147470852 size:2000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:1360839354 size:2000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:2109248666 size:2000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:2147470852 size:2000000):  1.1920928955e-06 s
 Busqueda arbol binario (key:0 size:2000000):  1.9073486328e-06 s
-Promedio: 2.741814e-06
+Promedio: 2.253056e-06
 
-Busqueda arbol binario (key:322486 size:3000000):  1.2874603271e-05 s
-Busqueda arbol binario (key:14700764 size:3000000):  3.8146972656e-06 s
-Busqueda arbol binario (key:3128036 size:3000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:6337399 size:3000000):  7.1525573730e-06 s
-Busqueda arbol binario (key:61396 size:3000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:10393545 size:3000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:2147445644 size:3000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:1295390003 size:3000000):  6.9141387939e-06 s
-Busqueda arbol binario (key:450057883 size:3000000):  7.8678131104e-06 s
-Busqueda arbol binario (key:187645041 size:3000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:1980098116 size:3000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:152503 size:3000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:5000 size:3000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:1493283650 size:3000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:214826 size:3000000):  3.8146972656e-06 s
-Busqueda arbol binario (key:1843349527 size:3000000):  6.9141387939e-06 s
-Busqueda arbol binario (key:1360839354 size:3000000):  8.1062316895e-06 s
-Busqueda arbol binario (key:2109248666 size:3000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:2147470852 size:3000000):  2.1457672119e-06 s
-Busqueda arbol binario (key:0 size:3000000):  2.1457672119e-06 s
-Promedio: 5.292892e-06
+Busqueda arbol binario (key:322486 size:3000000):  5.0067901611e-06 s
+Busqueda arbol binario (key:14700764 size:3000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:3128036 size:3000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:6337399 size:3000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:61396 size:3000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:10393545 size:3000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:2147445644 size:3000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:1295390003 size:3000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:450057883 size:3000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:187645041 size:3000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:1980098116 size:3000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:152503 size:3000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:5000 size:3000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:1493283650 size:3000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:214826 size:3000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:1843349527 size:3000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:1360839354 size:3000000):  3.8146972656e-06 s
+Busqueda arbol binario (key:2109248666 size:3000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:2147470852 size:3000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:0 size:3000000):  1.1920928955e-06 s
+Promedio: 2.694130e-06
 
-Busqueda arbol binario (key:322486 size:4000000):  9.0599060059e-06 s
+Busqueda arbol binario (key:322486 size:4000000):  5.0067901611e-06 s
 Busqueda arbol binario (key:14700764 size:4000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:3128036 size:4000000):  5.9604644775e-06 s
-Busqueda arbol binario (key:6337399 size:4000000):  5.9604644775e-06 s
-Busqueda arbol binario (key:61396 size:4000000):  1.7881393433e-05 s
-Busqueda arbol binario (key:10393545 size:4000000):  5.9604644775e-06 s
-Busqueda arbol binario (key:2147445644 size:4000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:1295390003 size:4000000):  8.1062316895e-06 s
-Busqueda arbol binario (key:450057883 size:4000000):  6.9141387939e-06 s
-Busqueda arbol binario (key:187645041 size:4000000):  7.8678131104e-06 s
-Busqueda arbol binario (key:1980098116 size:4000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:152503 size:4000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:5000 size:4000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:1493283650 size:4000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:214826 size:4000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:1843349527 size:4000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:1360839354 size:4000000):  9.0599060059e-06 s
-Busqueda arbol binario (key:2109248666 size:4000000):  8.1062316895e-06 s
-Busqueda arbol binario (key:2147470852 size:4000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:0 size:4000000):  3.0994415283e-06 s
-Promedio: 6.365776e-06
+Busqueda arbol binario (key:3128036 size:4000000):  6.1988830566e-06 s
+Busqueda arbol binario (key:6337399 size:4000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:61396 size:4000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:10393545 size:4000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:2147445644 size:4000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:1295390003 size:4000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:450057883 size:4000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:187645041 size:4000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:1980098116 size:4000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:152503 size:4000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:5000 size:4000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:1493283650 size:4000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:214826 size:4000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:1843349527 size:4000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:1360839354 size:4000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:2109248666 size:4000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:2147470852 size:4000000):  9.5367431641e-07 s
+Busqueda arbol binario (key:0 size:4000000):  2.1457672119e-06 s
+Promedio: 2.753735e-06
 
-Busqueda arbol binario (key:322486 size:5000000):  7.8678131104e-06 s
-Busqueda arbol binario (key:14700764 size:5000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:322486 size:5000000):  5.9604644775e-06 s
+Busqueda arbol binario (key:14700764 size:5000000):  2.8610229492e-06 s
 Busqueda arbol binario (key:3128036 size:5000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:6337399 size:5000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:61396 size:5000000):  1.7166137695e-05 s
-Busqueda arbol binario (key:10393545 size:5000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:2147445644 size:5000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:1295390003 size:5000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:450057883 size:5000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:187645041 size:5000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:1980098116 size:5000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:152503 size:5000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:5000 size:5000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:1493283650 size:5000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:214826 size:5000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:1843349527 size:5000000):  1.1181831360e-04 s
-Busqueda arbol binario (key:1360839354 size:5000000):  6.9141387939e-06 s
+Busqueda arbol binario (key:6337399 size:5000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:61396 size:5000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:10393545 size:5000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:2147445644 size:5000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:1295390003 size:5000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:450057883 size:5000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:187645041 size:5000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:1980098116 size:5000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:152503 size:5000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:5000 size:5000000):  5.9604644775e-06 s
+Busqueda arbol binario (key:1493283650 size:5000000):  1.0013580322e-05 s
+Busqueda arbol binario (key:214826 size:5000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:1843349527 size:5000000):  3.8146972656e-06 s
+Busqueda arbol binario (key:1360839354 size:5000000):  4.0531158447e-06 s
 Busqueda arbol binario (key:2109248666 size:5000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:2147470852 size:5000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:0 size:5000000):  2.8610229492e-06 s
-Promedio: 1.033545e-05
+Busqueda arbol binario (key:2147470852 size:5000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:0 size:5000000):  1.9073486328e-06 s
+Promedio: 3.874302e-06
 
-Busqueda arbol binario (key:322486 size:6000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:14700764 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:3128036 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:6337399 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:61396 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:10393545 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:2147445644 size:6000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:322486 size:6000000):  6.9141387939e-06 s
+Busqueda arbol binario (key:14700764 size:6000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:3128036 size:6000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:6337399 size:6000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:61396 size:6000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:10393545 size:6000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:2147445644 size:6000000):  3.0994415283e-06 s
 Busqueda arbol binario (key:1295390003 size:6000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:450057883 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:187645041 size:6000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:450057883 size:6000000):  5.0067901611e-06 s
+Busqueda arbol binario (key:187645041 size:6000000):  4.0531158447e-06 s
 Busqueda arbol binario (key:1980098116 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:152503 size:6000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:5000 size:6000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:152503 size:6000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:5000 size:6000000):  3.0994415283e-06 s
 Busqueda arbol binario (key:1493283650 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:214826 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:1843349527 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:1360839354 size:6000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:2109248666 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:2147470852 size:6000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:0 size:6000000):  2.8610229492e-06 s
-Promedio: 3.147125e-06
+Busqueda arbol binario (key:214826 size:6000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:1843349527 size:6000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:1360839354 size:6000000):  5.0067901611e-06 s
+Busqueda arbol binario (key:2109248666 size:6000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:2147470852 size:6000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:0 size:6000000):  3.0994415283e-06 s
+Promedio: 3.778934e-06
 
-Busqueda arbol binario (key:322486 size:7000000):  1.0013580322e-05 s
-Busqueda arbol binario (key:14700764 size:7000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:3128036 size:7000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:6337399 size:7000000):  7.8678131104e-06 s
-Busqueda arbol binario (key:61396 size:7000000):  5.9604644775e-06 s
-Busqueda arbol binario (key:10393545 size:7000000):  9.0599060059e-06 s
-Busqueda arbol binario (key:2147445644 size:7000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:1295390003 size:7000000):  6.1988830566e-06 s
-Busqueda arbol binario (key:450057883 size:7000000):  8.1062316895e-06 s
-Busqueda arbol binario (key:187645041 size:7000000):  6.9141387939e-06 s
-Busqueda arbol binario (key:1980098116 size:7000000):  5.9604644775e-06 s
-Busqueda arbol binario (key:152503 size:7000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:5000 size:7000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:1493283650 size:7000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:214826 size:7000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:1843349527 size:7000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:1360839354 size:7000000):  1.0013580322e-05 s
-Busqueda arbol binario (key:2109248666 size:7000000):  6.1988830566e-06 s
-Busqueda arbol binario (key:2147470852 size:7000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:0 size:7000000):  4.0531158447e-06 s
-Promedio: 5.972385e-06
+Busqueda arbol binario (key:322486 size:7000000):  5.0067901611e-06 s
+Busqueda arbol binario (key:14700764 size:7000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:3128036 size:7000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:6337399 size:7000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:61396 size:7000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:10393545 size:7000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:2147445644 size:7000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:1295390003 size:7000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:450057883 size:7000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:187645041 size:7000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:1980098116 size:7000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:152503 size:7000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:5000 size:7000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:1493283650 size:7000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:214826 size:7000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:1843349527 size:7000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:1360839354 size:7000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:2109248666 size:7000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:2147470852 size:7000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:0 size:7000000):  2.1457672119e-06 s
+Promedio: 3.063679e-06
 
-Busqueda arbol binario (key:322486 size:8000000):  1.0967254639e-05 s
-Busqueda arbol binario (key:14700764 size:8000000):  5.9604644775e-06 s
-Busqueda arbol binario (key:3128036 size:8000000):  1.0013580322e-05 s
-Busqueda arbol binario (key:6337399 size:8000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:61396 size:8000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:10393545 size:8000000):  6.1988830566e-06 s
-Busqueda arbol binario (key:2147445644 size:8000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:1295390003 size:8000000):  1.0967254639e-05 s
-Busqueda arbol binario (key:450057883 size:8000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:187645041 size:8000000):  6.9141387939e-06 s
-Busqueda arbol binario (key:1980098116 size:8000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:152503 size:8000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:322486 size:8000000):  5.9604644775e-06 s
+Busqueda arbol binario (key:14700764 size:8000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:3128036 size:8000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:6337399 size:8000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:61396 size:8000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:10393545 size:8000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:2147445644 size:8000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:1295390003 size:8000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:450057883 size:8000000):  8.1062316895e-06 s
+Busqueda arbol binario (key:187645041 size:8000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:1980098116 size:8000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:152503 size:8000000):  1.9073486328e-06 s
 Busqueda arbol binario (key:5000 size:8000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:1493283650 size:8000000):  4.7683715820e-06 s
-Busqueda arbol binario (key:214826 size:8000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:1843349527 size:8000000):  5.9604644775e-06 s
-Busqueda arbol binario (key:1360839354 size:8000000):  1.0013580322e-05 s
-Busqueda arbol binario (key:2109248666 size:8000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:2147470852 size:8000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:0 size:8000000):  5.0067901611e-06 s
-Promedio: 5.841255e-06
+Busqueda arbol binario (key:1493283650 size:8000000):  1.9073486328e-06 s
+Busqueda arbol binario (key:214826 size:8000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:1843349527 size:8000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:1360839354 size:8000000):  3.8146972656e-06 s
+Busqueda arbol binario (key:2109248666 size:8000000):  3.8146972656e-06 s
+Busqueda arbol binario (key:2147470852 size:8000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:0 size:8000000):  2.1457672119e-06 s
+Promedio: 3.325939e-06
 
-Busqueda arbol binario (key:322486 size:9000000):  5.0067901611e-06 s
-Busqueda arbol binario (key:14700764 size:9000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:3128036 size:9000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:6337399 size:9000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:61396 size:9000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:10393545 size:9000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:2147445644 size:9000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:1295390003 size:9000000):  2.8610229492e-06 s
-Busqueda arbol binario (key:450057883 size:9000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:187645041 size:9000000):  2.1457672119e-06 s
-Busqueda arbol binario (key:1980098116 size:9000000):  2.1457672119e-06 s
-Busqueda arbol binario (key:152503 size:9000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:5000 size:9000000):  2.1457672119e-06 s
-Busqueda arbol binario (key:1493283650 size:9000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:214826 size:9000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:1843349527 size:9000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:1360839354 size:9000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:2109248666 size:9000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:2147470852 size:9000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:0 size:9000000):  1.9073486328e-06 s
-Promedio: 2.491474e-06
+Busqueda arbol binario (key:322486 size:9000000):  1.2874603271e-05 s
+Busqueda arbol binario (key:14700764 size:9000000):  5.9604644775e-06 s
+Busqueda arbol binario (key:3128036 size:9000000):  6.9141387939e-06 s
+Busqueda arbol binario (key:6337399 size:9000000):  6.9141387939e-06 s
+Busqueda arbol binario (key:61396 size:9000000):  7.8678131104e-06 s
+Busqueda arbol binario (key:10393545 size:9000000):  2.2888183594e-05 s
+Busqueda arbol binario (key:2147445644 size:9000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:1295390003 size:9000000):  5.9604644775e-06 s
+Busqueda arbol binario (key:450057883 size:9000000):  5.9604644775e-06 s
+Busqueda arbol binario (key:187645041 size:9000000):  1.0013580322e-05 s
+Busqueda arbol binario (key:1980098116 size:9000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:152503 size:9000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:5000 size:9000000):  5.0067901611e-06 s
+Busqueda arbol binario (key:1493283650 size:9000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:214826 size:9000000):  5.0067901611e-06 s
+Busqueda arbol binario (key:1843349527 size:9000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:1360839354 size:9000000):  7.1525573730e-06 s
+Busqueda arbol binario (key:2109248666 size:9000000):  5.0067901611e-06 s
+Busqueda arbol binario (key:2147470852 size:9000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:0 size:9000000):  4.0531158447e-06 s
+Promedio: 6.592274e-06
 
-Busqueda arbol binario (key:322486 size:10000000):  5.9604644775e-06 s
+Busqueda arbol binario (key:322486 size:10000000):  6.1988830566e-06 s
 Busqueda arbol binario (key:14700764 size:10000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:3128036 size:10000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:6337399 size:10000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:61396 size:10000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:10393545 size:10000000):  2.8133392334e-05 s
-Busqueda arbol binario (key:2147445644 size:10000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:3128036 size:10000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:6337399 size:10000000):  3.8146972656e-06 s
+Busqueda arbol binario (key:61396 size:10000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:10393545 size:10000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:2147445644 size:10000000):  1.9073486328e-06 s
 Busqueda arbol binario (key:1295390003 size:10000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:450057883 size:10000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:187645041 size:10000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:1980098116 size:10000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:152503 size:10000000):  1.9073486328e-06 s
-Busqueda arbol binario (key:5000 size:10000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:450057883 size:10000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:187645041 size:10000000):  4.0531158447e-06 s
+Busqueda arbol binario (key:1980098116 size:10000000):  2.1457672119e-06 s
+Busqueda arbol binario (key:152503 size:10000000):  3.0994415283e-06 s
+Busqueda arbol binario (key:5000 size:10000000):  3.0994415283e-06 s
 Busqueda arbol binario (key:1493283650 size:10000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:214826 size:10000000):  2.1457672119e-06 s
-Busqueda arbol binario (key:1843349527 size:10000000):  3.0994415283e-06 s
-Busqueda arbol binario (key:1360839354 size:10000000):  4.0531158447e-06 s
-Busqueda arbol binario (key:2109248666 size:10000000):  5.0067901611e-06 s
+Busqueda arbol binario (key:214826 size:10000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:1843349527 size:10000000):  2.8610229492e-06 s
+Busqueda arbol binario (key:1360839354 size:10000000):  5.0067901611e-06 s
+Busqueda arbol binario (key:2109248666 size:10000000):  4.0531158447e-06 s
 Busqueda arbol binario (key:2147470852 size:10000000):  2.1457672119e-06 s
 Busqueda arbol binario (key:0 size:10000000):  3.0994415283e-06 s
-Promedio: 4.601479e-06
+Promedio: 3.373623e-06
 
-Busqueda lineal (key:322486 size:1000000):  3.5479068756e-03 s
-Busqueda lineal (key:14700764 size:1000000):  4.8029422760e-03 s
-Busqueda lineal (key:3128036 size:1000000):  3.2861232758e-03 s
-Busqueda lineal (key:6337399 size:1000000):  2.9551982880e-03 s
-Busqueda lineal (key:61396 size:1000000):  2.9129981995e-03 s
-Busqueda lineal (key:2147445644 size:1000000):  3.8120746613e-03 s
-Busqueda lineal (key:1295390003 size:1000000):  3.9238929749e-03 s
-Busqueda lineal (key:450057883 size:1000000):  3.5161972046e-03 s
-Busqueda lineal (key:187645041 size:1000000):  2.9690265656e-03 s
-Busqueda lineal (key:1980098116 size:1000000):  2.9070377350e-03 s
-Busqueda lineal (key:152503 size:1000000):  4.0769577026e-03 s
-Busqueda lineal (key:5000 size:1000000):  3.8568973541e-03 s
-Busqueda lineal (key:1493283650 size:1000000):  2.1481513977e-03 s
-Busqueda lineal (key:214826 size:1000000):  2.9430389404e-03 s
-Busqueda lineal (key:1843349527 size:1000000):  2.9180049896e-03 s
-Busqueda lineal (key:1360839354 size:1000000):  5.0311088562e-03 s
-Busqueda lineal (key:2109248666 size:1000000):  4.6350955963e-03 s
-Busqueda lineal (key:2147470852 size:1000000):  3.0241012573e-03 s
-Busqueda lineal (key:0 size:1000000):  2.9559135437e-03 s
-Busqueda lineal (key:0 size:1000000):  3.9360523224e-03 s
-Promedio: 3.507936e-03
+Busqueda lineal (key:322486 size:1000000):  3.0388832092e-03 s
+Busqueda lineal (key:14700764 size:1000000):  5.3420066833e-03 s
+Busqueda lineal (key:3128036 size:1000000):  4.8398971558e-03 s
+Busqueda lineal (key:6337399 size:1000000):  3.0369758606e-03 s
+Busqueda lineal (key:61396 size:1000000):  3.0720233917e-03 s
+Busqueda lineal (key:10393545 size:1000000):  4.4908523560e-03 s
+Busqueda lineal (key:2147445644 size:1000000):  5.4090023041e-03 s
+Busqueda lineal (key:1295390003 size:1000000):  3.3159255981e-03 s
+Busqueda lineal (key:450057883 size:1000000):  3.1089782715e-03 s
+Busqueda lineal (key:187645041 size:1000000):  4.2769908905e-03 s
+Busqueda lineal (key:1980098116 size:1000000):  4.4300556183e-03 s
+Busqueda lineal (key:152503 size:1000000):  3.9551258087e-03 s
+Busqueda lineal (key:5000 size:1000000):  3.2958984375e-03 s
+Busqueda lineal (key:1493283650 size:1000000):  1.6181468964e-03 s
+Busqueda lineal (key:214826 size:1000000):  5.2440166473e-03 s
+Busqueda lineal (key:1843349527 size:1000000):  5.0978660583e-03 s
+Busqueda lineal (key:1360839354 size:1000000):  3.5998821259e-03 s
+Busqueda lineal (key:2109248666 size:1000000):  3.5071372986e-03 s
+Busqueda lineal (key:2147470852 size:1000000):  4.5070648193e-03 s
+Busqueda lineal (key:0 size:1000000):  4.0898323059e-03 s
+Promedio: 3.963828e-03
 
-Busqueda lineal (key:322486 size:2000000):  5.9280395508e-03 s
-Busqueda lineal (key:14700764 size:2000000):  9.1829299927e-03 s
-Busqueda lineal (key:3128036 size:2000000):  5.3479671478e-03 s
-Busqueda lineal (key:6337399 size:2000000):  8.5389614105e-03 s
-Busqueda lineal (key:61396 size:2000000):  7.8890323639e-03 s
-Busqueda lineal (key:2147445644 size:2000000):  8.1081390381e-03 s
-Busqueda lineal (key:1295390003 size:2000000):  7.3230266571e-03 s
-Busqueda lineal (key:450057883 size:2000000):  6.9088935852e-03 s
-Busqueda lineal (key:187645041 size:2000000):  8.0730915070e-03 s
-Busqueda lineal (key:1980098116 size:2000000):  6.3388347626e-03 s
-Busqueda lineal (key:152503 size:2000000):  9.2010498047e-03 s
-Busqueda lineal (key:5000 size:2000000):  6.3498020172e-03 s
-Busqueda lineal (key:1493283650 size:2000000):  1.6250610352e-03 s
-Busqueda lineal (key:214826 size:2000000):  7.9338550568e-03 s
-Busqueda lineal (key:1843349527 size:2000000):  6.6919326782e-03 s
-Busqueda lineal (key:1360839354 size:2000000):  7.9910755157e-03 s
-Busqueda lineal (key:2109248666 size:2000000):  7.1680545807e-03 s
-Busqueda lineal (key:2147470852 size:2000000):  7.6560974121e-03 s
-Busqueda lineal (key:0 size:2000000):  7.3938369751e-03 s
-Busqueda lineal (key:0 size:2000000):  6.5448284149e-03 s
-Promedio: 7.109725e-03
+Busqueda lineal (key:322486 size:2000000):  7.7309608459e-03 s
+Busqueda lineal (key:14700764 size:2000000):  5.8948993683e-03 s
+Busqueda lineal (key:3128036 size:2000000):  5.5239200592e-03 s
+Busqueda lineal (key:6337399 size:2000000):  6.8249702454e-03 s
+Busqueda lineal (key:61396 size:2000000):  5.9461593628e-03 s
+Busqueda lineal (key:10393545 size:2000000):  7.6699256897e-03 s
+Busqueda lineal (key:2147445644 size:2000000):  6.1929225922e-03 s
+Busqueda lineal (key:1295390003 size:2000000):  7.2910785675e-03 s
+Busqueda lineal (key:450057883 size:2000000):  6.5050125122e-03 s
+Busqueda lineal (key:187645041 size:2000000):  6.0610771179e-03 s
+Busqueda lineal (key:1980098116 size:2000000):  8.5659027100e-03 s
+Busqueda lineal (key:152503 size:2000000):  5.9208869934e-03 s
+Busqueda lineal (key:5000 size:2000000):  8.2709789276e-03 s
+Busqueda lineal (key:1493283650 size:2000000):  1.8739700317e-03 s
+Busqueda lineal (key:214826 size:2000000):  6.0899257660e-03 s
+Busqueda lineal (key:1843349527 size:2000000):  7.6510906219e-03 s
+Busqueda lineal (key:1360839354 size:2000000):  7.0002079010e-03 s
+Busqueda lineal (key:2109248666 size:2000000):  7.7850818634e-03 s
+Busqueda lineal (key:2147470852 size:2000000):  6.9100856781e-03 s
+Busqueda lineal (key:0 size:2000000):  6.1161518097e-03 s
+Promedio: 6.591260e-03
 
-Busqueda lineal (key:322486 size:3000000):  1.0951995850e-02 s
-Busqueda lineal (key:14700764 size:3000000):  1.0574102402e-02 s
-Busqueda lineal (key:3128036 size:3000000):  4.3659210205e-03 s
-Busqueda lineal (key:6337399 size:3000000):  1.1423110962e-02 s
-Busqueda lineal (key:61396 size:3000000):  1.0164976120e-02 s
-Busqueda lineal (key:2147445644 size:3000000):  1.2044906616e-02 s
-Busqueda lineal (key:1295390003 size:3000000):  1.1738061905e-02 s
-Busqueda lineal (key:450057883 size:3000000):  1.0890960693e-02 s
-Busqueda lineal (key:187645041 size:3000000):  1.2877941132e-02 s
-Busqueda lineal (key:1980098116 size:3000000):  1.1311054230e-02 s
-Busqueda lineal (key:152503 size:3000000):  1.0822057724e-02 s
-Busqueda lineal (key:5000 size:3000000):  1.0850191116e-02 s
-Busqueda lineal (key:1493283650 size:3000000):  1.7039775848e-03 s
-Busqueda lineal (key:214826 size:3000000):  1.2288808823e-02 s
-Busqueda lineal (key:1843349527 size:3000000):  8.0451965332e-03 s
-Busqueda lineal (key:1360839354 size:3000000):  1.1906147003e-02 s
-Busqueda lineal (key:2109248666 size:3000000):  1.1086940765e-02 s
-Busqueda lineal (key:2147470852 size:3000000):  1.0120868683e-02 s
-Busqueda lineal (key:0 size:3000000):  1.1290073395e-02 s
-Busqueda lineal (key:0 size:3000000):  1.0704994202e-02 s
-Promedio: 1.025811e-02
+Busqueda lineal (key:322486 size:3000000):  1.2603998184e-02 s
+Busqueda lineal (key:14700764 size:3000000):  1.1631965637e-02 s
+Busqueda lineal (key:3128036 size:3000000):  4.5630931854e-03 s
+Busqueda lineal (key:6337399 size:3000000):  1.1065959930e-02 s
+Busqueda lineal (key:61396 size:3000000):  9.7980499268e-03 s
+Busqueda lineal (key:10393545 size:3000000):  1.0869026184e-02 s
+Busqueda lineal (key:2147445644 size:3000000):  1.0479211807e-02 s
+Busqueda lineal (key:1295390003 size:3000000):  9.5129013062e-03 s
+Busqueda lineal (key:450057883 size:3000000):  1.1688947678e-02 s
+Busqueda lineal (key:187645041 size:3000000):  1.0797977448e-02 s
+Busqueda lineal (key:1980098116 size:3000000):  9.9740028381e-03 s
+Busqueda lineal (key:152503 size:3000000):  1.2367963791e-02 s
+Busqueda lineal (key:5000 size:3000000):  1.0788917542e-02 s
+Busqueda lineal (key:1493283650 size:3000000):  1.8239021301e-03 s
+Busqueda lineal (key:214826 size:3000000):  9.6747875214e-03 s
+Busqueda lineal (key:1843349527 size:3000000):  8.9719295502e-03 s
+Busqueda lineal (key:1360839354 size:3000000):  9.1309547424e-03 s
+Busqueda lineal (key:2109248666 size:3000000):  1.0761976242e-02 s
+Busqueda lineal (key:2147470852 size:3000000):  1.0481119156e-02 s
+Busqueda lineal (key:0 size:3000000):  9.7050666809e-03 s
+Promedio: 9.834588e-03
 
-Busqueda lineal (key:322486 size:4000000):  1.4267921448e-02 s
-Busqueda lineal (key:14700764 size:4000000):  1.4205932617e-02 s
-Busqueda lineal (key:3128036 size:4000000):  4.0891170502e-03 s
-Busqueda lineal (key:6337399 size:4000000):  1.3858079910e-02 s
-Busqueda lineal (key:61396 size:4000000):  1.3925075531e-02 s
-Busqueda lineal (key:2147445644 size:4000000):  1.3329029083e-02 s
-Busqueda lineal (key:1295390003 size:4000000):  1.4117956161e-02 s
-Busqueda lineal (key:450057883 size:4000000):  1.3756990433e-02 s
-Busqueda lineal (key:187645041 size:4000000):  1.5172004700e-02 s
-Busqueda lineal (key:1980098116 size:4000000):  1.5340805054e-02 s
-Busqueda lineal (key:152503 size:4000000):  1.5480995178e-02 s
-Busqueda lineal (key:5000 size:4000000):  1.5590906143e-02 s
-Busqueda lineal (key:1493283650 size:4000000):  2.0010471344e-03 s
-Busqueda lineal (key:214826 size:4000000):  1.5607833862e-02 s
-Busqueda lineal (key:1843349527 size:4000000):  9.5980167389e-03 s
-Busqueda lineal (key:1360839354 size:4000000):  1.5812873840e-02 s
-Busqueda lineal (key:2109248666 size:4000000):  1.5430927277e-02 s
-Busqueda lineal (key:2147470852 size:4000000):  1.5196084976e-02 s
-Busqueda lineal (key:0 size:4000000):  1.5440940857e-02 s
-Busqueda lineal (key:0 size:4000000):  1.6191959381e-02 s
-Promedio: 1.342072e-02
+Busqueda lineal (key:322486 size:4000000):  1.5958070755e-02 s
+Busqueda lineal (key:14700764 size:4000000):  1.5782117844e-02 s
+Busqueda lineal (key:3128036 size:4000000):  4.6780109406e-03 s
+Busqueda lineal (key:6337399 size:4000000):  1.5815019608e-02 s
+Busqueda lineal (key:61396 size:4000000):  1.6306161880e-02 s
+Busqueda lineal (key:10393545 size:4000000):  1.6993999481e-02 s
+Busqueda lineal (key:2147445644 size:4000000):  1.6031026840e-02 s
+Busqueda lineal (key:1295390003 size:4000000):  1.4652013779e-02 s
+Busqueda lineal (key:450057883 size:4000000):  1.4971017838e-02 s
+Busqueda lineal (key:187645041 size:4000000):  1.3734102249e-02 s
+Busqueda lineal (key:1980098116 size:4000000):  1.3999938965e-02 s
+Busqueda lineal (key:152503 size:4000000):  1.3078927994e-02 s
+Busqueda lineal (key:5000 size:4000000):  1.4614820480e-02 s
+Busqueda lineal (key:1493283650 size:4000000):  2.7368068695e-03 s
+Busqueda lineal (key:214826 size:4000000):  1.3957977295e-02 s
+Busqueda lineal (key:1843349527 size:4000000):  9.8719596863e-03 s
+Busqueda lineal (key:1360839354 size:4000000):  1.3948202133e-02 s
+Busqueda lineal (key:2109248666 size:4000000):  1.5108823776e-02 s
+Busqueda lineal (key:2147470852 size:4000000):  1.4480113983e-02 s
+Busqueda lineal (key:0 size:4000000):  1.3506889343e-02 s
+Promedio: 1.351130e-02
 
-Busqueda lineal (key:322486 size:5000000):  1.8345117569e-02 s
-Busqueda lineal (key:14700764 size:5000000):  1.9212007523e-02 s
-Busqueda lineal (key:3128036 size:5000000):  5.3918361664e-03 s
-Busqueda lineal (key:6337399 size:5000000):  1.9861936569e-02 s
-Busqueda lineal (key:61396 size:5000000):  1.8738031387e-02 s
-Busqueda lineal (key:2147445644 size:5000000):  1.8627166748e-02 s
-Busqueda lineal (key:1295390003 size:5000000):  1.8989086151e-02 s
-Busqueda lineal (key:450057883 size:5000000):  2.1162986755e-02 s
-Busqueda lineal (key:187645041 size:5000000):  1.9145965576e-02 s
-Busqueda lineal (key:1980098116 size:5000000):  1.9556045532e-02 s
-Busqueda lineal (key:152503 size:5000000):  1.8861055374e-02 s
-Busqueda lineal (key:5000 size:5000000):  1.8246173859e-02 s
-Busqueda lineal (key:1493283650 size:5000000):  1.6949176788e-03 s
-Busqueda lineal (key:214826 size:5000000):  1.8036127090e-02 s
-Busqueda lineal (key:1843349527 size:5000000):  9.3669891357e-03 s
-Busqueda lineal (key:1360839354 size:5000000):  1.7237901688e-02 s
-Busqueda lineal (key:2109248666 size:5000000):  1.7006874084e-02 s
-Busqueda lineal (key:2147470852 size:5000000):  1.7611980438e-02 s
-Busqueda lineal (key:0 size:5000000):  1.7177820206e-02 s
-Busqueda lineal (key:0 size:5000000):  1.7449140549e-02 s
-Promedio: 1.658596e-02
+Busqueda lineal (key:322486 size:5000000):  2.5681972504e-02 s
+Busqueda lineal (key:14700764 size:5000000):  2.4995088577e-02 s
+Busqueda lineal (key:3128036 size:5000000):  5.3310394287e-03 s
+Busqueda lineal (key:6337399 size:5000000):  2.5288105011e-02 s
+Busqueda lineal (key:61396 size:5000000):  2.4989128113e-02 s
+Busqueda lineal (key:10393545 size:5000000):  2.5696039200e-02 s
+Busqueda lineal (key:2147445644 size:5000000):  2.9214143753e-02 s
+Busqueda lineal (key:1295390003 size:5000000):  3.3107995987e-02 s
+Busqueda lineal (key:450057883 size:5000000):  2.8837919235e-02 s
+Busqueda lineal (key:187645041 size:5000000):  3.5442113876e-02 s
+Busqueda lineal (key:1980098116 size:5000000):  3.4193038940e-02 s
+Busqueda lineal (key:152503 size:5000000):  3.4080028534e-02 s
+Busqueda lineal (key:5000 size:5000000):  3.4541130066e-02 s
+Busqueda lineal (key:1493283650 size:5000000):  4.0369033813e-03 s
+Busqueda lineal (key:214826 size:5000000):  3.3657073975e-02 s
+Busqueda lineal (key:1843349527 size:5000000):  1.5836000443e-02 s
+Busqueda lineal (key:1360839354 size:5000000):  3.3983945847e-02 s
+Busqueda lineal (key:2109248666 size:5000000):  2.9849052429e-02 s
+Busqueda lineal (key:2147470852 size:5000000):  2.8838157654e-02 s
+Busqueda lineal (key:0 size:5000000):  2.8326988220e-02 s
+Promedio: 2.679629e-02
 
-Busqueda lineal (key:322486 size:6000000):  2.0034074783e-02 s
-Busqueda lineal (key:14700764 size:6000000):  2.1155834198e-02 s
-Busqueda lineal (key:3128036 size:6000000):  4.1589736938e-03 s
-Busqueda lineal (key:6337399 size:6000000):  2.0126104355e-02 s
-Busqueda lineal (key:61396 size:6000000):  2.0102024078e-02 s
-Busqueda lineal (key:2147445644 size:6000000):  2.1469831467e-02 s
-Busqueda lineal (key:1295390003 size:6000000):  2.0278930664e-02 s
-Busqueda lineal (key:450057883 size:6000000):  2.0179986954e-02 s
-Busqueda lineal (key:187645041 size:6000000):  1.9699811935e-02 s
-Busqueda lineal (key:1980098116 size:6000000):  2.0154953003e-02 s
-Busqueda lineal (key:152503 size:6000000):  2.0558118820e-02 s
-Busqueda lineal (key:5000 size:6000000):  2.0590066910e-02 s
-Busqueda lineal (key:1493283650 size:6000000):  1.8069744110e-03 s
-Busqueda lineal (key:214826 size:6000000):  2.0601987839e-02 s
-Busqueda lineal (key:1843349527 size:6000000):  8.5561275482e-03 s
-Busqueda lineal (key:1360839354 size:6000000):  1.9869089127e-02 s
-Busqueda lineal (key:2109248666 size:6000000):  1.9937992096e-02 s
-Busqueda lineal (key:2147470852 size:6000000):  1.9607067108e-02 s
-Busqueda lineal (key:0 size:6000000):  2.4596929550e-02 s
-Busqueda lineal (key:0 size:6000000):  2.1345138550e-02 s
-Promedio: 1.824150e-02
+Busqueda lineal (key:322486 size:6000000):  2.6888132095e-02 s
+Busqueda lineal (key:14700764 size:6000000):  2.6800155640e-02 s
+Busqueda lineal (key:3128036 size:6000000):  5.1310062408e-03 s
+Busqueda lineal (key:6337399 size:6000000):  2.5551080704e-02 s
+Busqueda lineal (key:61396 size:6000000):  2.5400876999e-02 s
+Busqueda lineal (key:10393545 size:6000000):  2.6018857956e-02 s
+Busqueda lineal (key:2147445644 size:6000000):  2.4140834808e-02 s
+Busqueda lineal (key:1295390003 size:6000000):  2.4700880051e-02 s
+Busqueda lineal (key:450057883 size:6000000):  2.4831056595e-02 s
+Busqueda lineal (key:187645041 size:6000000):  2.5116205215e-02 s
+Busqueda lineal (key:1980098116 size:6000000):  2.3910999298e-02 s
+Busqueda lineal (key:152503 size:6000000):  2.5736093521e-02 s
+Busqueda lineal (key:5000 size:6000000):  2.5175094604e-02 s
+Busqueda lineal (key:1493283650 size:6000000):  2.3350715637e-03 s
+Busqueda lineal (key:214826 size:6000000):  2.4212837219e-02 s
+Busqueda lineal (key:1843349527 size:6000000):  8.9969635010e-03 s
+Busqueda lineal (key:1360839354 size:6000000):  2.3403882980e-02 s
+Busqueda lineal (key:2109248666 size:6000000):  2.2289037704e-02 s
+Busqueda lineal (key:2147470852 size:6000000):  2.4541854858e-02 s
+Busqueda lineal (key:0 size:6000000):  2.1929025650e-02 s
+Promedio: 2.185550e-02
 
-Busqueda lineal (key:322486 size:7000000):  2.3663997650e-02 s
-Busqueda lineal (key:14700764 size:7000000):  2.3491144180e-02 s
-Busqueda lineal (key:3128036 size:7000000):  5.8569908142e-03 s
-Busqueda lineal (key:6337399 size:7000000):  2.2636890411e-02 s
-Busqueda lineal (key:61396 size:7000000):  2.3844003677e-02 s
-Busqueda lineal (key:2147445644 size:7000000):  2.5707960129e-02 s
-Busqueda lineal (key:1295390003 size:7000000):  2.7287960052e-02 s
-Busqueda lineal (key:450057883 size:7000000):  2.4238109589e-02 s
-Busqueda lineal (key:187645041 size:7000000):  2.6309967041e-02 s
-Busqueda lineal (key:1980098116 size:7000000):  2.3934125900e-02 s
-Busqueda lineal (key:152503 size:7000000):  2.4955987930e-02 s
-Busqueda lineal (key:5000 size:7000000):  2.3714065552e-02 s
-Busqueda lineal (key:1493283650 size:7000000):  1.8951892853e-03 s
-Busqueda lineal (key:214826 size:7000000):  2.6526927948e-02 s
-Busqueda lineal (key:1843349527 size:7000000):  8.1770420074e-03 s
-Busqueda lineal (key:1360839354 size:7000000):  2.5840997696e-02 s
-Busqueda lineal (key:2109248666 size:7000000):  2.2826194763e-02 s
-Busqueda lineal (key:2147470852 size:7000000):  2.4394035339e-02 s
-Busqueda lineal (key:0 size:7000000):  2.3468017578e-02 s
-Busqueda lineal (key:0 size:7000000):  2.5842905045e-02 s
-Promedio: 2.173063e-02
+Busqueda lineal (key:322486 size:7000000):  2.3150920868e-02 s
+Busqueda lineal (key:14700764 size:7000000):  2.4691104889e-02 s
+Busqueda lineal (key:3128036 size:7000000):  4.0829181671e-03 s
+Busqueda lineal (key:6337399 size:7000000):  2.1898984909e-02 s
+Busqueda lineal (key:61396 size:7000000):  2.4181842804e-02 s
+Busqueda lineal (key:10393545 size:7000000):  2.4078130722e-02 s
+Busqueda lineal (key:2147445644 size:7000000):  2.5391101837e-02 s
+Busqueda lineal (key:1295390003 size:7000000):  2.4386882782e-02 s
+Busqueda lineal (key:450057883 size:7000000):  2.5434970856e-02 s
+Busqueda lineal (key:187645041 size:7000000):  2.4003028870e-02 s
+Busqueda lineal (key:1980098116 size:7000000):  2.9838085175e-02 s
+Busqueda lineal (key:152503 size:7000000):  2.7697086334e-02 s
+Busqueda lineal (key:5000 size:7000000):  2.4785995483e-02 s
+Busqueda lineal (key:1493283650 size:7000000):  1.9040107727e-03 s
+Busqueda lineal (key:214826 size:7000000):  2.6854038239e-02 s
+Busqueda lineal (key:1843349527 size:7000000):  8.9259147644e-03 s
+Busqueda lineal (key:1360839354 size:7000000):  2.9747009277e-02 s
+Busqueda lineal (key:2109248666 size:7000000):  2.5257825851e-02 s
+Busqueda lineal (key:2147470852 size:7000000):  2.5398969650e-02 s
+Busqueda lineal (key:0 size:7000000):  2.8763055801e-02 s
+Promedio: 2.252359e-02
 
-Busqueda lineal (key:322486 size:8000000):  2.8583049774e-02 s
-Busqueda lineal (key:14700764 size:8000000):  2.7647972107e-02 s
-Busqueda lineal (key:3128036 size:8000000):  5.0468444824e-03 s
-Busqueda lineal (key:6337399 size:8000000):  2.7117967606e-02 s
-Busqueda lineal (key:61396 size:8000000):  3.1814098358e-02 s
-Busqueda lineal (key:2147445644 size:8000000):  3.0754089355e-02 s
-Busqueda lineal (key:1295390003 size:8000000):  3.3129930496e-02 s
-Busqueda lineal (key:450057883 size:8000000):  3.2189846039e-02 s
-Busqueda lineal (key:187645041 size:8000000):  3.0033826828e-02 s
-Busqueda lineal (key:1980098116 size:8000000):  3.1981945038e-02 s
-Busqueda lineal (key:152503 size:8000000):  3.2114028931e-02 s
-Busqueda lineal (key:5000 size:8000000):  3.0941009521e-02 s
-Busqueda lineal (key:1493283650 size:8000000):  2.0401477814e-03 s
-Busqueda lineal (key:214826 size:8000000):  3.0946969986e-02 s
-Busqueda lineal (key:1843349527 size:8000000):  9.9060535431e-03 s
-Busqueda lineal (key:1360839354 size:8000000):  3.2603979111e-02 s
-Busqueda lineal (key:2109248666 size:8000000):  2.5187015533e-02 s
-Busqueda lineal (key:2147470852 size:8000000):  3.1083106995e-02 s
-Busqueda lineal (key:0 size:8000000):  3.1634092331e-02 s
-Busqueda lineal (key:0 size:8000000):  3.3953905106e-02 s
-Promedio: 2.693549e-02
+Busqueda lineal (key:322486 size:8000000):  3.0239105225e-02 s
+Busqueda lineal (key:14700764 size:8000000):  3.6895036697e-02 s
+Busqueda lineal (key:3128036 size:8000000):  6.6070556641e-03 s
+Busqueda lineal (key:6337399 size:8000000):  2.3437976837e-02 s
+Busqueda lineal (key:61396 size:8000000):  3.1404018402e-02 s
+Busqueda lineal (key:10393545 size:8000000):  2.8540134430e-02 s
+Busqueda lineal (key:2147445644 size:8000000):  2.7708053589e-02 s
+Busqueda lineal (key:1295390003 size:8000000):  2.8764009476e-02 s
+Busqueda lineal (key:450057883 size:8000000):  3.2582998276e-02 s
+Busqueda lineal (key:187645041 size:8000000):  3.0579090118e-02 s
+Busqueda lineal (key:1980098116 size:8000000):  3.1757116318e-02 s
+Busqueda lineal (key:152503 size:8000000):  3.2626152039e-02 s
+Busqueda lineal (key:5000 size:8000000):  3.1619071960e-02 s
+Busqueda lineal (key:1493283650 size:8000000):  1.9199848175e-03 s
+Busqueda lineal (key:214826 size:8000000):  3.0843973160e-02 s
+Busqueda lineal (key:1843349527 size:8000000):  7.9159736633e-03 s
+Busqueda lineal (key:1360839354 size:8000000):  3.4699916840e-02 s
+Busqueda lineal (key:2109248666 size:8000000):  2.5891065598e-02 s
+Busqueda lineal (key:2147470852 size:8000000):  2.7540922165e-02 s
+Busqueda lineal (key:0 size:8000000):  3.0346870422e-02 s
+Promedio: 2.659593e-02
 
-Busqueda lineal (key:322486 size:9000000):  2.9692173004e-02 s
-Busqueda lineal (key:14700764 size:9000000):  3.0140876770e-02 s
-Busqueda lineal (key:3128036 size:9000000):  4.6951770782e-03 s
-Busqueda lineal (key:6337399 size:9000000):  2.0989894867e-02 s
-Busqueda lineal (key:61396 size:9000000):  3.2307147980e-02 s
-Busqueda lineal (key:2147445644 size:9000000):  3.3185005188e-02 s
-Busqueda lineal (key:1295390003 size:9000000):  2.9713153839e-02 s
-Busqueda lineal (key:450057883 size:9000000):  3.4184932709e-02 s
-Busqueda lineal (key:187645041 size:9000000):  3.4223079681e-02 s
-Busqueda lineal (key:1980098116 size:9000000):  3.2119035721e-02 s
-Busqueda lineal (key:152503 size:9000000):  3.2855987549e-02 s
-Busqueda lineal (key:5000 size:9000000):  3.5918951035e-02 s
-Busqueda lineal (key:1493283650 size:9000000):  1.7368793488e-03 s
-Busqueda lineal (key:214826 size:9000000):  3.4796953201e-02 s
-Busqueda lineal (key:1843349527 size:9000000):  9.9539756775e-03 s
-Busqueda lineal (key:1360839354 size:9000000):  3.3375978470e-02 s
-Busqueda lineal (key:2109248666 size:9000000):  2.4272918701e-02 s
-Busqueda lineal (key:2147470852 size:9000000):  3.2360076904e-02 s
-Busqueda lineal (key:0 size:9000000):  3.3433914185e-02 s
-Busqueda lineal (key:0 size:9000000):  3.7145853043e-02 s
-Promedio: 2.785510e-02
+Busqueda lineal (key:322486 size:9000000):  4.3856143951e-02 s
+Busqueda lineal (key:14700764 size:9000000):  4.0809154510e-02 s
+Busqueda lineal (key:3128036 size:9000000):  9.3510150909e-03 s
+Busqueda lineal (key:6337399 size:9000000):  2.8517961502e-02 s
+Busqueda lineal (key:61396 size:9000000):  4.4882059097e-02 s
+Busqueda lineal (key:10393545 size:9000000):  3.4002065659e-02 s
+Busqueda lineal (key:2147445644 size:9000000):  4.6664953232e-02 s
+Busqueda lineal (key:1295390003 size:9000000):  3.7622928619e-02 s
+Busqueda lineal (key:450057883 size:9000000):  4.5160055161e-02 s
+Busqueda lineal (key:187645041 size:9000000):  4.4060945511e-02 s
+Busqueda lineal (key:1980098116 size:9000000):  4.0884971619e-02 s
+Busqueda lineal (key:152503 size:9000000):  4.5479059219e-02 s
+Busqueda lineal (key:5000 size:9000000):  4.0022134781e-02 s
+Busqueda lineal (key:1493283650 size:9000000):  2.3880004883e-03 s
+Busqueda lineal (key:214826 size:9000000):  4.3340921402e-02 s
+Busqueda lineal (key:1843349527 size:9000000):  1.2171030045e-02 s
+Busqueda lineal (key:1360839354 size:9000000):  4.1615009308e-02 s
+Busqueda lineal (key:2109248666 size:9000000):  3.2006978989e-02 s
+Busqueda lineal (key:2147470852 size:9000000):  3.5324096680e-02 s
+Busqueda lineal (key:0 size:9000000):  4.4500112534e-02 s
+Promedio: 3.563298e-02
 
-Busqueda lineal (key:322486 size:10000000):  3.0555963516e-02 s
-Busqueda lineal (key:14700764 size:10000000):  4.3292045593e-02 s
-Busqueda lineal (key:3128036 size:10000000):  6.3199996948e-03 s
-Busqueda lineal (key:6337399 size:10000000):  2.8365135193e-02 s
-Busqueda lineal (key:61396 size:10000000):  4.2938232422e-02 s
-Busqueda lineal (key:2147445644 size:10000000):  4.2086839676e-02 s
-Busqueda lineal (key:1295390003 size:10000000):  4.0292978287e-02 s
-Busqueda lineal (key:450057883 size:10000000):  4.2116880417e-02 s
-Busqueda lineal (key:187645041 size:10000000):  4.5153856277e-02 s
-Busqueda lineal (key:1980098116 size:10000000):  4.8133850098e-02 s
-Busqueda lineal (key:152503 size:10000000):  4.2849063873e-02 s
-Busqueda lineal (key:5000 size:10000000):  4.1141986847e-02 s
-Busqueda lineal (key:1493283650 size:10000000):  1.7948150635e-03 s
-Busqueda lineal (key:214826 size:10000000):  3.9387941360e-02 s
-Busqueda lineal (key:1843349527 size:10000000):  1.1139869690e-02 s
-Busqueda lineal (key:1360839354 size:10000000):  3.8177013397e-02 s
-Busqueda lineal (key:2109248666 size:10000000):  2.8280019760e-02 s
-Busqueda lineal (key:2147470852 size:10000000):  3.4058094025e-02 s
-Busqueda lineal (key:0 size:10000000):  3.6656856537e-02 s
-Busqueda lineal (key:0 size:10000000):  4.3624162674e-02 s
-Promedio: 3.431828e-02
+Busqueda lineal (key:322486 size:10000000):  3.7088871002e-02 s
+Busqueda lineal (key:14700764 size:10000000):  4.3179035187e-02 s
+Busqueda lineal (key:3128036 size:10000000):  4.4250488281e-03 s
+Busqueda lineal (key:6337399 size:10000000):  2.6006221771e-02 s
+Busqueda lineal (key:61396 size:10000000):  4.0671110153e-02 s
+Busqueda lineal (key:10393545 size:10000000):  3.0495166779e-02 s
+Busqueda lineal (key:2147445644 size:10000000):  4.3022155762e-02 s
+Busqueda lineal (key:1295390003 size:10000000):  3.5870075226e-02 s
+Busqueda lineal (key:450057883 size:10000000):  4.0637969971e-02 s
+Busqueda lineal (key:187645041 size:10000000):  4.4372081757e-02 s
+Busqueda lineal (key:1980098116 size:10000000):  4.4200897217e-02 s
+Busqueda lineal (key:152503 size:10000000):  4.3799877167e-02 s
+Busqueda lineal (key:5000 size:10000000):  4.6236991882e-02 s
+Busqueda lineal (key:1493283650 size:10000000):  1.8699169159e-03 s
+Busqueda lineal (key:214826 size:10000000):  4.6064853668e-02 s
+Busqueda lineal (key:1843349527 size:10000000):  8.5079669952e-03 s
+Busqueda lineal (key:1360839354 size:10000000):  4.5082092285e-02 s
+Busqueda lineal (key:2109248666 size:10000000):  3.0913114548e-02 s
+Busqueda lineal (key:2147470852 size:10000000):  3.4855127335e-02 s
+Busqueda lineal (key:0 size:10000000):  4.5258045197e-02 s
+Promedio: 3.462783e-02
 
