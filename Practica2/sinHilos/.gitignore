@@ -1,0 +1,9 @@
+#Ignore all
+*
+
+#Unignore all extensions
+!*.*
+
+#Ignore txt 10 million
+10millonesord.txt
+10millonesdesord.txt
