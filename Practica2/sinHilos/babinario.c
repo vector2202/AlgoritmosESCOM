@@ -84,36 +84,40 @@ void search(struct node* root, int key)
     struct node* aux = root;
     while(!isempty(aux) && key != aux->data)
 	aux = (key < aux->data) ? aux->left : aux->right;
-    if(isempty(aux))
-       printf("El numero %d no se encontro.\n", key);
-    else
-	printf("El numero %d se encontro.\n", key);
 }
 
 int main(int argc, char* argv[]){
-    double utime0, stime0, wtime0,utime1, stime1, wtime1; //Variables para medición de tiempos
-    int i, element;
-    int size = atoi(argv[1]), key = atoi(argv[2]); //Tamaño del arreglo que usaremos
+    
+    int keys[] = {322486, 14700764, 3128036, 6337399, 61396, 10393545, 2147445644, 1295390003, 450057883, 187645041, 1980098116, 152503, 5000, 1493283650, 214826, 1843349527, 1360839354, 2109248666, 2147470852, 0};
+    int k, sizek = 20;
+    double sum = 0;
+    double utime0, stime0, wtime0, utime1, stime1, wtime1;
+    int size = atoi(argv[1]);
+    
     struct node* root = NULL; // Inicializar el arbol binario
+    int i, element;
     //Insertar los n de numeros en el arbol
     for (i = 0; i < size; i++) {
 	scanf("%d", &element);
 	root = push(element, root);
     }
-    printf("\nBusqueda arbol binario (key:%d size:%d).\n\n", key, size);
+    for (k = 0; k < sizek; k++) {
+      int key = keys[k];
+      printf("Busqueda arbol binario (key:%d size:%d): ", key, size);
 
-    
-    //printf("\nOrdenamiento con arbol binario de busqueda n = %d.\n", size);
-    uswtime(&utime0, &stime0, &wtime0); //Iniciamos el conteo
-    search(root, key); //Realizar el ordenamiento
-    uswtime(&utime1, &stime1, &wtime1); // Evaluar tiempos de ejecucion
-    
-    //Calculo de tiempo de ejecucion del programa
-    printf("\nReal (Tiempo total): %.10e s\n", wtime1 - wtime0);
-    printf("User (Tiempo de procesamiento en CPU): %.10e s\n", utime1 - utime0);
-    printf("Sys (Tiempo en acciónes de E/S): %.10e s\n", stime1 - stime0);
-    printf("CPU/Wall   %.10f %% \n\n",
-           100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
-    free(root); // Liberar la memoria dinamica
+      //******************************************************************
+      // Iniciar el conteo del tiempo para las evaluaciones de rendimiento
+      //******************************************************************;
+      uswtime(&utime0, &stime0, &wtime0);
+      //******************************************************************
+      // Evaluar los tiempos de ejecución
+      //******************************************************************
+      search(root, key);
+      uswtime(&utime1, &stime1, &wtime1);
+      // Cálculo del tiempo de ejecución del programa
+      printf(" %.10e s\n", wtime1 - wtime0);
+      sum += (wtime1 - wtime0);
+    }
+    printf("Promedio: %10e\n\n", sum/sizek);
     return 0;
 }

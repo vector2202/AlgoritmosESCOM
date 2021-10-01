@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "tiempo.h"
 
 int binaria(int array[], int size, int key)
 {
@@ -29,14 +30,33 @@ int binaria(int array[], int size, int key)
 }
 int main(int argc, char *argv[])
 {
-    int size = atoi(argv[1]);
-    int i, key = atoi(argv[2]);
-    int* array = (int *)malloc(size * sizeof(int));
-    for (i = 0; i < size; i++)
-	scanf("%d", array+i);
+  int keys[] = {322486,     14700764,   3128036,    6337399,   61396,
+                2147445644, 1295390003, 450057883,  187645041, 1980098116,
+                152503,     5000,       1493283650, 214826,    1843349527,
+                1360839354, 2109248666, 2147470852, 0};
+  int i, k, sizek = 20;
+  double utime0, stime0, wtime0, utime1, stime1, wtime1;
+  double sum = 0;
+  int size = atoi(argv[1]);
+  int *array = (int *)malloc(size * sizeof(int));
+  for (i = 0; i < size; i++)
+    scanf("%d", array + i);
+  for (k = 0; k < sizek; k++) {
+    int key = keys[k];
+    printf("Busqueda binaria (key:%d size:%d): ", key, size);
+    //******************************************************************
+    // Iniciar el conteo del tiempo para las evaluaciones de rendimiento
+    //******************************************************************
+    uswtime(&utime0, &stime0, &wtime0);
+    //******************************************************************
+    // Evaluar los tiempos de ejecución
+    //******************************************************************
     int index = binaria(array, size, key);
-    if (index != -1)
-        printf("El numero %d se encontro en la posicion %d.\n", key, index);
-    else
-        printf("El numero %d no esta en el arreglo.\n", key);
+    uswtime(&utime1, &stime1, &wtime1);
+    // Cálculo del tiempo de ejecución del programa
+    printf(" %.10e s\n", wtime1 - wtime0);
+    sum += (wtime1 - wtime0);
+  }
+  free(array);
+  printf("Promedio: %10e\n\n", sum / sizek);
 }

@@ -1,9 +1,12 @@
 #!/bin/bash
 
 lista=$(cat $1)
-size=$2
-key=$3
-for busqueda in $lista
+listsize=$(cat $2)
+input=$3
+for ordenamiento in $lista
 do
-    ./$busqueda $size $key < 10millonesord.txt
-done		
+    for size in $listsize
+    do
+   	./$ordenamiento $size < $input
+    done
+done
