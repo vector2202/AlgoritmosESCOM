@@ -106,6 +106,8 @@ int binaria(int l, int r)
 */
 int exponencial(int l, int r)
 {
+    if(keyfound == 1)
+	return -1;
     if(array[l] == key)
 	return l+1;
     int exponent2 = 1;

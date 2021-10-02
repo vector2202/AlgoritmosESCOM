@@ -71,6 +71,8 @@ void* procesar(void* id)
 */
 int binaria(int l, int r)
 {
+    if(keyfound == 1)
+	return -1;
     int h;
     while(l <= r)
     {

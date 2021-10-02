@@ -40,13 +40,12 @@ void* procesar(void* id)
     int n_thread = (int)id;
     int inicio,fin,i,a;
     
-    //Revisar la parte de los datos a procesar	
+    //Revisar la parte de los datos a procesar
     inicio = (n_thread * size) / NumThreads;
     if(n_thread == NumThreads-1)	
 	fin = size - 1;
     else
 	fin = ((n_thread+1) * size) / NumThreads - 1;
-        
     int indexfound = busquedaLineal(inicio, fin);
     if (indexfound != -1) {
       printf(
@@ -65,11 +64,13 @@ void* procesar(void* id)
  * para verificar si existe el numero a buscar, enn caso de que el numero si este en el arreglo la funcion devuelve la
  * posicion mas 1 donde se encuentra el numero, en caso contrario regresa un -1.
  *
- * @param posición inicial y el limite superior del pedazo de arreglo a buscar.
+ * @param posición inicial y el limite superior del pedazo de arreglo a buscar
  * @return la posicion donde se encontro el numero o si no se encontro un -1
 */
 int busquedaLineal(int l, int r)
 {
+    if(keyfound == 1)
+	return -1;
     int i;
     for (i = l; i <= r; i++)
         if (array[i] == key)

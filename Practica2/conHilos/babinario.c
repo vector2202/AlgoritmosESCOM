@@ -121,6 +121,8 @@ struct node* push(int dataToInsert, struct node* root)
  */
 int search(struct node* root, int key)
 {
+    if(keyfound == 1)
+	return -1;
     struct node* aux = root;
     while(!isempty(aux) && key != aux->data)
 	aux = (key < aux->data) ? aux->left : aux->right;

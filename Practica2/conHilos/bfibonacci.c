@@ -138,6 +138,8 @@ int min (int x, int y) {return (x <= y) ? x : y;}
 */
 int busquedafibonacci (int l, int r)
 {
+    if(keyfound == 1)
+	return -1;
     if(key < arr[l] || key > arr[r])
 	return -1;
     int auxf2,auxf1,auxfm;//auxf2 tomara el valor de n-1 y auxf1 n-2 y auxfm almacenera el numero mas pequeño
