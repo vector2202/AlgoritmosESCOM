@@ -84,6 +84,10 @@ void search(struct node* root, int key)
     struct node* aux = root;
     while(!isempty(aux) && key != aux->data)
 	aux = (key < aux->data) ? aux->left : aux->right;
+    if(isempty(aux))
+	printf("El elemento %d no se encontro en el arbol", key);
+    else
+	printf("El elemento %d se encontro en el arbol", key);
 }
 
 int main(int argc, char* argv[]){
