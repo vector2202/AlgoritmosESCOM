@@ -52,63 +52,67 @@ void* procesar(void* id)
         
     int indexfound = busquedafibonacci(inicio, fin);
     if (indexfound != -1) {
-      printf(
-          "El hilo %d encontro el numero %d en la posicion %d.\n",
-          n_thread, key, indexfound);
+      /* printf( */
+      /*     "El hilo %d encontro el numero %d en la posicion %d.\n", */
+      /*     n_thread, key, indexfound); */
       keyfound = 1;
     }
 }
 int main(int argc, char* argv[]) {
+    int keys[] = {322486,     14700764,   3128036,    6337399,    61396,
+	10393545,   2147445644, 1295390003, 450057883,  187645041,
+	1980098116, 152503,     5000,       1493283650, 214826,
+	1843349527, 1360839354, 2109248666, 2147470852, 0};
+    int k, sizek = 20;
+    double utime0, stime0, wtime0, utime1, stime1, wtime1;
+    double sum = 0;
     size = atoi(argv[1]);
-    key = atoi(argv[2]);
-    NumThreads = atoi(argv[3]);
+    //key = atoi(argv[2]);
+    NumThreads = atoi(argv[2]);
     arr = (int *)malloc(size * sizeof(int));
     int i;
     for (i = 0; i < size; i++)
 	scanf("%d", arr+i);
-    printf("\nBusqueda de fibonacci (key:%d size:%d threads:%d).\n\n", key, size, NumThreads);
-
-    //******************************************************************
-    //Iniciar el conteo del tiempo para las evaluaciones de rendimiento
-    //******************************************************************
-    double utime0, stime0, wtime0,utime1, stime1, wtime1;
-    uswtime(&utime0, &stime0, &wtime0);
-    pthread_t* thread = malloc(NumThreads * sizeof(pthread_t));
-    //*******************************************************************
-    //Procesar desde cada hilo "procesar"
-    //*******************************************************************
-    //Crear los threads con el comportamiento "segmentar"
-    for (i = 1; i < NumThreads; i++) 
-    {
-	if (pthread_create (&thread[i], NULL, procesar,(void*)i) != 0 ) 
+    for(k = 0; k < sizek; k++){
+	key = keys[k];
+	printf("Busqueda de fibonacci (key:%d size:%d threads:%d): ", key, size, NumThreads);
+	
+	//******************************************************************
+	//Iniciar el conteo del tiempo para las evaluaciones de rendimiento
+	//******************************************************************
+	uswtime(&utime0, &stime0, &wtime0);
+	pthread_t* thread = malloc(NumThreads * sizeof(pthread_t));
+	//*******************************************************************
+	//Procesar desde cada hilo "procesar"
+	//*******************************************************************
+	//Crear los threads con el comportamiento "segmentar"
+	for (i = 1; i < NumThreads; i++) 
 	{
-	    perror("El thread no  pudo crearse");
-	    exit(-1);
+	    if (pthread_create (&thread[i], NULL, procesar,(void*)i) != 0 ) 
+	    {
+		perror("El thread no  pudo crearse");
+		exit(-1);
+	    }
 	}
+	//El main ejecuta el thread 0
+	procesar(0);
+	//Esperar a que terminen los threads (Saludar)
+	for (i = 1; i < NumThreads; i++) pthread_join (thread[i], NULL);
+	
+	/* if(keyfound == 0) */
+	/*     printf("Ningun hilo encontro el numero %d en el arreglo.\n", key); */
+	//******************************************************************
+	// Evaluar los tiempos de ejecución
+	//******************************************************************
+	uswtime(&utime1, &stime1, &wtime1);
+	// Cálculo del tiempo de ejecución del programa
+	uswtime(&utime1, &stime1, &wtime1);
+	// Cálculo del tiempo de ejecución del programa
+	printf("%.10e s\n", wtime1 - wtime0);
+	sum += (wtime1 - wtime0);
     }
-    //El main ejecuta el thread 0
-    procesar(0);
-    //Esperar a que terminen los threads (Saludar)
-    for (i = 1; i < NumThreads; i++) pthread_join (thread[i], NULL);
-
-    if(keyfound == 0)
-	printf("Ningun hilo encontro el numero %d en el arreglo.\n", key);
-    //******************************************************************
-    // Evaluar los tiempos de ejecución
-    //******************************************************************
-    uswtime(&utime1, &stime1, &wtime1);
-    // Cálculo del tiempo de ejecución del programa
-    printf("\n");
-    printf("real (Tiempo total)  %.10e s\n", wtime1 - wtime0);
-    printf("user (Tiempo de procesamiento en CPU's) %.10e s\n",
-           utime1 - utime0);
-    printf("%d threads (Tiempo de procesamiento aproximado por cada thread en "
-           "CPU) %.10e s\n",
-           NumThreads, (utime1 - utime0) / NumThreads);
-    printf("sys (Tiempo en acciónes de E/S)  %.3e s\n", stime1 - stime0);
-    printf("CPU/Wall   %.10f %% \n",
-           100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
-    printf("\n");
+    free(arr);
+    printf("Promedio: %10e\n\n", sum/sizek);
     return 0;
 }
 /**

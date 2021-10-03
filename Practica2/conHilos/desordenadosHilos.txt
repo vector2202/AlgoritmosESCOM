@@ -1,0 +1,441 @@
+Busqueda arbol binario (key:322486 size:1000000 threads:20): 5.6910514832e-04 s
+Busqueda arbol binario (key:14700764 size:1000000 threads:20): 3.6406517029e-04 s
+Busqueda arbol binario (key:3128036 size:1000000 threads:20): 3.0207633972e-04 s
+Busqueda arbol binario (key:6337399 size:1000000 threads:20): 3.0612945557e-04 s
+Busqueda arbol binario (key:61396 size:1000000 threads:20): 3.1805038452e-04 s
+Busqueda arbol binario (key:10393545 size:1000000 threads:20): 3.1709671021e-04 s
+Busqueda arbol binario (key:2147445644 size:1000000 threads:20): 2.9993057251e-04 s
+Busqueda arbol binario (key:1295390003 size:1000000 threads:20): 2.9897689819e-04 s
+Busqueda arbol binario (key:450057883 size:1000000 threads:20): 2.9397010803e-04 s
+Busqueda arbol binario (key:187645041 size:1000000 threads:20): 2.9587745667e-04 s
+Busqueda arbol binario (key:1980098116 size:1000000 threads:20): 2.9397010803e-04 s
+Busqueda arbol binario (key:152503 size:1000000 threads:20): 3.0303001404e-04 s
+Busqueda arbol binario (key:5000 size:1000000 threads:20): 2.9492378235e-04 s
+Busqueda arbol binario (key:1493283650 size:1000000 threads:20): 2.9397010803e-04 s
+Busqueda arbol binario (key:214826 size:1000000 threads:20): 3.0493736267e-04 s
+Busqueda arbol binario (key:1843349527 size:1000000 threads:20): 3.2806396484e-04 s
+Busqueda arbol binario (key:1360839354 size:1000000 threads:20): 3.0994415283e-04 s
+Busqueda arbol binario (key:2109248666 size:1000000 threads:20): 3.0612945557e-04 s
+Busqueda arbol binario (key:2147470852 size:1000000 threads:20): 3.2711029053e-04 s
+Busqueda arbol binario (key:0 size:1000000 threads:20): 3.0994415283e-04 s
+Promedio: 3.218651e-04
+
+Busqueda arbol binario (key:322486 size:2000000 threads:20): 5.5313110352e-04 s
+Busqueda arbol binario (key:14700764 size:2000000 threads:20): 3.3688545227e-04 s
+Busqueda arbol binario (key:3128036 size:2000000 threads:20): 3.0016899109e-04 s
+Busqueda arbol binario (key:6337399 size:2000000 threads:20): 3.0279159546e-04 s
+Busqueda arbol binario (key:61396 size:2000000 threads:20): 3.1399726868e-04 s
+Busqueda arbol binario (key:10393545 size:2000000 threads:20): 3.4999847412e-04 s
+Busqueda arbol binario (key:2147445644 size:2000000 threads:20): 3.0612945557e-04 s
+Busqueda arbol binario (key:1295390003 size:2000000 threads:20): 3.1208992004e-04 s
+Busqueda arbol binario (key:450057883 size:2000000 threads:20): 3.5786628723e-04 s
+Busqueda arbol binario (key:187645041 size:2000000 threads:20): 3.3092498779e-04 s
+Busqueda arbol binario (key:1980098116 size:2000000 threads:20): 2.9778480530e-04 s
+Busqueda arbol binario (key:152503 size:2000000 threads:20): 3.0899047852e-04 s
+Busqueda arbol binario (key:5000 size:2000000 threads:20): 3.4022331238e-04 s
+Busqueda arbol binario (key:1493283650 size:2000000 threads:20): 3.3402442932e-04 s
+Busqueda arbol binario (key:214826 size:2000000 threads:20): 3.8313865662e-04 s
+Busqueda arbol binario (key:1843349527 size:2000000 threads:20): 3.9601325989e-04 s
+Busqueda arbol binario (key:1360839354 size:2000000 threads:20): 3.4999847412e-04 s
+Busqueda arbol binario (key:2109248666 size:2000000 threads:20): 4.3702125549e-04 s
+Busqueda arbol binario (key:2147470852 size:2000000 threads:20): 2.9397010803e-04 s
+Busqueda arbol binario (key:0 size:2000000 threads:20): 3.4499168396e-04 s
+Promedio: 3.475070e-04
+
+Busqueda arbol binario (key:322486 size:3000000 threads:20): 6.3610076904e-04 s
+Busqueda arbol binario (key:14700764 size:3000000 threads:20): 3.9005279541e-04 s
+Busqueda arbol binario (key:3128036 size:3000000 threads:20): 3.1614303589e-04 s
+Busqueda arbol binario (key:6337399 size:3000000 threads:20): 2.9993057251e-04 s
+Busqueda arbol binario (key:61396 size:3000000 threads:20): 3.0303001404e-04 s
+Busqueda arbol binario (key:10393545 size:3000000 threads:20): 3.0803680420e-04 s
+Busqueda arbol binario (key:2147445644 size:3000000 threads:20): 3.3092498779e-04 s
+Busqueda arbol binario (key:1295390003 size:3000000 threads:20): 3.1089782715e-04 s
+Busqueda arbol binario (key:450057883 size:3000000 threads:20): 3.0994415283e-04 s
+Busqueda arbol binario (key:187645041 size:3000000 threads:20): 3.2091140747e-04 s
+Busqueda arbol binario (key:1980098116 size:3000000 threads:20): 2.9397010803e-04 s
+Busqueda arbol binario (key:152503 size:3000000 threads:20): 3.0398368835e-04 s
+Busqueda arbol binario (key:5000 size:3000000 threads:20): 3.4499168396e-04 s
+Busqueda arbol binario (key:1493283650 size:3000000 threads:20): 3.0899047852e-04 s
+Busqueda arbol binario (key:214826 size:3000000 threads:20): 2.9802322388e-04 s
+Busqueda arbol binario (key:1843349527 size:3000000 threads:20): 3.3020973206e-04 s
+Busqueda arbol binario (key:1360839354 size:3000000 threads:20): 4.3201446533e-04 s
+Busqueda arbol binario (key:2109248666 size:3000000 threads:20): 3.1495094299e-04 s
+Busqueda arbol binario (key:2147470852 size:3000000 threads:20): 2.8705596924e-04 s
+Busqueda arbol binario (key:0 size:3000000 threads:20): 3.0708312988e-04 s
+Promedio: 3.373623e-04
+
+Busqueda arbol binario (key:322486 size:4000000 threads:20): 6.2394142151e-04 s
+Busqueda arbol binario (key:14700764 size:4000000 threads:20): 4.4798851013e-04 s
+Busqueda arbol binario (key:3128036 size:4000000 threads:20): 3.0493736267e-04 s
+Busqueda arbol binario (key:6337399 size:4000000 threads:20): 2.9897689819e-04 s
+Busqueda arbol binario (key:61396 size:4000000 threads:20): 2.9897689819e-04 s
+Busqueda arbol binario (key:10393545 size:4000000 threads:20): 3.1399726868e-04 s
+Busqueda arbol binario (key:2147445644 size:4000000 threads:20): 3.3211708069e-04 s
+Busqueda arbol binario (key:1295390003 size:4000000 threads:20): 3.2019615173e-04 s
+Busqueda arbol binario (key:450057883 size:4000000 threads:20): 3.1089782715e-04 s
+Busqueda arbol binario (key:187645041 size:4000000 threads:20): 3.3211708069e-04 s
+Busqueda arbol binario (key:1980098116 size:4000000 threads:20): 3.1614303589e-04 s
+Busqueda arbol binario (key:152503 size:4000000 threads:20): 2.9897689819e-04 s
+Busqueda arbol binario (key:5000 size:4000000 threads:20): 3.4809112549e-04 s
+Busqueda arbol binario (key:1493283650 size:4000000 threads:20): 2.9182434082e-04 s
+Busqueda arbol binario (key:214826 size:4000000 threads:20): 2.9301643372e-04 s
+Busqueda arbol binario (key:1843349527 size:4000000 threads:20): 3.1805038452e-04 s
+Busqueda arbol binario (key:1360839354 size:4000000 threads:20): 3.0684471130e-04 s
+Busqueda arbol binario (key:2109248666 size:4000000 threads:20): 2.8896331787e-04 s
+Busqueda arbol binario (key:2147470852 size:4000000 threads:20): 4.2796134949e-04 s
+Busqueda arbol binario (key:0 size:4000000 threads:20): 3.4713745117e-04 s
+Promedio: 3.410578e-04
+
+Busqueda arbol binario (key:322486 size:5000000 threads:20): 6.5588951111e-04 s
+Busqueda arbol binario (key:14700764 size:5000000 threads:20): 3.9410591125e-04 s
+Busqueda arbol binario (key:3128036 size:5000000 threads:20): 3.1185150146e-04 s
+Busqueda arbol binario (key:6337399 size:5000000 threads:20): 3.0279159546e-04 s
+Busqueda arbol binario (key:61396 size:5000000 threads:20): 3.0016899109e-04 s
+Busqueda arbol binario (key:10393545 size:5000000 threads:20): 2.9587745667e-04 s
+Busqueda arbol binario (key:2147445644 size:5000000 threads:20): 3.2114982605e-04 s
+Busqueda arbol binario (key:1295390003 size:5000000 threads:20): 3.2401084900e-04 s
+Busqueda arbol binario (key:450057883 size:5000000 threads:20): 3.0303001404e-04 s
+Busqueda arbol binario (key:187645041 size:5000000 threads:20): 3.1495094299e-04 s
+Busqueda arbol binario (key:1980098116 size:5000000 threads:20): 3.1709671021e-04 s
+Busqueda arbol binario (key:152503 size:5000000 threads:20): 3.2711029053e-04 s
+Busqueda arbol binario (key:5000 size:5000000 threads:20): 3.2591819763e-04 s
+Busqueda arbol binario (key:1493283650 size:5000000 threads:20): 4.3582916260e-04 s
+Busqueda arbol binario (key:214826 size:5000000 threads:20): 3.6406517029e-04 s
+Busqueda arbol binario (key:1843349527 size:5000000 threads:20): 3.2591819763e-04 s
+Busqueda arbol binario (key:1360839354 size:5000000 threads:20): 3.1208992004e-04 s
+Busqueda arbol binario (key:2109248666 size:5000000 threads:20): 3.2687187195e-04 s
+Busqueda arbol binario (key:2147470852 size:5000000 threads:20): 2.8800964355e-04 s
+Busqueda arbol binario (key:0 size:5000000 threads:20): 2.9397010803e-04 s
+Promedio: 3.420353e-04
+
+Busqueda arbol binario (key:322486 size:6000000 threads:20): 5.0783157349e-04 s
+Busqueda arbol binario (key:14700764 size:6000000 threads:20): 3.6001205444e-04 s
+Busqueda arbol binario (key:3128036 size:6000000 threads:20): 3.2997131348e-04 s
+Busqueda arbol binario (key:6337399 size:6000000 threads:20): 3.2496452332e-04 s
+Busqueda arbol binario (key:61396 size:6000000 threads:20): 3.2687187195e-04 s
+Busqueda arbol binario (key:10393545 size:6000000 threads:20): 3.6501884460e-04 s
+Busqueda arbol binario (key:2147445644 size:6000000 threads:20): 3.3402442932e-04 s
+Busqueda arbol binario (key:1295390003 size:6000000 threads:20): 3.5190582275e-04 s
+Busqueda arbol binario (key:450057883 size:6000000 threads:20): 3.5715103149e-04 s
+Busqueda arbol binario (key:187645041 size:6000000 threads:20): 3.2281875610e-04 s
+Busqueda arbol binario (key:1980098116 size:6000000 threads:20): 3.2711029053e-04 s
+Busqueda arbol binario (key:152503 size:6000000 threads:20): 3.2901763916e-04 s
+Busqueda arbol binario (key:5000 size:6000000 threads:20): 3.3116340637e-04 s
+Busqueda arbol binario (key:1493283650 size:6000000 threads:20): 3.9482116699e-04 s
+Busqueda arbol binario (key:214826 size:6000000 threads:20): 3.2019615173e-04 s
+Busqueda arbol binario (key:1843349527 size:6000000 threads:20): 3.2091140747e-04 s
+Busqueda arbol binario (key:1360839354 size:6000000 threads:20): 3.3998489380e-04 s
+Busqueda arbol binario (key:2109248666 size:6000000 threads:20): 3.2997131348e-04 s
+Busqueda arbol binario (key:2147470852 size:6000000 threads:20): 3.2401084900e-04 s
+Busqueda arbol binario (key:0 size:6000000 threads:20): 3.3998489380e-04 s
+Promedio: 3.468871e-04
+
+
+Busqueda arbol binario (key:322486 size:7000000 threads:20): 5.5599212646e-04 s
+Busqueda arbol binario (key:14700764 size:7000000 threads:20): 3.6311149597e-04 s
+Busqueda arbol binario (key:3128036 size:7000000 threads:20): 3.2114982605e-04 s
+Busqueda arbol binario (key:6337399 size:7000000 threads:20): 3.1995773315e-04 s
+Busqueda arbol binario (key:61396 size:7000000 threads:20): 3.3092498779e-04 s
+Busqueda arbol binario (key:10393545 size:7000000 threads:20): 3.4093856812e-04 s
+Busqueda arbol binario (key:2147445644 size:7000000 threads:20): 3.2615661621e-04 s
+Busqueda arbol binario (key:1295390003 size:7000000 threads:20): 3.2496452332e-04 s
+Busqueda arbol binario (key:450057883 size:7000000 threads:20): 3.1900405884e-04 s
+Busqueda arbol binario (key:187645041 size:7000000 threads:20): 3.2210350037e-04 s
+Busqueda arbol binario (key:1980098116 size:7000000 threads:20): 3.2806396484e-04 s
+Busqueda arbol binario (key:152503 size:7000000 threads:20): 3.4403800964e-04 s
+Busqueda arbol binario (key:5000 size:7000000 threads:20): 3.2305717468e-04 s
+Busqueda arbol binario (key:1493283650 size:7000000 threads:20): 4.1198730469e-04 s
+Busqueda arbol binario (key:214826 size:7000000 threads:20): 3.5977363586e-04 s
+Busqueda arbol binario (key:1843349527 size:7000000 threads:20): 3.3593177795e-04 s
+Busqueda arbol binario (key:1360839354 size:7000000 threads:20): 3.4189224243e-04 s
+Busqueda arbol binario (key:2109248666 size:7000000 threads:20): 3.1805038452e-04 s
+Busqueda arbol binario (key:2147470852 size:7000000 threads:20): 3.3807754517e-04 s
+Busqueda arbol binario (key:0 size:7000000 threads:20): 3.3402442932e-04 s
+Promedio: 3.479600e-04
+
+Busqueda arbol binario (key:322486 size:8000000 threads:20): 4.9495697021e-04 s
+Busqueda arbol binario (key:14700764 size:8000000 threads:20): 3.8313865662e-04 s
+Busqueda arbol binario (key:3128036 size:8000000 threads:20): 3.2591819763e-04 s
+Busqueda arbol binario (key:6337399 size:8000000 threads:20): 3.4213066101e-04 s
+Busqueda arbol binario (key:61396 size:8000000 threads:20): 3.2901763916e-04 s
+Busqueda arbol binario (key:10393545 size:8000000 threads:20): 3.2782554626e-04 s
+Busqueda arbol binario (key:2147445644 size:8000000 threads:20): 3.4713745117e-04 s
+Busqueda arbol binario (key:1295390003 size:8000000 threads:20): 3.6597251892e-04 s
+Busqueda arbol binario (key:450057883 size:8000000 threads:20): 3.4093856812e-04 s
+Busqueda arbol binario (key:187645041 size:8000000 threads:20): 3.4999847412e-04 s
+Busqueda arbol binario (key:1980098116 size:8000000 threads:20): 3.4093856812e-04 s
+Busqueda arbol binario (key:152503 size:8000000 threads:20): 3.3688545227e-04 s
+Busqueda arbol binario (key:5000 size:8000000 threads:20): 3.4499168396e-04 s
+Busqueda arbol binario (key:1493283650 size:8000000 threads:20): 3.4499168396e-04 s
+Busqueda arbol binario (key:214826 size:8000000 threads:20): 3.3783912659e-04 s
+Busqueda arbol binario (key:1843349527 size:8000000 threads:20): 3.4999847412e-04 s
+Busqueda arbol binario (key:1360839354 size:8000000 threads:20): 3.4379959106e-04 s
+Busqueda arbol binario (key:2109248666 size:8000000 threads:20): 3.4379959106e-04 s
+Busqueda arbol binario (key:2147470852 size:8000000 threads:20): 3.4093856812e-04 s
+Busqueda arbol binario (key:0 size:8000000 threads:20): 3.3593177795e-04 s
+Promedio: 3.513575e-04
+
+Busqueda arbol binario (key:322486 size:9000000 threads:20): 5.8984756470e-04 s
+Busqueda arbol binario (key:14700764 size:9000000 threads:20): 4.1890144348e-04 s
+Busqueda arbol binario (key:3128036 size:9000000 threads:20): 3.9482116699e-04 s
+Busqueda arbol binario (key:6337399 size:9000000 threads:20): 3.9196014404e-04 s
+Busqueda arbol binario (key:61396 size:9000000 threads:20): 3.8003921509e-04 s
+Busqueda arbol binario (key:10393545 size:9000000 threads:20): 3.7813186646e-04 s
+Busqueda arbol binario (key:2147445644 size:9000000 threads:20): 3.7288665771e-04 s
+Busqueda arbol binario (key:1295390003 size:9000000 threads:20): 3.8290023804e-04 s
+Busqueda arbol binario (key:450057883 size:9000000 threads:20): 3.7002563477e-04 s
+Busqueda arbol binario (key:187645041 size:9000000 threads:20): 3.5595893860e-04 s
+Busqueda arbol binario (key:1980098116 size:9000000 threads:20): 3.7598609924e-04 s
+Busqueda arbol binario (key:152503 size:9000000 threads:20): 3.3998489380e-04 s
+Busqueda arbol binario (key:5000 size:9000000 threads:20): 3.5691261292e-04 s
+Busqueda arbol binario (key:1493283650 size:9000000 threads:20): 3.4999847412e-04 s
+Busqueda arbol binario (key:214826 size:9000000 threads:20): 3.5810470581e-04 s
+Busqueda arbol binario (key:1843349527 size:9000000 threads:20): 3.5810470581e-04 s
+Busqueda arbol binario (key:1360839354 size:9000000 threads:20): 3.8409233093e-04 s
+Busqueda arbol binario (key:2109248666 size:9000000 threads:20): 3.6382675171e-04 s
+Busqueda arbol binario (key:2147470852 size:9000000 threads:20): 3.5691261292e-04 s
+Busqueda arbol binario (key:0 size:9000000 threads:20): 3.6716461182e-04 s
+Promedio: 3.823280e-04
+
+Busqueda arbol binario (key:322486 size:10000000 threads:20): 5.5813789368e-04 s
+Busqueda arbol binario (key:14700764 size:10000000 threads:20): 3.9005279541e-04 s
+Busqueda arbol binario (key:3128036 size:10000000 threads:20): 3.6311149597e-04 s
+Busqueda arbol binario (key:6337399 size:10000000 threads:20): 3.6907196045e-04 s
+Busqueda arbol binario (key:61396 size:10000000 threads:20): 3.5905838013e-04 s
+Busqueda arbol binario (key:10393545 size:10000000 threads:20): 3.6692619324e-04 s
+Busqueda arbol binario (key:2147445644 size:10000000 threads:20): 3.6096572876e-04 s
+Busqueda arbol binario (key:1295390003 size:10000000 threads:20): 3.6787986755e-04 s
+Busqueda arbol binario (key:450057883 size:10000000 threads:20): 3.6907196045e-04 s
+Busqueda arbol binario (key:187645041 size:10000000 threads:20): 3.5810470581e-04 s
+Busqueda arbol binario (key:1980098116 size:10000000 threads:20): 3.6191940308e-04 s
+Busqueda arbol binario (key:152503 size:10000000 threads:20): 3.9100646973e-04 s
+Busqueda arbol binario (key:5000 size:10000000 threads:20): 3.6597251892e-04 s
+Busqueda arbol binario (key:1493283650 size:10000000 threads:20): 4.3201446533e-04 s
+Busqueda arbol binario (key:214826 size:10000000 threads:20): 4.6491622925e-04 s
+Busqueda arbol binario (key:1843349527 size:10000000 threads:20): 3.8599967957e-04 s
+Busqueda arbol binario (key:1360839354 size:10000000 threads:20): 3.6096572876e-04 s
+Busqueda arbol binario (key:2109248666 size:10000000 threads:20): 3.5285949707e-04 s
+Busqueda arbol binario (key:2147470852 size:10000000 threads:20): 3.6692619324e-04 s
+Busqueda arbol binario (key:0 size:10000000 threads:20): 3.9386749268e-04 s
+Promedio: 3.869414e-04
+
+Busqueda lineal (key:322486 size:1000000 threads:20): 6.9594383240e-04 s
+Busqueda lineal (key:14700764 size:1000000 threads:20): 5.6600570679e-04 s
+Busqueda lineal (key:3128036 size:1000000 threads:20): 6.0081481934e-04 s
+Busqueda lineal (key:6337399 size:1000000 threads:20): 6.1798095703e-04 s
+Busqueda lineal (key:61396 size:1000000 threads:20): 7.0405006409e-04 s
+Busqueda lineal (key:10393545 size:1000000 threads:20): 9.3793869019e-04 s
+Busqueda lineal (key:2147445644 size:1000000 threads:20): 6.5994262695e-04 s
+Busqueda lineal (key:1295390003 size:1000000 threads:20): 7.7414512634e-04 s
+Busqueda lineal (key:450057883 size:1000000 threads:20): 9.5319747925e-04 s
+Busqueda lineal (key:187645041 size:1000000 threads:20): 7.1310997009e-04 s
+Busqueda lineal (key:1980098116 size:1000000 threads:20): 6.9808959961e-04 s
+Busqueda lineal (key:152503 size:1000000 threads:20): 7.8678131104e-04 s
+Busqueda lineal (key:5000 size:1000000 threads:20): 8.1491470337e-04 s
+Busqueda lineal (key:1493283650 size:1000000 threads:20): 6.0105323792e-04 s
+Busqueda lineal (key:214826 size:1000000 threads:20): 3.5309791565e-04 s
+Busqueda lineal (key:1843349527 size:1000000 threads:20): 3.2305717468e-04 s
+Busqueda lineal (key:1360839354 size:1000000 threads:20): 2.8085708618e-04 s
+Busqueda lineal (key:2109248666 size:1000000 threads:20): 2.8991699219e-04 s
+Busqueda lineal (key:2147470852 size:1000000 threads:20): 2.8109550476e-04 s
+Busqueda lineal (key:0 size:1000000 threads:20): 2.8109550476e-04 s
+Promedio: 5.966544e-04
+
+Busqueda lineal (key:322486 size:2000000 threads:20): 1.2118816376e-03 s
+Busqueda lineal (key:14700764 size:2000000 threads:20): 1.0671615601e-03 s
+Busqueda lineal (key:3128036 size:2000000 threads:20): 1.0600090027e-03 s
+Busqueda lineal (key:6337399 size:2000000 threads:20): 2.9897689819e-04 s
+Busqueda lineal (key:61396 size:2000000 threads:20): 2.9706954956e-04 s
+Busqueda lineal (key:10393545 size:2000000 threads:20): 3.0803680420e-04 s
+Busqueda lineal (key:2147445644 size:2000000 threads:20): 3.0708312988e-04 s
+Busqueda lineal (key:1295390003 size:2000000 threads:20): 3.1399726868e-04 s
+Busqueda lineal (key:450057883 size:2000000 threads:20): 2.9802322388e-04 s
+Busqueda lineal (key:187645041 size:2000000 threads:20): 2.9397010803e-04 s
+Busqueda lineal (key:1980098116 size:2000000 threads:20): 2.8896331787e-04 s
+Busqueda lineal (key:152503 size:2000000 threads:20): 2.8300285339e-04 s
+Busqueda lineal (key:5000 size:2000000 threads:20): 2.7513504028e-04 s
+Busqueda lineal (key:1493283650 size:2000000 threads:20): 2.8109550476e-04 s
+Busqueda lineal (key:214826 size:2000000 threads:20): 2.8300285339e-04 s
+Busqueda lineal (key:1843349527 size:2000000 threads:20): 2.7394294739e-04 s
+Busqueda lineal (key:1360839354 size:2000000 threads:20): 2.7585029602e-04 s
+Busqueda lineal (key:2109248666 size:2000000 threads:20): 2.7298927307e-04 s
+Busqueda lineal (key:2147470852 size:2000000 threads:20): 2.8204917908e-04 s
+Busqueda lineal (key:0 size:2000000 threads:20): 2.7799606323e-04 s
+Promedio: 4.125118e-04
+
+Busqueda lineal (key:322486 size:3000000 threads:20): 1.8320083618e-03 s
+Busqueda lineal (key:14700764 size:3000000 threads:20): 1.5108585358e-03 s
+Busqueda lineal (key:3128036 size:3000000 threads:20): 1.0528564453e-03 s
+Busqueda lineal (key:6337399 size:3000000 threads:20): 3.5595893860e-04 s
+Busqueda lineal (key:61396 size:3000000 threads:20): 3.3617019653e-04 s
+Busqueda lineal (key:10393545 size:3000000 threads:20): 3.3903121948e-04 s
+Busqueda lineal (key:2147445644 size:3000000 threads:20): 3.3378601074e-04 s
+Busqueda lineal (key:1295390003 size:3000000 threads:20): 2.7918815613e-04 s
+Busqueda lineal (key:450057883 size:3000000 threads:20): 3.6406517029e-04 s
+Busqueda lineal (key:187645041 size:3000000 threads:20): 3.2997131348e-04 s
+Busqueda lineal (key:1980098116 size:3000000 threads:20): 2.9301643372e-04 s
+Busqueda lineal (key:152503 size:3000000 threads:20): 2.9182434082e-04 s
+Busqueda lineal (key:5000 size:3000000 threads:20): 3.7598609924e-04 s
+Busqueda lineal (key:1493283650 size:3000000 threads:20): 3.0517578125e-04 s
+Busqueda lineal (key:214826 size:3000000 threads:20): 2.7489662170e-04 s
+Busqueda lineal (key:1843349527 size:3000000 threads:20): 2.8991699219e-04 s
+Busqueda lineal (key:1360839354 size:3000000 threads:20): 2.9015541077e-04 s
+Busqueda lineal (key:2109248666 size:3000000 threads:20): 2.8491020203e-04 s
+Busqueda lineal (key:2147470852 size:3000000 threads:20): 2.9897689819e-04 s
+Busqueda lineal (key:0 size:3000000 threads:20): 3.1900405884e-04 s
+Promedio: 4.878879e-04
+
+Busqueda lineal (key:322486 size:4000000 threads:20): 2.3000240326e-03 s
+Busqueda lineal (key:14700764 size:4000000 threads:20): 1.9779205322e-03 s
+Busqueda lineal (key:3128036 size:4000000 threads:20): 8.6998939514e-04 s
+Busqueda lineal (key:6337399 size:4000000 threads:20): 3.4618377686e-04 s
+Busqueda lineal (key:61396 size:4000000 threads:20): 2.9897689819e-04 s
+Busqueda lineal (key:10393545 size:4000000 threads:20): 2.8300285339e-04 s
+Busqueda lineal (key:2147445644 size:4000000 threads:20): 2.9110908508e-04 s
+Busqueda lineal (key:1295390003 size:4000000 threads:20): 2.9802322388e-04 s
+Busqueda lineal (key:450057883 size:4000000 threads:20): 2.8300285339e-04 s
+Busqueda lineal (key:187645041 size:4000000 threads:20): 2.9897689819e-04 s
+Busqueda lineal (key:1980098116 size:4000000 threads:20): 3.2401084900e-04 s
+Busqueda lineal (key:152503 size:4000000 threads:20): 2.9301643372e-04 s
+Busqueda lineal (key:5000 size:4000000 threads:20): 2.7990341187e-04 s
+Busqueda lineal (key:1493283650 size:4000000 threads:20): 3.0899047852e-04 s
+Busqueda lineal (key:214826 size:4000000 threads:20): 3.1185150146e-04 s
+Busqueda lineal (key:1843349527 size:4000000 threads:20): 2.7394294739e-04 s
+Busqueda lineal (key:1360839354 size:4000000 threads:20): 2.9015541077e-04 s
+Busqueda lineal (key:2109248666 size:4000000 threads:20): 3.5500526428e-04 s
+Busqueda lineal (key:2147470852 size:4000000 threads:20): 2.8181076050e-04 s
+Busqueda lineal (key:0 size:4000000 threads:20): 2.8586387634e-04 s
+Promedio: 5.125880e-04
+
+Busqueda lineal (key:322486 size:5000000 threads:20): 2.8870105743e-03 s
+Busqueda lineal (key:14700764 size:5000000 threads:20): 2.4271011353e-03 s
+Busqueda lineal (key:3128036 size:5000000 threads:20): 9.6511840820e-04 s
+Busqueda lineal (key:6337399 size:5000000 threads:20): 4.1604042053e-04 s
+Busqueda lineal (key:61396 size:5000000 threads:20): 3.1709671021e-04 s
+Busqueda lineal (key:10393545 size:5000000 threads:20): 3.1709671021e-04 s
+Busqueda lineal (key:2147445644 size:5000000 threads:20): 3.0899047852e-04 s
+Busqueda lineal (key:1295390003 size:5000000 threads:20): 2.7394294739e-04 s
+Busqueda lineal (key:450057883 size:5000000 threads:20): 2.8395652771e-04 s
+Busqueda lineal (key:187645041 size:5000000 threads:20): 2.7394294739e-04 s
+Busqueda lineal (key:1980098116 size:5000000 threads:20): 2.8204917908e-04 s
+Busqueda lineal (key:152503 size:5000000 threads:20): 2.7489662170e-04 s
+Busqueda lineal (key:5000 size:5000000 threads:20): 3.1518936157e-04 s
+Busqueda lineal (key:1493283650 size:5000000 threads:20): 2.8491020203e-04 s
+Busqueda lineal (key:214826 size:5000000 threads:20): 2.7990341187e-04 s
+Busqueda lineal (key:1843349527 size:5000000 threads:20): 2.9182434082e-04 s
+Busqueda lineal (key:1360839354 size:5000000 threads:20): 3.5595893860e-04 s
+Busqueda lineal (key:2109248666 size:5000000 threads:20): 3.0398368835e-04 s
+Busqueda lineal (key:2147470852 size:5000000 threads:20): 2.8800964355e-04 s
+Busqueda lineal (key:0 size:5000000 threads:20): 2.9587745667e-04 s
+Promedio: 5.721450e-04
+
+Busqueda lineal (key:322486 size:6000000 threads:20): 3.4949779510e-03 s
+Busqueda lineal (key:14700764 size:6000000 threads:20): 2.9189586639e-03 s
+Busqueda lineal (key:3128036 size:6000000 threads:20): 1.0111331940e-03 s
+Busqueda lineal (key:6337399 size:6000000 threads:20): 3.2496452332e-04 s
+Busqueda lineal (key:61396 size:6000000 threads:20): 2.9182434082e-04 s
+Busqueda lineal (key:10393545 size:6000000 threads:20): 2.9706954956e-04 s
+Busqueda lineal (key:2147445644 size:6000000 threads:20): 2.7608871460e-04 s
+Busqueda lineal (key:1295390003 size:6000000 threads:20): 2.8705596924e-04 s
+Busqueda lineal (key:450057883 size:6000000 threads:20): 2.7704238892e-04 s
+Busqueda lineal (key:187645041 size:6000000 threads:20): 2.8014183044e-04 s
+Busqueda lineal (key:1980098116 size:6000000 threads:20): 2.8109550476e-04 s
+Busqueda lineal (key:152503 size:6000000 threads:20): 3.2281875610e-04 s
+Busqueda lineal (key:5000 size:6000000 threads:20): 2.9301643372e-04 s
+Busqueda lineal (key:1493283650 size:6000000 threads:20): 2.7894973755e-04 s
+Busqueda lineal (key:214826 size:6000000 threads:20): 2.9087066650e-04 s
+Busqueda lineal (key:1843349527 size:6000000 threads:20): 3.0398368835e-04 s
+Busqueda lineal (key:1360839354 size:6000000 threads:20): 2.9706954956e-04 s
+Busqueda lineal (key:2109248666 size:6000000 threads:20): 2.9993057251e-04 s
+Busqueda lineal (key:2147470852 size:6000000 threads:20): 3.3187866211e-04 s
+Busqueda lineal (key:0 size:6000000 threads:20): 3.0422210693e-04 s
+Promedio: 6.231546e-04
+
+Busqueda lineal (key:322486 size:7000000 threads:20): 3.6721229553e-03 s
+Busqueda lineal (key:14700764 size:7000000 threads:20): 3.2451152802e-03 s
+Busqueda lineal (key:3128036 size:7000000 threads:20): 1.2028217316e-03 s
+Busqueda lineal (key:6337399 size:7000000 threads:20): 3.3688545227e-04 s
+Busqueda lineal (key:61396 size:7000000 threads:20): 3.1995773315e-04 s
+Busqueda lineal (key:10393545 size:7000000 threads:20): 3.1399726868e-04 s
+Busqueda lineal (key:2147445644 size:7000000 threads:20): 3.1685829163e-04 s
+Busqueda lineal (key:1295390003 size:7000000 threads:20): 3.0493736267e-04 s
+Busqueda lineal (key:450057883 size:7000000 threads:20): 3.0708312988e-04 s
+Busqueda lineal (key:187645041 size:7000000 threads:20): 4.1604042053e-04 s
+Busqueda lineal (key:1980098116 size:7000000 threads:20): 3.5190582275e-04 s
+Busqueda lineal (key:152503 size:7000000 threads:20): 2.8300285339e-04 s
+Busqueda lineal (key:5000 size:7000000 threads:20): 2.9087066650e-04 s
+Busqueda lineal (key:1493283650 size:7000000 threads:20): 2.8085708618e-04 s
+Busqueda lineal (key:214826 size:7000000 threads:20): 2.8300285339e-04 s
+Busqueda lineal (key:1843349527 size:7000000 threads:20): 3.8909912109e-04 s
+Busqueda lineal (key:1360839354 size:7000000 threads:20): 2.9706954956e-04 s
+Busqueda lineal (key:2109248666 size:7000000 threads:20): 2.8300285339e-04 s
+Busqueda lineal (key:2147470852 size:7000000 threads:20): 3.0779838562e-04 s
+Busqueda lineal (key:0 size:7000000 threads:20): 3.3187866211e-04 s
+Promedio: 6.767154e-04
+
+Busqueda lineal (key:322486 size:8000000 threads:20): 4.2419433594e-03 s
+Busqueda lineal (key:14700764 size:8000000 threads:20): 3.5181045532e-03 s
+Busqueda lineal (key:3128036 size:8000000 threads:20): 1.3129711151e-03 s
+Busqueda lineal (key:6337399 size:8000000 threads:20): 3.9196014404e-04 s
+Busqueda lineal (key:61396 size:8000000 threads:20): 2.9897689819e-04 s
+Busqueda lineal (key:10393545 size:8000000 threads:20): 2.8300285339e-04 s
+Busqueda lineal (key:2147445644 size:8000000 threads:20): 2.9206275940e-04 s
+Busqueda lineal (key:1295390003 size:8000000 threads:20): 2.9182434082e-04 s
+Busqueda lineal (key:450057883 size:8000000 threads:20): 3.0183792114e-04 s
+Busqueda lineal (key:187645041 size:8000000 threads:20): 2.9778480530e-04 s
+Busqueda lineal (key:1980098116 size:8000000 threads:20): 3.2186508179e-04 s
+Busqueda lineal (key:152503 size:8000000 threads:20): 2.7704238892e-04 s
+Busqueda lineal (key:5000 size:8000000 threads:20): 2.7608871460e-04 s
+Busqueda lineal (key:1493283650 size:8000000 threads:20): 2.8991699219e-04 s
+Busqueda lineal (key:214826 size:8000000 threads:20): 2.7489662170e-04 s
+Busqueda lineal (key:1843349527 size:8000000 threads:20): 2.7799606323e-04 s
+Busqueda lineal (key:1360839354 size:8000000 threads:20): 2.8395652771e-04 s
+Busqueda lineal (key:2109248666 size:8000000 threads:20): 2.7704238892e-04 s
+Busqueda lineal (key:2147470852 size:8000000 threads:20): 3.1495094299e-04 s
+Busqueda lineal (key:0 size:8000000 threads:20): 2.7704238892e-04 s
+Promedio: 7.050633e-04
+
+Busqueda lineal (key:322486 size:9000000 threads:20): 3.5469532013e-03 s
+Busqueda lineal (key:14700764 size:9000000 threads:20): 3.6311149597e-04 s
+Busqueda lineal (key:3128036 size:9000000 threads:20): 3.0207633972e-04 s
+Busqueda lineal (key:6337399 size:9000000 threads:20): 2.7608871460e-04 s
+Busqueda lineal (key:61396 size:9000000 threads:20): 3.1495094299e-04 s
+Busqueda lineal (key:10393545 size:9000000 threads:20): 3.0493736267e-04 s
+Busqueda lineal (key:2147445644 size:9000000 threads:20): 2.7489662170e-04 s
+Busqueda lineal (key:1295390003 size:9000000 threads:20): 3.4809112549e-04 s
+Busqueda lineal (key:450057883 size:9000000 threads:20): 3.7813186646e-04 s
+Busqueda lineal (key:187645041 size:9000000 threads:20): 2.9587745667e-04 s
+Busqueda lineal (key:1980098116 size:9000000 threads:20): 2.9993057251e-04 s
+Busqueda lineal (key:152503 size:9000000 threads:20): 3.3807754517e-04 s
+Busqueda lineal (key:5000 size:9000000 threads:20): 3.1208992004e-04 s
+Busqueda lineal (key:1493283650 size:9000000 threads:20): 2.9397010803e-04 s
+Busqueda lineal (key:214826 size:9000000 threads:20): 2.7990341187e-04 s
+Busqueda lineal (key:1843349527 size:9000000 threads:20): 3.0088424683e-04 s
+Busqueda lineal (key:1360839354 size:9000000 threads:20): 2.7394294739e-04 s
+Busqueda lineal (key:2109248666 size:9000000 threads:20): 3.4213066101e-04 s
+Busqueda lineal (key:2147470852 size:9000000 threads:20): 4.0698051453e-04 s
+Busqueda lineal (key:0 size:9000000 threads:20): 2.8491020203e-04 s
+Promedio: 4.768968e-04
+
+Busqueda lineal (key:322486 size:10000000 threads:20): 4.9390792847e-03 s
+Busqueda lineal (key:14700764 size:10000000 threads:20): 4.6586990356e-04 s
+Busqueda lineal (key:3128036 size:10000000 threads:20): 4.0411949158e-04 s
+Busqueda lineal (key:6337399 size:10000000 threads:20): 2.8991699219e-04 s
+Busqueda lineal (key:61396 size:10000000 threads:20): 2.8300285339e-04 s
+Busqueda lineal (key:10393545 size:10000000 threads:20): 2.7990341187e-04 s
+Busqueda lineal (key:2147445644 size:10000000 threads:20): 3.0183792114e-04 s
+Busqueda lineal (key:1295390003 size:10000000 threads:20): 2.7894973755e-04 s
+Busqueda lineal (key:450057883 size:10000000 threads:20): 2.7513504028e-04 s
+Busqueda lineal (key:187645041 size:10000000 threads:20): 2.8109550476e-04 s
+Busqueda lineal (key:1980098116 size:10000000 threads:20): 2.7608871460e-04 s
+Busqueda lineal (key:152503 size:10000000 threads:20): 2.7608871460e-04 s
+Busqueda lineal (key:5000 size:10000000 threads:20): 2.7608871460e-04 s
+Busqueda lineal (key:1493283650 size:10000000 threads:20): 2.8705596924e-04 s
+Busqueda lineal (key:214826 size:10000000 threads:20): 3.2496452332e-04 s
+Busqueda lineal (key:1843349527 size:10000000 threads:20): 2.7894973755e-04 s
+Busqueda lineal (key:1360839354 size:10000000 threads:20): 2.8800964355e-04 s
+Busqueda lineal (key:2109248666 size:10000000 threads:20): 2.7298927307e-04 s
+Busqueda lineal (key:2147470852 size:10000000 threads:20): 2.7990341187e-04 s
+Busqueda lineal (key:0 size:10000000 threads:20): 2.7394294739e-04 s
+Promedio: 5.316496e-04
+
