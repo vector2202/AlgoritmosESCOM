@@ -21,34 +21,34 @@
 %% Casos
 \section*{Analsis de casos por codigo}
 \subsection*{Busqueda con Arbol Binario de busqueda}
-Operaciones basicas consideradas: comparacion entre la llave a buscar y el elemento del nodo, la comparacion entre el arbol auxiliar y nulo y la asignacion de auxiliar.\\
+Operaciones basicas consideradas: comparacion entre la llave a buscar y el elemento del nodo, la funcion isempty que es una comparacion entre el ABB y el valor nulo.\\
 \inputminted[firstline = 82, lastline = 91]{C}{babinario.c}
 Condiciones del mejor caso: que el elemento a buscar este en la raiz.\\
-Condiciones del peor caso: un arbol que tenga n niveles y el elemento este en el nodo hoja.\\
+Condiciones del peor caso: un arbol de tamaño de problema n que tenga n niveles y el elemento este en el nodo hoja.\\
 Funcion de complejidad temporal del mejor caso $= 1$\\
-Funcion de complejidad temporal del peor caso $= 4n$\\
-Funcion de complejidad temporal del caso medio $= \frac{1+4n)}{2}$
+Funcion de complejidad temporal del peor caso $= 2n$\\
+Funcion de complejidad temporal del caso medio $= \frac{1+2n}{2}$
 \newpage
 \subsection*{Busqueda Binaria}
-Operaciones basicas consideradas: comparaciones de la llave con elementos del arreglo, actualizacion de limite inferior y superior y la asignacion de h.\\
+Operaciones basicas consideradas: comparaciones de la llave con elementos del arreglo, actualizacion de limite inferior y limite superior y la asignacion de h.\\
 \inputminted[firstline = 15, lastline = 30]{C}{bbinaria.c}
 Condiciones del mejor caso: cuando el numero a buscar esta en medio del arreglo.\\
 Condiciones del peor caso: cuando el numero a buscar esta al final del arreglo.\\
-Funcion de complejidad temporal del mejor caso $= 4$\\
+Funcion de complejidad temporal del mejor caso $= 3$\\
 Funcion de complejidad temporal del peor caso $= 4log_2(n)$\\
-Funcion de complejidad temporal del caso medio $= \frac{4log_2(n) + 4 + 3log_2(n)}{3}-$
+Funcion de complejidad temporal del caso medio $= \frac{4log_2(n) + 3 + 3log_2(n)}{3}$
 \newpage
 \subsection*{Busqueda exponencial}
-Operaciones consideradas: Comparaciones entre el elemento buscado y los elementos del arreglo. operaciones con exponent2 e i.\\
+Operaciones consideradas: comparacion entre el elemento buscado y los elementos del arreglo, comparacion entre i y el size, operacion de asignacion de i, la busqueda binaria que se acotara como $log_2$ n.\\
 \inputminted[firstline = 32, lastline = 40]{C}{bexponencial.c}
 Condición de mejor caso: El número buscado está en la primera posición. \\
-Condiciones Peor caso: El numero esta en una posicion $2^m + 1$ donde $2^m$ es el numero potencia de 2 mas cercano y menor a n. \\
+Condiciones Peor caso: El numero esta en la ultima posicion del arreglo siempre y cuando el tamaño del arreglo no sea: potencia de 2 + 1, en ese caso seria la posicion anterior. \\
 Función de complejidad temporal del mejor caso : 1.\\
-Función complejidad temporal del peor caso: $3+4log_2(n)$. \\
-Función complejidad caso medio: $\frac{3}{2}+2log_2(n)$.\\
+Función complejidad temporal del peor caso: $4log_2(n)$. \\
+Función complejidad caso medio: $\frac{1}{2}+2log_2(n)$.\\
 \newpage
 \subsection*{Busqueda de fibonacci}
-Operaciones consideradas: Comparaciones entre el elemento buscado y los elementos del arreglo, asignaciones a las variables fibonacci dentro del while de analisis.\\
+Operaciones consideradas: Comparaciones entre el elemento buscado y los elementos del arreglo, asignaciones a las variables fibonacci dentro del while de analisis.
 \inputminted[firstline = 55, lastline = 100]{C}{bfibonacci.c}
 Condición de mejor caso: El número buscado está en la primera posición. \\
 Condiciones Peor caso: Cuando el número que buscamos se encuentra en el sub-arreglo que tiene mayor tamaño por lo que hará un mayor número de instrucciones. \\

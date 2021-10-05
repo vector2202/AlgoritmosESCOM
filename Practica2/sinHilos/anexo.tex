@@ -1,0 +1,35 @@
+%%Ambiente
+\documentclass[12pt]{report}
+
+%% Paquetes
+\usepackage{hyperref}
+\usepackage[spanish, mexico]{babel}
+\usepackage{listings}
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\setlength{\parindent}{0cm}
+
+%%Titulo
+\title{Practica 2}
+%%Autor
+\author{Los utlimos}
+
+%%Inicio del documento
+\begin{document}
+\section*{Busqueda ABB}
+\inputminted{C}{babinario.c}
+\newpage
+\section*{Busqueda binaria}
+\inputminted{C}{bbinaria.c}
+\newpage
+\section*{Busqueda exponencial}
+\inputminted{C}{bexponencial.c}
+\newpage
+\section*{Busqueda de Fibonacci}
+\inputminted{C}{bfibonacci.c}
+\newpage
+\section*{Busqueda lineal}
+\inputminted{C}{blineal.c}
+
+\end{document}

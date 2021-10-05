@@ -1,0 +1,11 @@
+Busqueda lineal (key:2045206161 size:10000000):  2.1198034286e-02 s
+c = 2.1198034286e-09
+
+Busqueda arbol binario (key:21487193 size:100000): 3.2877922058e-04 s
+c = 3.2877922058e-09
+
+Busqueda exponencial (key:2147483528 size:10000000):  1.9073486328e-06 s
+c = 2.05060411e-08
+
+Busqueda binaria (key:2147483528 size:10000000):  1.1920928955e-06 s
+c = 2.050604108e-08

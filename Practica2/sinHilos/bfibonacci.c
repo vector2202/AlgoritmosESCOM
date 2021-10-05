@@ -16,22 +16,16 @@ int min (int x, int y);
 //funcion que buscar un numero en un arreglo
 int busquedafibonacci (int arr [], int x, int n);
 
-int main(int argc, char* argv[]) {
-  int keys[] = {322486,     14700764,   3128036,    6337399,    61396,
-                10393545,   2147445644, 1295390003, 450057883,  187645041,
-                1980098116, 152503,     5000,       1493283650, 214826,
-                1843349527, 1360839354, 2109248666, 2147470852, 0};
-  int i, k, sizek = 20;
-  double utime0, stime0, wtime0, utime1, stime1, wtime1;
-  double sum = 0;
-  int size = atoi(argv[1]);
-  int *array = (int *)malloc(size * sizeof(int));
-  for (i = 0; i < size; i++)
-    scanf("%d", array + i);
-  for (k = 0; k < sizek; k++) {
-    int key = keys[k];
-    printf("Busqueda fibonacci (key:%d size:%d): ", key, size);
-
+int main(int argc, char* argv[])
+{
+    int i;
+    double utime0, stime0, wtime0, utime1, stime1, wtime1;
+    int size = atoi(argv[1]);
+    int key = atoi(argv[2]);
+    int *array = (int *)malloc(size * sizeof(int));
+    for (i = 0; i < size; i++)
+	scanf("%d", array + i);
+    printf("Busqueda fibonacci (key:%d size:%d).\n\n", key, size);
     //******************************************************************
     // Iniciar el conteo del tiempo para las evaluaciones de rendimiento
     //*****************************************************************
@@ -40,18 +34,41 @@ int main(int argc, char* argv[]) {
     // Evaluar los tiempos de ejecución
     //******************************************************************
     int index = busquedafibonacci(array, key, size);
+    if (index != 1)
+	printf("El numero %d se encontro en la posicion %d.\n", key, index);
+    else
+	printf("El numero %d no existe en el arreglo.\n", key);
     uswtime(&utime1, &stime1, &wtime1);
     // Cálculo del tiempo de ejecución del programa
-    printf(" %.10e s\n", wtime1 - wtime0);
-    sum += (wtime1 - wtime0);
-  }
-  free(array);
-  printf("Promedio: %10e\n\n", sum / sizek);
+    printf("Tiempo real: %.10e s\n", wtime1 - wtime0);
+    free(array);
+    return 0;
 }
 
 //entran dos numeros y retorna el menor de los dos
 int min (int x, int y) {return (x <= y) ? x : y;}
-// funcion de busqueda donde retorna la posicion del valor buscado, en caso de que no se encuntre retorna -1
+/**
+ * busqueda fibonacci
+ *
+ * Entra n el cual buscara dos numero de la serie de fibonacci que
+ * mas cerca a n y se sumaran, con ese numero entrara al segundo
+ * while hasta que la suma de los dos numeros de la serie de fibonacci
+ * sean menor a 1, una vez entrando al while se define i que se define
+ * entre la suma del rango +auxfm2 o n-1 el que sea menor es el que i
+ * tendra su valor  despues  entra a un if si el donde compara la
+ * posicion i con el numero a buscar, si es menor i a x se dezpalazan
+ * los valores  y se resntan al numero de la serie fibonacci. si no
+ * entra al if  esta otra comparacion donde  se compara que el numero
+ * de la posicion i sea mayor a x y dezplaza los valores y resta de los
+ * dos numeros de la serie fibonacci y si no entra a este if es por
+ * que el numero a comparar es el numero buscado por lo cual retorna
+ * i que es la posicion. si el numero a buscar no esta dentro del
+ * rango de limite inferior y superior, regresa que no lo encontro,
+ * esto lo sabemos porque tenemos un arreglo ordenado.
+ * 
+ * @param un arreglo ordenado su tamaño y la llave a buscar
+ * @return la posicion donde se encontro el numero o si no se encontro un -1
+*/
 int busquedafibonacci (int arr [], int x, int n)
 {
     int auxf2,auxf1,auxfm;//auxf2 tomara el valor de n-1 y auxf1 n-2 y auxfm almacenera el numero mas pequeño
@@ -84,7 +101,7 @@ int busquedafibonacci (int arr [], int x, int n)
         }
 	// si el elemnto es encontrado se retorna la posicion i
         else
-	    return i;	   
+	    return i+1;	   
     }
  //se comprara el ultimo elemento con numbusc
     if (auxf1 && arr [rango + 1] == x){
