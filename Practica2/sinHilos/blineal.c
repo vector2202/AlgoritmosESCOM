@@ -7,6 +7,10 @@
  * @date 9/2021
  * @version 1
  * @author "Los ultimos"
+ *
+ *
+ * compilacion gcc -lm tiempo.c blineal.c -o blineal
+ * ejecución ./blineal size key < input
  */
 
 #include <stdio.h>

@@ -6,6 +6,9 @@
  * @date 9/2021
  * @version 1
  * @author "Los ultimos"
+ *
+ * compilacion gcc -lm tiempo.c babinario.c -o babinario
+ * ejecución ./abinario size key < input
  */
 
 #include <stdio.h>

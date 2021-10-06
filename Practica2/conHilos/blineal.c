@@ -1,11 +1,15 @@
 /**
  * Titutlo Busqueda lineal
  * 
- * este codigo busca un elemento en un arreglo usando el algoritmo de busqueda lineal
+ * este codigo busca un elemento en un arreglo usando
+ * el algoritmo de busqueda lineal
  *
  * @date 9/2021
  * @version 1
  * @author "Los ultimos"
+ *
+ * compilacion gcc -lm -lpthread tiempo.c blineal.c -o blineal
+ * ejecución ./blineal size key threads < input
  */
 
 #include <stdio.h>
@@ -65,11 +69,14 @@ void* procesar(void* id)
  *
  * Esta funcion busca un numero dentro de una lista.
  *
- * Se ingresa la posicion inicial del arreglo y su tamaño, compara cada elemento del arreglo desde la posicion inicial
- * para verificar si existe el numero a buscar, enn caso de que el numero si este en el arreglo la funcion devuelve la
- * posicion mas 1 donde se encuentra el numero, en caso contrario regresa un -1.
+ * Se ingresa la posicion inicial del arreglo y su tamaño,
+ * compara cada elemento del arreglo desde la posicion inicial
+ * para verificar si existe el numero a buscar, enn caso de que
+ * el numero si este en el arreglo la funcion devuelve la
+ * posicion mas 1 donde se encuentra el numero, en caso contrario
+ * regresa un -1.
  *
- * @param posición inicial y el limite superior del pedazo de arreglo a buscar
+ * @param posición inicial y el limite superior del rango de arreglo a buscar
  * @return la posicion donde se encontro el numero o si no se encontro un -1
 */
 int busquedaLineal(int l, int r)

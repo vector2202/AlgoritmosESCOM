@@ -1,11 +1,15 @@
 /**
  * Titutlo Busqueda binaria
  * 
- * este codigo busca un elemento en un arreglo usando el algoritmo de busqueda binaria
+ * este codigo busca un elemento en un arreglo usando
+ * el algoritmo de busqueda binaria
  *
  * @date 9/2021
  * @version 1
  * @author "Los ultimos"
+ *
+ * compilacion gcc -lm -lpthread tiempo.c bbinaria.c -o bbinaria
+ * ejecución ./bbinaria size key threads < input
  */
 
 #include <stdio.h>

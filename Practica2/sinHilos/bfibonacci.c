@@ -1,11 +1,15 @@
 /**
  * Titutlo Busqueda de fibonacci
  * 
- * este codigo busca un elemento en un arreglo usando el algoritmo de busqueda de fibonacci
+ * este codigo busca un elemento en un arreglo usando el
+ * algoritmo de busqueda de fibonacci
  *
  * @date 9/2021
  * @version 1
  * @author "Los ultimos"
+ *
+ * compilacion gcc -lm tiempo.c bfibonacci.c -o bfibonacci
+ * ejecución ./bfibonacci size key < input
  */
 #include <stdio.h>
 #include <stdlib.h>

@@ -7,6 +7,9 @@
  * @date 9/2021
  * @version 1
  * @author "Los ultimos"
+ *
+ * compilacion gcc -lm tiempo.c bbinaria.c -o bbinaria
+ * ejecución ./bbinaria size key < input
  */
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,23 +1,12 @@
 #!/bin/bash
 
+#./ejecutar.sh listadeordenamiento size key threads archivoentrada
 lista=$(cat $1)
-listsize=$(cat $2)
-threads=$3
-input=$4
+size=$2
+threads=$4
+key=$3
+input=$5
 for ordenamiento in $lista
 do
-    for size in $listsize
-    do
-   	./$ordenamiento $size $threads < $input
-    done
+    ./$ordenamiento $size $key $threads < $input
 done
-
-# lista=$(cat $1)
-# size=$2
-# key=$3
-# threads=$4
-# input=$5
-# for ordenamiento in $lista
-# do
-#    	./$ordenamiento $size $key $threads < $input
-# done

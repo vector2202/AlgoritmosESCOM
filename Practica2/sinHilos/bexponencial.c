@@ -1,11 +1,15 @@
 /**
  * Titutlo Busqueda lineal
  * 
- * este codigo busca un elemento en un arreglo usando el algoritmo de busqueda lineal
+ * este codigo busca un elemento en un arreglo usando el
+ * algoritmo de busqueda exponencial
  *
  * @date 9/2021
  * @version 1
  * @author "Los ultimos"
+ *
+ * compilacion gcc -lm tiempo.c bexponencial.c -o bexponencial
+ * ejecución ./bexponencial size key < input
  */
 
 #include <stdio.h>
