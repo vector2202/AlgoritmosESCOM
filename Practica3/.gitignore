@@ -1,0 +1,12 @@
+#Ignore all
+*
+
+#Unignore all extensions
+!*.*
+
+#Ignore all .png, .txt. pdf, .dat
+
+*.png
+*.txt
+*.pdf
+*.dat
