@@ -8,7 +8,7 @@
 int giveMeBit(int x,int k){
     return x & (1<<k);
 }
-void showMeBits(int x, int bitsSize){
+void showMeBits(unsigned long long x, int bitsSize){
     int i;
     for(i = bitsSize-1; i >= 0; i--)
 	printf("%d",CONSULTARBIT(x, i));
@@ -48,23 +48,18 @@ void getBits(struct node* mainTree, struct bits frequency[], int bits, int sizeb
 	getBits(mainTree->left, frequency, (bits << 1), sizebits + 1);// irte al nodo izq, sumandole un 0
 	if(isLeaf(mainTree)){
 	    int hashKey = mainTree->data.symbol;
-	    frequency[hashKey].bits = bits;//bits
+	    frequency[hashKey].bits = bits;
 	    frequency[hashKey].symbol = mainTree->data.symbol;
 	    frequency[hashKey].sizebits = sizebits;
-	    //printf("Character: %d. Size: %d\n", mainTree->data.symbol, sizebits);
-	    //showMeBits(bits, sizebits);
-	    //puts("\n");
 	}
 	getBits(mainTree->right, frequency, (bits<<1)  + 1, sizebits + 1);//irte al nodo der sumandole un 1
     }
 }
-// checar decod
-//checar bit a bit, de la posicion i, si tu rebadas los 8 bits, solicita la siguiente posicion y reseta el conteo de bits
 
 int getCharacters(struct node* tree, unsigned char* cadena, int* posInString, int posInBits, unsigned char* byteToWrite){
     if(isLeaf(tree)){
 	*byteToWrite = tree->data.symbol;//printf("%d ", tree->data.symbol);
-	return posInBits;//pendiente
+	return posInBits;
     }
     else{
 	if(posInBits < 0){
@@ -169,24 +164,4 @@ struct node* mergeTrees(Heap* heap){
 	insert(heap, mergeNodes(node1, node2));
     }
     return PopMin(heap);
-}
-
-void recorrerArbol(struct node* root, int* i){
-    if(!isEmpty(root)){
-	recorrerArbol(root->left, i);
-	if(isLeaf(root)){
-	    printf("Pos: %d, Symbol: %d, Frecuency: %d\n", (*i), root->data.symbol, root->data.frequency);
-	    (*i) ++;
-	}
-	recorrerArbol(root->right, i);
-		      
-    }
-}
-void print(Heap *h){
-    int i;
-    printf("Heap Status: \n");
-    for(i=0;i< h->count;i++){
-        printf("Pos: %d, Symbol: %d, Frecuency: %d\n", i, h->arrayOfNodes[i]->data.symbol, h->arrayOfNodes[i]->data.frequency);
-    }
-    printf("NULL \n");
 }
