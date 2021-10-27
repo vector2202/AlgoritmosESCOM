@@ -29,7 +29,7 @@ unsigned char* readFile(const char* fileToOpen, struct data symbolFrecuency[], i
 	symbolFrecuency[c].frequency ++;//frecuencia de apariciones
     }
     fclose(file);
-    //printf("Tamaño del archivo leido: %d.\n", (*fileSize));
+    printf("\nTamaño del archivo a comprimir: %d.\n", (*fileSize));
     return bytesRead;
 }
 

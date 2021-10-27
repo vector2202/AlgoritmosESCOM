@@ -49,7 +49,7 @@ unsigned char* readByteCode(int* fileSize, int* byteFileSize){
         bytesRead[i] = c;
     }
     fclose(file);
-    //printf("Tamaño del archivo comprimido: %d.\n", (*byteFileSize));
+    printf("Tamaño del archivo comprimido: %d.\n", (*byteFileSize));
     return bytesRead;
 }
 //Escribiremos el archivo original de nuevo
@@ -79,7 +79,7 @@ void writeFile(unsigned char* bytesRead, struct node* mainTree, const char* file
 	    i++;
 	}
     }
-    printf("\nTamaño final: %d.\n", bytesWritten);
+    printf("Tamaño del archivo descomprimido: %d.\n\n", bytesWritten);
     fclose(finalFile);
 }
 
