@@ -1,9 +1,9 @@
 /**
- * Compresion de archivos con Algoritmo de Huffman
- * Este programa comprime un archivo usando el algoritmo de Huffman
+ * @file Compresion de archivos con Algoritmo de Huffman
+ * @brief Este programa comprime un archivo usando el algoritmo de Huffman
  *
  * @author Victor Torres Leilani Sotelo Guillermo Sanchez
- * @version 1
+ * @version 1.0
  * compilacion: gcc -lm tiempo.c HuffmanStructures.c DecompressHuffman.c -o DecompressHuffman
  * ejecución ./DecompressHuffman nombreDelArchivo
  */
