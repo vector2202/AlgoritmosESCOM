@@ -28,7 +28,8 @@
  * @param *fileSize direccion de memoria de la variable del tamaño del archivo
  * @return unsigned char* el apuntador de la cadena de los bytes leidos
  */
-unsigned char* readFile(const char* fileToOpen, struct data bytesFrecuency[], int* fileSize){
+unsigned char* readFile(const char* fileToOpen, struct data bytesFrecuency[], int* fileSize)
+{
     int i;
     FILE* file;
     unsigned char c;
@@ -47,11 +48,11 @@ unsigned char* readFile(const char* fileToOpen, struct data bytesFrecuency[], in
     
     //Reservamos memoria para la cadena de bytes leidos
     unsigned char* bytesRead = malloc((*fileSize) * sizeof(unsigned char));
-    
+
     //Guardamos los bytes leidos y su frecuencia con su valor en decimal
     for(i = 0; i < (*fileSize); i++){
     	fread(&c, sizeof(unsigned char), 1, file);
-        bytesRead[i] = c;
+        bytesRead[i] = c; 
 	bytesFrecuency[c].symbol = c;// Enmascaramiento
 	bytesFrecuency[c].frequency ++;// frecuencia de apariciones
     }
@@ -71,12 +72,13 @@ unsigned char* readFile(const char* fileToOpen, struct data bytesFrecuency[], in
  * @param *fileSize direccion de memoria de la variable del tamaño del archivo
  * @return void
  */
-void writeFrecuenyTable(struct data bytesFrecuency[], int fileSize){
+void writeFrecuenyTable(struct data bytesFrecuency[], int fileSize)
+{
     int i;
     FILE* frecuencyTable;
     
     //Abrimos y verificamos que si se abrio correctamente
-    frecuencyTable = fopen("frecuencyTable.txt", "wt");
+    frecuencyTable = fopen("frecuencyTable.txt", "wt+");
     if(frecuencyTable == NULL){
         puts("The file could not be opened.\n");
         exit(1);
@@ -109,7 +111,9 @@ void writeFrecuenyTable(struct data bytesFrecuency[], int fileSize){
  * @param fileSize el tamaño del archivo original
  * @return void
  */
-void writeBinaryCode(unsigned char* bytesRead, struct node* mainTree, struct bits* bytesCode, int fileSize, int* compressedFileSize){
+
+void writeBinaryCode(unsigned char* bytesRead, struct node* mainTree, struct bits* bytesCode, int fileSize, int* compressedFileSize)
+{
     int i, j, bitsExtraWritten = 0;
     FILE* binaryCode;
     
@@ -128,7 +132,7 @@ void writeBinaryCode(unsigned char* bytesRead, struct node* mainTree, struct bit
     for(i = 0; i < fileSize; i++){
 	bitsSize = bytesCode[bytesRead[i]].sizebits;
 	bits = bytesCode[bytesRead[i]].bits;
-	
+
 	//Checamos si hay bits que no escribimos
 	if(tempSize != 0){
 	    bits = (tempBits << bitsSize) + bits;
@@ -136,7 +140,7 @@ void writeBinaryCode(unsigned char* bytesRead, struct node* mainTree, struct bit
 	    tempBits = 0;
 	    tempSize = 0;
 	}
-	
+
 	//Podemos escribir o no el byte?
 	if(bitsSize >= 8){
 	    if(bitsSize > 8){

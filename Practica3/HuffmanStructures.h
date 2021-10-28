@@ -20,7 +20,7 @@
 struct bits{
     unsigned char symbol;
     int sizebits;
-    int bits;
+    int bits; 
 };
 
 //Estructura para almacenar un simbolo y su frecuencia dada
@@ -41,7 +41,6 @@ struct Heap{
     struct node** arrayOfNodes;
     int count;
     int capacity;
-
 };
 //Alias del heap
 typedef struct Heap Heap;
