@@ -3,22 +3,6 @@
 #include "HuffmanStructures.h"
 
 //***********************************************************************
-//Operaciones con bits
-//***********************************************************************
-int giveMeBit(int x,int k){
-    return x & (1<<k);
-}
-void showMeBits(unsigned long long x, int bitsSize){
-    int i;
-    for(i = bitsSize-1; i >= 0; i--)
-	printf("%d",CONSULTARBIT(x, i));
-
-}
-void writeBits(unsigned char symbol, struct bits hashTable[]){
-    int hashKey = symbol;
-    showMeBits(hashTable[hashKey].bits, hashTable[hashKey].sizebits);
-}
-//***********************************************************************
 //Operaciones con el arbol de Huffman.
 //***********************************************************************
 //Es vacio el arbol
@@ -27,38 +11,38 @@ int isEmpty(struct node* root){return root == NULL;}
 int isLeaf(struct node* root){return root->left == NULL && root->right == NULL;}
 
 //Insertar elementos en el arbol huffman
-void pushTree(struct node* root, unsigned char symbol, int frecuency){
+void pushTree(struct node* root, unsigned char byte, int frecuency){
     root->data.frequency = frecuency;
-    root->data.symbol = symbol;
+    root->data.byte = byte;
     root->left = NULL;
     root->right = NULL;    
 }
 //unir los nodos
 struct node* mergeNodes(struct node* node1, struct node* node2){
     struct node* new_node = malloc(sizeof(struct node));
-    new_node->data.symbol = 0;
+    new_node->data.byte = 0;
     new_node->left = node1;
     new_node->right = node2;
     new_node->data.frequency = node1->data.frequency + node2->data.frequency;
     return new_node;
 }
 //obtener la codificacion de los caracteres
-void getBits(struct node* mainTree, struct bits frequency[], int bits, int sizebits){
-    if(!isEmpty(mainTree)){//if notempty
-	getBits(mainTree->left, frequency, (bits << 1), sizebits + 1);// irte al nodo izq, sumandole un 0
-	if(isLeaf(mainTree)){
-	    int hashKey = mainTree->data.symbol;
-	    frequency[hashKey].bits = bits;
-	    frequency[hashKey].symbol = mainTree->data.symbol;
-	    frequency[hashKey].sizebits = sizebits;
+void getBits(struct node* HuffmanTree, struct bits bytesCode[], int bits, int sizeBits){
+    if(!isEmpty(HuffmanTree)){//if notempty
+	getBits(HuffmanTree->left, bytesCode, (bits << 1), sizeBits + 1);// irte al nodo izq, sumandole un 0
+	if(isLeaf(HuffmanTree)){
+	    int hashKey = HuffmanTree->data.byte;
+	    bytesCode[hashKey].bits = bits;
+	    bytesCode[hashKey].byte = HuffmanTree->data.byte;
+	    bytesCode[hashKey].sizeBits = sizeBits;
 	}
-	getBits(mainTree->right, frequency, (bits<<1)  + 1, sizebits + 1);//irte al nodo der sumandole un 1
+	getBits(HuffmanTree->right, bytesCode, (bits<<1)  + 1, sizeBits + 1);//irte al nodo der sumandole un 1
     }
 }
 
-int getCharacters(struct node* tree, unsigned char* cadena, int* posInString, int posInBits, unsigned char* byteToWrite){
-    if(isLeaf(tree)){
-	*byteToWrite = tree->data.symbol;//printf("%d ", tree->data.symbol);
+int getCharacters(struct node* HuffmanTree, unsigned char* cadena, int* posInString, int posInBits, unsigned char* byteToWrite){
+    if(isLeaf(HuffmanTree)){
+	*byteToWrite = HuffmanTree->data.byte;
 	return posInBits;
     }
     else{
@@ -67,9 +51,9 @@ int getCharacters(struct node* tree, unsigned char* cadena, int* posInString, in
 	    posInBits = 7;
 	}
 	if(((int)CONSULTARBIT(cadena[(*posInString)], (posInBits))) == 0)
-	    return getCharacters(tree->left, cadena, posInString, (posInBits)-1, byteToWrite);
+	    return getCharacters(HuffmanTree->left, cadena, posInString, (posInBits)-1, byteToWrite);
 	else
-	    return getCharacters(tree->right, cadena, posInString, posInBits-1, byteToWrite);
+	    return getCharacters(HuffmanTree->right, cadena, posInString, posInBits-1, byteToWrite);
     }
 }
 
@@ -146,11 +130,11 @@ struct node* PopMin(Heap *heap){
 //Funciones con el arbol y heap
 //**********************************************************************
 //formar en el arbol las frecuencias y formar esos arboles en la cola
-void insertTree(struct data symbolFrecuency[], struct node roots[], Heap* heap){
+void insertTree(struct data bytesFrecuency[], struct node roots[], Heap* heap){
     int i;
     for(i = 0; i < 256; i++){
-	if(symbolFrecuency[i].frequency > 0){
-	    pushTree(&roots[i], symbolFrecuency[i].symbol, symbolFrecuency[i].frequency);
+	if(bytesFrecuency[i].frequency > 0){
+	    pushTree(&roots[i], bytesFrecuency[i].byte, bytesFrecuency[i].frequency);
 	    insert(heap, &roots[i]);
 	}
     }

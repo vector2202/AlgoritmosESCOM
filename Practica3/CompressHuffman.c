@@ -1,12 +1,3 @@
-/**
- * Compresion de archivos con Algoritmo de Huffman
- * Este programa comprime un archivo usando el algoritmo de Huffman
- *
- * @author Victor Torres Leilani Sotelo Guillermo Sanchez
- * @version 1
- * compilacion: gcc -lm tiempo.c HuffmanStructures.c CompressHuffman.c -o CompressHuffman
- * ejecución ./CompressHuffman nombreDelArchivo
- */
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,20 +5,6 @@
 #include "HuffmanStructures.h"
 #include "tiempo.h"
 
-/**
- * readFile
- *
- * Esta funcion lee un archivo de entrada, calcula el tamaño del
- * archivo, lee los bytes del archivo y los guarda en una cadena
- * ademas registra la frecuencia de aparicion de cada byte
- * aplicando el concepto de Hash, donde la llave es el valor
- * en decimal del byte que leimos
- *
- * @param fileToOpen nombre del archivo a abrir
- * @param bytesFrecuency[] arreglo donde esta la frecuencia de repeticion de bits
- * @param *fileSize direccion de memoria de la variable del tamaño del archivo
- * @return unsigned char* el apuntador de la cadena de los bytes leidos
- */
 unsigned char* readFile(const char* fileToOpen, struct data bytesFrecuency[], int* fileSize)
 {
     int i;
@@ -53,25 +30,13 @@ unsigned char* readFile(const char* fileToOpen, struct data bytesFrecuency[], in
     for(i = 0; i < (*fileSize); i++){
     	fread(&c, sizeof(unsigned char), 1, file);
         bytesRead[i] = c; 
-	bytesFrecuency[c].symbol = c;// Enmascaramiento
+	bytesFrecuency[c].byte = c;// Enmascaramiento
 	bytesFrecuency[c].frequency ++;// frecuencia de apariciones
     }
     fclose(file);
     return bytesRead;
 }
 
-/**
- * writeFrecuencyTable
- *
- * Escribe en un txt, el tamaño original del archivo ademas de
- * el valor en decimal de cada bit que aparecio seguida de las
- * veces que aparecio solo si la frecuencia de aparicion es 
- * mayor a 0, esto es, que el byte esta en el archivo original
- *
- * @param symbolFrecuency[] arreglo donde esta la frecuencia de repeticion de bits
- * @param *fileSize direccion de memoria de la variable del tamaño del archivo
- * @return void
- */
 void writeFrecuenyTable(struct data bytesFrecuency[], int fileSize)
 {
     int i;
@@ -88,29 +53,10 @@ void writeFrecuenyTable(struct data bytesFrecuency[], int fileSize)
     fprintf(frecuencyTable, "%d\n", fileSize);
     for(i = 0; i < 256; i++)
 	if(bytesFrecuency[i].frequency > 0) //Si el simbolo aparecio en el archivo, escribelo
-            fprintf(frecuencyTable, "%d %d\n", bytesFrecuency[i].symbol, bytesFrecuency[i].frequency);
+            fprintf(frecuencyTable, "%d %d\n", bytesFrecuency[i].byte, bytesFrecuency[i].frequency);
     
     fclose(frecuencyTable);
 }
-
-/**
- * writeBinaryCode
- *
- * En un archivo llamado byteCode.dat, escribe el equivalente de
- * la codificacion de Huffman de los bytes leidos del archivo original,
- * esto lo hace mediante corrimientos de bits y con una bandera llamada
- * sizeByteToWrite que nos indica si tenemos los 8 bits para escribir
- * en el .dat, si no la guarda y mediante corrimeintos la suma con la 
- * codificacion del siguiente byte, en el ultimo byte del .dat, escribe
- * cuantos bits extra escribimos que no corresponden a la codificacion
- * de Huffman
- *
- * @param *bytesRead el apuntador al inicio de la cadena de los bytes leidos
- * @param *mainTree el arbol de Huffman donde unimos todos los bytes y su frecuencia
- * @param *frecuencyTable un arreglo donde temenos la codificacion de Huffman de los bytes
- * @param fileSize el tamaño del archivo original
- * @return void
- */
 
 void writeBinaryCode(unsigned char* bytesRead, struct node* mainTree, struct bits* bytesCode, int fileSize, int* compressedFileSize)
 {
@@ -130,7 +76,7 @@ void writeBinaryCode(unsigned char* bytesRead, struct node* mainTree, struct bit
     unsigned char byteToWrite;
 
     for(i = 0; i < fileSize; i++){
-	bitsSize = bytesCode[bytesRead[i]].sizebits;
+	bitsSize = bytesCode[bytesRead[i]].sizeBits;
 	bits = bytesCode[bytesRead[i]].bits;
 
 	//Checamos si hay bits que no escribimos
@@ -219,7 +165,7 @@ int main(int argc, char* argv[]){
     //Arreglo para almacenar el byte y frecuencia en cada nodo del arbol
     struct node* roots = (struct node*)malloc(256 * sizeof(struct node));
     //Arbol de Huffman ya unificado
-    struct node* mainTree;
+    struct node* HuffmanTree;
     //Cadena de bytes leidos del archivo original
     unsigned char* bytesRead;
     //Cola de prioridad
@@ -239,11 +185,11 @@ int main(int argc, char* argv[]){
     //formar en el arbol las frecuencias y formar esos arboles en la cola
     insertTree(bytesFrecuency, roots, heap);
     //unir los arboles en el arbol de Huffman
-    mainTree = mergeTrees(heap);
+    HuffmanTree = mergeTrees(heap);
     //Obtener los bits que vale cada byte
-    getBits(mainTree, bytesCode, 0, 0);
+    getBits(HuffmanTree, bytesCode, 0, 0);
     //escribir el .dat con los bits de cada byte correspondiente
-    writeBinaryCode(bytesRead, mainTree, bytesCode, fileSize, &compressedFileSize);
+    writeBinaryCode(bytesRead, HuffmanTree, bytesCode, fileSize, &compressedFileSize);
     //escribir la tabla de frecuencias y el tamaño
     writeFrecuenyTable(bytesFrecuency, fileSize);
 
