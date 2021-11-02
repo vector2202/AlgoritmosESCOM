@@ -21,10 +21,11 @@
  * 'sizeBits' contiene el tamaño de los bits correspondientes a la codifcacion
  */
 
-struct bits{
+struct bits
+{
     unsigned char byte;
     int sizeBits;
-    int bits; 
+    int bits;
 };
 
 /** @struct data
@@ -34,7 +35,8 @@ struct bits{
  * @var data::frecuency
  * 'frecuency' contiene las veces que aparecio el byte en el archivo leido
  */
-struct data{
+struct data
+{
     int frequency;
     int byte;
 };
@@ -48,21 +50,30 @@ struct data{
  * @var node::data
  * 'data' contiene el byte correspondiente y su frecuencia
  */
-struct node{
-    struct node* left;
-    struct node* right;
+struct node
+{
+    struct node *left;
+    struct node *right;
     struct data data;
 };
 
-//Estructura del heap utilizado
-struct Heap{
-    struct node** arrayOfNodes;
+/** @struct Heap
+ * @brief Almacena un arreglo de nodos
+ * @var node::arrayOfNodes
+ * 'arrayOfNodes' contiene un arreglo de nodos
+ * @var Heap::count
+ * 'count' contiene los nodos existentes en el arreglo
+ * @var Heap::capacity 
+ * 'capacity' contiene la capacidad maxima del arreglo
+ */
+struct Heap
+{
+    struct node **arrayOfNodes;
     int count;
     int capacity;
 };
-//Alias del heap
+//Alias de Heap
 typedef struct Heap Heap;
-
 
 //*****************************************************************
 //Funciones con el arbol de Huffman
@@ -74,7 +85,7 @@ typedef struct Heap Heap;
  * @return 1 si el arbol es vacio
  * @return 0 si el arbol no es vacio
  */
-int isEmpty(struct node* root);
+int isEmpty(struct node *root);
 /**
  * Nos dice si nodo en el que estamos es un nodo hoja.
  *
@@ -82,7 +93,7 @@ int isEmpty(struct node* root);
  * @return 1 si el nodo es hoja
  * @return 0 si el nodo no es hoja
  */
-int isLeaf(struct node* root);
+int isLeaf(struct node *root);
 /**
  * Inserta dado un byte y una frecuencia, las inserta en el nodo del arbol
  *
@@ -90,7 +101,7 @@ int isLeaf(struct node* root);
  * @param byte el byte correspondiente de su frecuencia
  * @param frecuency la frecuencia correspondiente del byte
  */
-void pushTree(struct node* root, unsigned char byte, int frecuency);
+void pushTree(struct node *root, unsigned char byte, int frecuency);
 /**
  * Une dos nodos en un nodo ancestro comun
  *
@@ -98,7 +109,7 @@ void pushTree(struct node* root, unsigned char byte, int frecuency);
  * @param node2 el segundo nodo a unir que estara del lado derecho
  * @return el nodo comun que tiene como hijos a ambos nodos
  */
-struct node* mergeNodes(struct node* node1, struct node* node2);
+struct node *mergeNodes(struct node *node1, struct node *node2);
 /**
  * Obtiene la codificaciond de Huffman correspondiente a los bytes.
  * La guarda en un arreglo de struct junto con el tamaño de bits
@@ -112,7 +123,7 @@ struct node* mergeNodes(struct node* node1, struct node* node2);
  * @param bits los bits con los que inicia el nodo que por defecto es 0
  * @param bitsSize el tamaño de los bits que por defecto es 0
  */
-void getBits(struct node* HuffmanTree, struct bits bytesCode[], int bits, int bitsSize);
+void getBits(struct node *HuffmanTree, struct bits bytesCode[], int bits, int bitsSize);
 /**
  * Obtiene el byte correspondiente a la codificacion de Huffman. Recorre
  * el arbol analizando si es 0 o 1 el bit en el que esta para irse
@@ -127,21 +138,53 @@ void getBits(struct node* HuffmanTree, struct bits bytesCode[], int bits, int bi
  * @param byteToWrite la variable donde guardaremos el byte correspondiente
  * @return la posicion en bits en donde nos quedamos en relacion a un byte
  */
-int getCharacters(struct node* HuffmanTree, unsigned char* cadena, int* posInString, int posInBits, unsigned char* byteToWrite);
+int getCharacters(struct node *HuffmanTree, unsigned char *cadena, int *posInString, int posInBits, unsigned char *byteToWrite);
 
 //*****************************************************************
 //Funciones con heap
 
 //Crea un espacio en memoria para el heap
+/**
+ * Crea una estructura Heap, la cual es un arreglo de nodos, 
+ * ingresando la capacidad de esta.
+ * @param capacity es la capacidad de la estructura 
+*/
 Heap *CreateHeap(int capacity);
 //Inserta elementos en el heap
-void insert(Heap *heap, struct node* node);
-//
+/**
+ *Inserta Nodos en la estructura de datos, indicando el Heap donde se desea
+ *Hacer la insersion, segido del nodo que se desea insertar, simempre y cuando 
+ *la capacidad de Heap no haya sido exedida.
+ *@param Heap es el monticulo donde vamos a insertar el nodo
+ *@param NODE es el nodo a insertar dentro del monticulo 
+*/
+void insert(Heap *heap, struct node *node);
+/**
+ * Ordena los elementos del arreglo de nodos, haciendo que el elemento mas
+ * pequeño sea la rama principal de nuestro arbol.
+ *@param Heap es el monticulo al que vamos a ordenar su arreglo de nodos
+ *@param index es el indice en este caso el numero de elementos que hay que ordenar 
+*/
 void heapify_bottom_top(Heap *heap, int index);
-//
+/**
+ * Ordena los elementos del arreglo de nodos, haciendo que el elemento mas
+ * pequeño sea la rama principal de nuestro arbol,este lo usamos al momento de
+ * retirar el elemento principal de nuestro Heap, debido a que el ordenamiento lo 
+ * realiza a partir de nuestra raiz hacia los elementos hijos del arbol.
+ *@param Heap es el monticulo al que vamos a ordenar su arreglo de nodos
+ *@param parent_node es el indice del elemento padre de nuestro nodo para realizar
+ *el ordenamiento antes descrito sera 0, ya que se elimina el nodo principal de nuestro
+ *arbol
+*/
 void heapify_top_bottom(Heap *heap, int parent_node);
 //Elimina el primer elemento de la cola de prioridad
-struct node* PopMin(Heap *heap);
+
+/**
+ * @param Heap Es la estructura heap a la cual deseamos eliminar su elemento mas pequeño
+ * en la cola de prioridad
+ * @return nodo elimindo
+*/
+struct node *PopMin(Heap *heap);
 
 //**********************************************************************
 //Funciones con el arbol de huffman y heap
@@ -155,7 +198,7 @@ struct node* PopMin(Heap *heap);
  * @param roots el arreglo de nodos que trae todos los bytes y su frecuencia
  * @param heap la cola de prioridad
  */
-void insertTree(struct data bytesFrecuency[], struct node roots[], Heap* heap);
+void insertTree(struct data bytesFrecuency[], struct node roots[], Heap *heap);
 /**
  * Une todos los nodos hoja en un solo, llamado Arbol de Huffman.
  * Usando la cola de prioridad saca los dos nodos de menor frecuencia
@@ -167,10 +210,9 @@ void insertTree(struct data bytesFrecuency[], struct node roots[], Heap* heap);
  * @param heap la cola de prioridad con los nodos de los bytes leidos
  * @return el Arbol de Huffman
  */
-struct node* mergeTrees(Heap* heap);
+struct node *mergeTrees(Heap *heap);
 
 //**********************************************************************
 //Macros para trabajas con bits
-#define PESOBIT(bpos) 1<<bpos
-#define CONSULTARBIT(var,bpos) (*(unsigned*)&var & PESOBIT(bpos))?1:0
-
+#define PESOBIT(bpos) 1 << bpos
+#define CONSULTARBIT(var, bpos) (*(unsigned *)&var & PESOBIT(bpos)) ? 1 : 0

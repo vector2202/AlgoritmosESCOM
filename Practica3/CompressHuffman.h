@@ -22,7 +22,7 @@
  * @param fileSize direccion de memoria de la variable del tamaño del archivo
  * @return el apuntador de la cadena de los bytes leidos
  */
-unsigned char* readFile(const char* fileToOpen, struct data bytesFrecuency[], int* fileSize);
+unsigned char *readFile(const char *fileToOpen, struct data bytesFrecuency[], int *fileSize);
 /**
  *
  * Escribe la tabla de frecuencias y el tamaño del archivo leido.
@@ -51,4 +51,4 @@ void writeFrecuenyTable(struct data bytesFrecuency[], int fileSize);
  * @param frecuencyTable un arreglo donde temenos la codificacion de Huffman de los bytes
  * @param fileSize el tamaño del archivo original
  */
-void writeBinaryCode(unsigned char* bytesRead, struct node* mainTree, struct bits* bytesCode, int fileSize, int* compressedFileSize);
+void writeBinaryCode(unsigned char *bytesRead, struct node *mainTree, struct bits *bytesCode, int fileSize, int *compressedFileSize);

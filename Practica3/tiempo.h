@@ -1,8 +1,8 @@
 //*****************************************************************
-//TIEMPO.H 
+//TIEMPO.H
 //*****************************************************************
 //*****************************************************************
-//M. EN C. EDGARDO ADRIÁN FRANCO MARTÍNEZ 
+//M. EN C. EDGARDO ADRIÁN FRANCO MARTÍNEZ
 //Curso: Análisis de algoritmos
 //(C) Enero 2013
 //ESCOM-IPN
@@ -10,15 +10,14 @@
 //Compilación de la libreria: "gcc -c tiempo.c " (Generación del código objeto)
 //*****************************************************************
 
-
 //*****************************************************************
 //uswtime (Declaración)
 //*****************************************************************
-//Descripción: Función que almacena en las variables referenciadas 
+//Descripción: Función que almacena en las variables referenciadas
 //el tiempo de CPU, de E/S y Total actual del proceso actual.
 //
 //Recibe: Variables de tipo doble para almacenar los tiempos actuales
-//Devuelve: 
+//Devuelve:
 //*****************************************************************
 void uswtime(double *usertime, double *systime, double *walltime);
 /* 
