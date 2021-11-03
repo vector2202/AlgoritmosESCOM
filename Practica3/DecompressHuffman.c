@@ -29,7 +29,7 @@ void readFrecuencyTable(struct data bytesFrecuency[], int* fileSize){
     fclose(frecuencyTable);
 }
 
-unsigned char* readByteCode(int* fileSize, int* byteFileSize){
+unsigned char* readByteCode(int* byteFileSize){
     unsigned char c;
     int i;
     FILE* file;
@@ -132,7 +132,7 @@ int main(int argc, char* argv[]){
     //Obtener el codigo de bits de cada byte
     getBits(HuffmanTree, bytesCode, 0, 0);
     //leer el .dat generado en la compresion
-    bytesRead = readByteCode(&fileSize, &byteFileSize);
+    bytesRead = readByteCode(&byteFileSize);
     //sustituir la cadena de .dat por su valor de arbol
     writeFile(bytesRead, HuffmanTree, argv[1], byteFileSize, &fileSize);
 

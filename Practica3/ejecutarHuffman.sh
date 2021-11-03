@@ -3,10 +3,8 @@
 archivoOrigen=$1
 #archivoDestino=$2
 
-echo -e "\n Comprimir y descomprimir archivos usando el Algoritmo de Huffman\n\n"
-echo -e "Archivo a comprimir: $archivoOrigen \n"
-echo Tamaño del archivo a comprimir: 
-wc -c $archivoOrigen
+echo -e "\nComprimir y descomprimir archivos usando el Algoritmo de Huffman\n\n"
+echo -e "Archivo a comprimir: $archivoOrigen."
 
 gcc -lm tiempo.c HuffmanStructures.c CompressHuffman.c -o CompressHuffman
 
@@ -20,6 +18,3 @@ echo El archivo original ha sido removido
 
 ./DecompressHuffman $archivoOrigen
 
-echo Tamaño del archivo descomprimido:
-
-wc -c $archivoOrigen
