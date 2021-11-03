@@ -3,8 +3,10 @@
 
 #Unignore all extensions
 !*.*
+#Unignore html doc
+!html/
 
-#Ignore all .png, .txt. pdf, .dat
+#Ignore all .png, .txt. pdf, .dat, .bmp, .ppt, .rar
 
 *.png
 *.txt
