@@ -20,7 +20,7 @@
  * @param bytesFrecuency arreglo donde esta la frecuencia de repeticion de bits
  * @param fileSize direccion de memoria de la variable del tamaño del archivo
  */
-void readFrecuencyTable(struct data bytesFrecuency[], int* fileSize);
+void readFrecuencyTable(struct data bytesFrecuency[], int *fileSize);
 
 /**
  *
@@ -31,7 +31,7 @@ void readFrecuencyTable(struct data bytesFrecuency[], int* fileSize);
  * @param byteFileSize direccion de memoria de la variable del tamaño del archivo comprimido
  * @return el arreglo donde estan los bytes leidos
  */
-unsigned char* readByteCode(int* fileSize, int* byteFileSize);
+unsigned char *readByteCode(int *fileSize, int *byteFileSize);
 
 /**
  *
@@ -48,5 +48,4 @@ unsigned char* readByteCode(int* fileSize, int* byteFileSize);
  * @param byteFileSize el tamaño del archivo comprimido
  * @param fileSize apuuntador de la variable del tamaño del archivo que escribiremos
  */
-void writeFile(unsigned char* bytesRead, struct node* mainTree, const char* file, int byteFileSize, int* fileSize);
-
+void writeFile(unsigned char *bytesRead, struct node *mainTree, const char *file, int byteFileSize, int *fileSize);
