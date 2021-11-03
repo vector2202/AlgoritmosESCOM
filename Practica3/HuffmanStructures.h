@@ -145,44 +145,50 @@ int getCharacters(struct node *HuffmanTree, unsigned char *cadena, int *posInStr
 
 //Crea un espacio en memoria para el heap
 /**
- * Crea una estructura Heap, la cual es un arreglo de nodos, 
- * ingresando la capacidad de esta.
- * @param capacity es la capacidad de la estructura 
+ * Crea una estructura Heap en memoria dinamica dada su
+ * capacidad, la cual es un arreglo de nodos.
+ *
+ * @param capacity es la capacidad que queremos que tenga heap
+ * @return el apuntador a la estructura heap creada
 */
 Heap *CreateHeap(int capacity);
 //Inserta elementos en el heap
 /**
- *Inserta Nodos en la estructura de datos, indicando el Heap donde se desea
- *Hacer la insersion, segido del nodo que se desea insertar, simempre y cuando 
- *la capacidad de Heap no haya sido exedida.
- *@param Heap es el monticulo donde vamos a insertar el nodo
- *@param NODE es el nodo a insertar dentro del monticulo 
+ * Inserta Nodos en la estructura de datos, indicando el Heap donde se desea
+ * hacer la incersion, seguido del nodo que se desea insertar, simempre y cuando
+ * la capacidad de Heap no haya sido exedida.
+ *
+ * @param heap es el monticulo donde vamos a insertar el nodo
+ * @param node es el nodo a insertar dentro del monticulo 
 */
 void insert(Heap *heap, struct node *node);
 /**
  * Ordena los elementos del arreglo de nodos, haciendo que el elemento mas
  * pequeño sea la rama principal de nuestro arbol.
- *@param Heap es el monticulo al que vamos a ordenar su arreglo de nodos
- *@param index es el indice en este caso el numero de elementos que hay que ordenar 
+ *
+ * @param Heap es el monticulo al que vamos a ordenar su arreglo de nodos
+ * @param index es el indice en este caso el numero de elementos que hay que ordenar 
 */
 void heapify_bottom_top(Heap *heap, int index);
 /**
  * Ordena los elementos del arreglo de nodos, haciendo que el elemento mas
  * pequeño sea la rama principal de nuestro arbol,este lo usamos al momento de
- * retirar el elemento principal de nuestro Heap, debido a que el ordenamiento lo 
- * realiza a partir de nuestra raiz hacia los elementos hijos del arbol.
- *@param Heap es el monticulo al que vamos a ordenar su arreglo de nodos
- *@param parent_node es el indice del elemento padre de nuestro nodo para realizar
- *el ordenamiento antes descrito sera 0, ya que se elimina el nodo principal de nuestro
- *arbol
+ * retirar el elemento principal de nuestro Heap, debido a que el ordenamiento
+ * lo realiza a partir de nuestra raiz hacia los elementos hijos del arbol.
+ *
+ * @param Heap es el monticulo al que vamos a ordenar su arreglo de nodos
+ * @param parent_node es el indice del elemento padre de nuestro nodo para
+realizar
+ *
 */
 void heapify_top_bottom(Heap *heap, int parent_node);
 //Elimina el primer elemento de la cola de prioridad
 
 /**
- * @param Heap Es la estructura heap a la cual deseamos eliminar su elemento mas pequeño
- * en la cola de prioridad
- * @return nodo elimindo
+ * Elmina el elemento mas pequeño de una cola de prioridad
+ *
+ * @param Heap Es la estructura heap
+ * @return nodo eliminado
 */
 struct node *PopMin(Heap *heap);
 
@@ -192,7 +198,6 @@ struct node *PopMin(Heap *heap);
 /**
  * Inserta en la cola de prioridad los nodos. EL numero de nodos
  * que inserta son los bytes distintos que aparecieron en el archivo
- *
  *
  * @param bytesFrecuency el arreglo de struct donde viene el byte y su frecuencia
  * @param roots el arreglo de nodos que trae todos los bytes y su frecuencia
@@ -205,7 +210,6 @@ void insertTree(struct data bytesFrecuency[], struct node roots[], Heap *heap);
  * suma sus dos frecuencia y los une en un nodo padre, haciendo esto
  * hasta que solo quede un nodo padre el cual contiene a todos los nodos
  * de los bytes leidos
- *
  *
  * @param heap la cola de prioridad con los nodos de los bytes leidos
  * @return el Arbol de Huffman
