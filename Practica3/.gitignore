@@ -4,7 +4,7 @@
 #Unignore all extensions
 !*.*
 #Unignore html doc
-!html/
+
 #Unignore the test files directory
 !testFiles/
 !testFiles/byteFiles/
