@@ -1,0 +1,37 @@
+Tenemos que tener 20 archivos, 5 de bytes, 5 de kilobytes, 5 de megabytes y 5 de gigabytes
+No es recomedable subir +100 mb en git, entonces los que rebasen este tamaño incluyendo el de 100 me los enviaran a mi correo: victorres0702@gmail.com
+
+Tienen que subir al menos 1 archivo de cada grupo y subir 3 extra, cada que suban uno o me lo manden a mi correo, le ponen su letra a lado del archivo para que se lleve un mejor control.
+
+Los achivos van en testFiles/grupo correspondiente
+
+Bytes  	   	    Lo subio
+1. 5 bytes
+2. 50 bytes
+3. 100 bytes
+4. 250 bytes
+5. 500 bytes
+
+Kilobytes
+1. 1kb
+2. 10 kb
+3. 100 kb
+4. 250 kb
+5. 500 kb
+
+Megabytes
+1. 1 mb
+2. 10 mb
+3. 100 mb
+4. 250 mb
+5. 500 mb
+
+Gigabytes
+1. 1 gb
+2. 2 gb
+3. 3 gb
+4. 5 gb
+5. 10 gb
+
+Aqui no estoy seguro de si sea facil descargar uno de 10gb, si no se puede entonces lo sustituyen por uno de 4.
+

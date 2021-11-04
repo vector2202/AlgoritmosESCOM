@@ -7,8 +7,6 @@
 !html/
 #Unignore the test files directory
 !testFiles/
-#Unignore the instructions and log file
-!log.txt
 #Ignore all .png, .txt. pdf, .dat, .bmp, .ppt, .rar
 *.png
 *.txt
@@ -18,3 +16,6 @@
 *.zip
 *.ppt
 *.rar
+#Unignore the instructions and log file
+!log.txt
+
