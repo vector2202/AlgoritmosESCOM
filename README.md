@@ -2,9 +2,9 @@
 Este repositorio contiene las practicas de Analisis y Diseño de Algoritmos 
 
 Integrantes:
- * @vector2202
- * @GuillermoSanFLo
- * @LaraSotelo
+ * [@vector2202](https://github.com/vector2202)
+ * [@GuillermoSanFLo](https://github.com/LaraSotelo)
+ * [@LaraSotelo](https://github.com/GuillermoSanFLo)
  
  ## Practica 2
  En esta practica se desarrollan los algoritmos de busqueda: lineal, binaria, exponencial, fibonacci y arbol binario de busqueda para evaluar sus tiempos de ejecucion y ademas se le implemento hilos usando la biblioteca *lpthread* para usarlos y buscar mejorar los tiempos de algunos de estos algoritmos.
