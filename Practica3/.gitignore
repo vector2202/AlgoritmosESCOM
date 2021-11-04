@@ -8,14 +8,15 @@
 #Unignore the test files directory
 !testFiles/
 #Ignore all .png, .txt. pdf, .dat, .bmp, .ppt, .rar
-*.png
-*.txt
-*.pdf
+#*.png
+#*.txt
+#*.pdf
+frecuencyTable.txt
 *.dat
-*.bmp
-*.zip
-*.ppt
-*.rar
+#*.bmp
+#*.zip
+#*.ppt
+#*.rar
 #Unignore the instructions and log file
 !log.txt
 
