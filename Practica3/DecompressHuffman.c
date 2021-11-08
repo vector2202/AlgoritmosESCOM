@@ -51,8 +51,8 @@ unsigned char* readByteCode(int* byteFileSize){
     
     //leemos los bytes del .dat y los guardamos en un arreglo
     for(i = 0; i < (*byteFileSize); i++){
-    	fread(&c, sizeof(unsigned char), 1, file);
-        bytesRead[i] = c;
+	fread(&c, sizeof(unsigned char), 1, file);
+	bytesRead[i] = c;
     }
     fclose(file);
     return bytesRead;
