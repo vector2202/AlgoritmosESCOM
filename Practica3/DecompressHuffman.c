@@ -10,7 +10,7 @@ void readFrecuencyTable(struct data bytesFrecuency[], int* fileSize){
     FILE* frecuencyTable;
 
     //Abrimos y verificamos que si se abrio correctamente
-    frecuencyTable = fopen("frecuencyTable.txt", "r");
+    frecuencyTable = fopen("frecuencias.txt", "r");
     if(frecuencyTable == NULL){
         puts("The file could not be opened.\n");
         exit(1);
@@ -35,7 +35,7 @@ unsigned char* readByteCode(int* byteFileSize){
     FILE* file;
 
     //Abrimos y verificamos que si se abrio correctamente
-    file = fopen("byteCode.dat", "rb");
+    file = fopen("codificacion.dat", "rb");
     if(file == NULL){
         puts("Open file Failed");
         exit(1);

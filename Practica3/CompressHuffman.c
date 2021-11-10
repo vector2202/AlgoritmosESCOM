@@ -45,7 +45,7 @@ void writeFrecuenyTable(struct data bytesFrecuency[], int fileSize)
     FILE *frecuencyTable;
 
     //Abrimos y verificamos que si se abrio correctamente
-    frecuencyTable = fopen("frecuencyTable.txt", "wt+");
+    frecuencyTable = fopen("frecuencias.txt", "wt+");
     if (frecuencyTable == NULL)
     {
         puts("The file could not be opened.\n");
@@ -67,7 +67,7 @@ void writeBinaryCode(unsigned char *bytesRead, struct node *mainTree, struct bit
     FILE *binaryCode;
 
     //Abrimos y verificamos que si se abrio correctamente
-    binaryCode = fopen("byteCode.dat", "wb+");
+    binaryCode = fopen("codificacion.dat", "wb+");
     if (binaryCode == NULL)
     {
         puts("The file could not be opened.\n");
