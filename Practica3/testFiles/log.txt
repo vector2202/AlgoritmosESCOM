@@ -5,33 +5,41 @@ Tienen que subir al menos 1 archivo de cada grupo y subir 3 extra, cada que suba
 
 Los achivos van en testFiles/grupo correspondiente
 
-Bytes  	   	    Lo subio
-1. 5 bytes
-2. 50 bytes
-3. 100 bytes
-4. 250 bytes
-5. 500 bytes
+BMP: 1
+PNG: 3
+PDF: 2
+PPT: 1
+TXT: 8
+ZIP: 1
+RAR: 0
+
+Bytes  	   	    Lo subio	extension
+1. 5 bytes 	    Leilani	txt
+2. 15 bytes	    Leilani	txt
+3. 50 bytes	    Victor 	txt
+4. 100 bytes	    -
+5. 500 bytes	    -
 
 Kilobytes
-1. 1kb
-2. 10 kb
-3. 100 kb
-4. 250 kb
-5. 500 kb
+1. 1kb		   Leilani	png
+2. 35 kb	   Leilani	txt
+3. 100 kb	   Victor	zip
+4. 150 kb	   Victor	pdf
+5. 250 kb	   Victor	ppt
+6. 500 kb	   Victor	png
 
 Megabytes
-1. 1 mb
-2. 10 mb
-3. 100 mb
-4. 250 mb
-5. 500 mb
+1. 1 mb		   Leilani	txt
+2. 2 mb		   Leilani	txt
+3. 5 mb		   Victor	png
+4. 10 mb	   Victor	bmp
+5. 100 mb	   Victor	pdf
+6. 500 mb
 
 Gigabytes
-1. 1 gb
+1. 1 gb		   Leilani	txt
 2. 2 gb
-3. 3 gb
-4. 5 gb
-5. 10 gb
+3. 5 gb
 
 Aqui no estoy seguro de si sea facil descargar uno de 10gb, si no se puede entonces lo sustituyen por uno de 4.
 
