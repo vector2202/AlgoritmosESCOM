@@ -1,0 +1,367 @@
+\documentclass[12 pt]{report}
+
+\usepackage[spanish, mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[export]{adjustbox}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%%Titulo
+\title{Reporte algoritmo de Huffman}
+%%Autor
+\author{Victor Federico Torres Trejo}
+%%Inicio del documento
+\date{\today}
+%% \usemintedstyle{friendly}
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{figure}[ht]
+  \minipage{0.76\textwidth}
+  \includegraphics[height = 4.9cm ]{extras/Logo_IPN.png}
+  \label{EscudoIPN}
+  \endminipage
+  \minipage{0.32\textwidth}
+  \includegraphics[height = 4.9cm ,width=4cm]{extras/Logo_ESCOM.png}
+  \label{EscudoESCOM}
+  \endminipage
+\end{figure}
+
+\begin{center}
+  \vspace{0.8cm}
+  \LARGE
+  INSTITUTO POLITÉCNICO NACIONAL
+  
+  \vspace{0.8cm}
+  \LARGE
+  ESCUELA SUPERIOR DE COMPUTO
+  
+  \vspace{1.5cm}	
+  \Large
+  \textbf{Practica: Algoritmo de Huffman}
+
+  \vspace{1.0cm}
+  \normalsize	
+  Los últimos:  \\
+  \vspace{.3cm}
+  \large
+  \textbf{Torres Trejo Victor Federico \\ Sotelo Padrón Lara Leilani \\ Sánchez Flores Guillermo}
+  
+  \vspace{1cm}
+  \normalsize	
+  PROFESOR \\
+  \vspace{.3cm}
+  \large
+  \textbf{Edgardo Adrián Franco Martínez}
+  
+  \vspace{1cm}
+  \normalsize
+  
+  \vspace{1cm}
+  \normalsize	
+  ASIGNATURA \\
+  \vspace{.3cm}
+  \large
+  \textbf{Análisis y Diseño de Algoritmos}
+\end{center}
+
+
+\vspace{1cm}
+\today
+
+
+
+\section*{Objetivo}
+Implementar un algoritmo de codificación voraz ideado por David Huffman, este algoritmo permite encontrar un codigo binario eficiente para un tipo de información en un bajo orden de complejidad
+
+\section*{Definición del problema}
+\begin{itemize}
+\item Implementar el algoritmo de codificación de Huffman para codificar archivos de cualquier tipo bajo Lenguaje C.
+  \begin{itemize}
+  \item Implementar codificación voraz de Huffman
+  \item Implementar el algoritmo de codificación
+  \end{itemize}
+\item Medir y comprobar las ventajas de tamaño de los archivos una vez realizadas diferentes codificaciones de archivos.
+\item Medir los tiempos de ejecución de las implementaciones (codificador y decodificador).
+\item Analizar y determinar una cota de la complejidad de la codificación y decodificación  
+\end{itemize}
+
+
+\section*{Entorno experimental}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale = 0.3]{extras/os.png}
+  \caption{\label{Entorno experimental usado} }
+\end{figure}
+\newpage
+
+
+
+
+\section*{Descripción de la solución}
+\subsection*{Codificación}
+Para este codigo lo primero que se hizo fue leer los bytes del archivo original, con ayuda de la función fread se logro, para guardar la frecuencia de repetición de cada byte, se le hacia un enmascaramiento del byte a su valor en entero, esto sabíamos que iba a ser de $0-255$ bytes, por lo que pudimos aplicar hash, ya que conocemos que el valor hash de cada byte, será único, por lo que podemos hacer uso de esta estructura, así entonces en su valor correspondiente aumentamos la frecuencia en 1 cada vez que detectamos el byte y guardamos que byte es en la posición correspondiente del arreglo. Al final guardamos también una cadena con todos los bytes leídos, esto para después poder hacer la codificación correspondiente.\\
+Ya después insertamos en un arreglo de arboles de Huffman, todos los bytes cuya frecuencia hayan sido mayor a 0, ya que esto significa que aparecieron en el archivo original, así mismo, cada vez que guardamos un byte en un nodo, formamos dicho nodo en una cola de prioridad usando montículos, de esta manera el montículo ordena cada nodo de acuerdo a su frecuencia, una vez guardado esto, unimos todos los arboles de cada byte aparecido en un árbol de Huffman principal, esto se hace sacando el primer elemento de la cola de prioridad, sacando el segundo y re-insertarlos en el montículo pero ahora con los dos nodos unidos, este ciclo se repite hasta que el tamaño del montículo sea 1, indicando que ya tenemos el árbol de Huffman principal.\\
+Una vez que tenemos el árbol, leemos las codificaciones correspondientes de los bits apoyándonos del recorrido in-order, si nos vamos a la izquierda aumentamos un 0, y si nos vamos a la derecha un 1 a una cadena de bits, usando corrimientos hasta que por fin llegamos un nodo sin algún hijo, después de ahí, preguntamos si es un nodo hoja, porque solo los nodos hoja, son aquellos que traen un bit y su frecuencia valido, los demás solo traen la suma de frecuencias de dos nodos hijos, llegado a este punto, aplicamos igual hash con el enmascaramiento del byte a entero, y guardamos la cadena de bits que llevábamos hasta el momento con corrimientos y añadiendo 0 o 1 si nos íbamos a la izquierda o a la derecha, guardamos su byte correspondiente y guardamos el tamaño de los bits correspondiente, esto es porque si bien guardamos la cadena de bits correspondiente, no podemos guardar solo esos bits, y como las guardamos en un entero, añade 0 para formar sus 32 bits, entonces guardando el tamaño de los bits, le decimos, solo queremos los últimos n bits.\\
+Para escribir el codigo binario correspondiente, igual haremos uso de corrimientos, leemos de acuerdo a la cadena de bytes originalmente leída, el byte en el que vamos, y de eso obtenemos los bits que le corresponden de la codificación junto con su tamaño, dependiendo del tamaño, tenemos 3 casos:
+\begin{itemize}
+\item si su tamaño de bits es de 8, solo le hacemos un enmascaramiento a esos 8 bits, para que se eliminen los bits innecesarios y que no nos importan y solo tomemos los 8, y después escribimos en el dat correspondiente.
+\item si es mayor a 8, entonces guardamos los últimos tamaño de bits $-$ 8 bits que no podemos escribir pero que tenemos que escribir la siguiente vez, le hacemos un corrimiento a bits del mismo tamaño de los bits que guardamos para eliminarlos y el enmascaramiento mencionado en el primer caso de los primeros 8 bits que si podemos escribir. Los bits no escritos y su tamaño se almacenan en una variable temporal.
+\item si es menor a 8, significa que no podemos escribir, por lo que guardamos los bits y su tamaño en una variable temporal
+\end{itemize}
+Si hay byte por escribir lo hacemos, si no es así, no escribimos nada en el dat.\\
+En la siguiente iteración después de obtener los bits y su tamaño del byte original leído, verificamos si guardamos algo en variables temporales, esto sucede en 2 de los 3 casos descritos. Si hay algo, entonces esos bits, van primero, ya que es lo primero que tenemos que escribir, así que con corrimiento los mandamos al principio y después los bits del byte en el que vamos, restablecemos estas variables auxiliares, indicando que ya las usamos, dejándolas vacías por si se vuelven a ocupar.\\
+Con el fin de evitar desbordamientos en las variables temporales, tenemos un ciclo while, donde vemos si a pesar que ya escribimos una vez, tenemos en la variable temporal 8 o mas bits, si es así, entonces escribiremos los primeros 8, guardamos el exceso y se lo asignamos de nuevo a la variable temporal, siendo ese exceso el valor de la variable temporal. Esto se repetirá hasta que el tamaño de los bits de la variable temporal sea menor a 8.
+
+Al final de escribir todos los bytes en su codificación, preguntamos si hay bits que no escribimos, si es así, los escribimos y guardamos cuantos bits extras escribimos, ya que si teníamos x bits, necesitamos de $8-x$ bits extra para poder escribirlo en el dat, en el ultimo byte del dat, escribimos precisamente cuantos bits extra no correspondientes a la codificación, escribimos, esto para poder leerlo y descomprimirlo bien.\\
+Como salida extra escribimos en un txt la tabla de frecuencias de aparición de cada byte junto con el tamaño del archivo original.
+
+\subsection*{Decodificación}
+
+Como primer paso, leemos la tabla de frecuencias, esto con el fin de rearmar el árbol, las frecuencias de bytes, el armado del árbol de Huffman y la obtención de la codificación de cada byte, se hacen de la misma manera descrita en la codificación. Una vez con el árbol, leemos todos los bytes del dat que generemos en la compresión, y ya con todo esto, escribimos de vuelta el archivo original. Primero, del ultimo byte escrito en el dat, lo leemos, ya que ese byte nos indica cuantos bits extra escribimos. Ahora recorremos cada byte leído excepto el ultimo.\\
+Esto se hace que a cada byte leído, recorremos el árbol como nos va indicando, si en el byte en el primer bit hay un 1, se va a la derecha y si lee un 0, a la izquierda, esto lo hace preguntando si el nodo actual es nodo hoja, si no lo es, checa que la posición del bit leído no se haya desbordado, ya que sus limites son de 7 a 0, y consulta que bit hay en esa posición del byte que esta leyendo actualmente, como ya mencionamos hacia donde se va dependiendo si es 1 o 0. Si el nodo es hoja, significa que llegamos a un byte correspondiente, así que retorna el byte a escribir en el archivo original, junto con la posición de bit donde se quedo. \\
+Ya que tenemos que byte debemos escribir, lo hacemos, aumentamos nuestro tamaño de archivo original y verificamos que la posición en bits no se haya desbordado, después de la primera iteración, debemos cuidar que no escribamos mas bytes de los que tenía el archivo original, por ello tenemos ese conteo y ademas cuidamos que no escribamos los bits de mas, esto es, si estamos en el penúltimo byte leído y ademas, nuestra posición en bits, corresponde al complemento de los bits extra, entonces ya acabamos de escribir.
+
+\subsection*{Cola de prioridad}
+Usamos un montículo o montón para la cola de prioridad, donde sus funciones son las siguientes:\\
+\begin{itemize}
+\item Insert, insertará nodos a el montón.
+\item Bottom up lo que hará es recorrer el montón de arriba hacia abajo
+\item Top bottom es ordenara de abajo hacia arriba y buscará el de mayor prioridad y lo colocará hasta arriba ya usado el de mayor prioridad le hará un pop y volvemos a hablar a top bottom para que busque al de mayor prioridad y lo coloque hasta arriba
+\item Pop eliminara el primer elemento, el de menor frecuencia de todos los nodos en la cola
+\end{itemize}
+\newpage
+
+\section*{Análisis de complejidad}
+%%checar linea 200
+\subsection*{Codificación de Huffman}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/maincomp.jpeg}
+  \caption{\label{fig:Main de la codificación}}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/createheap.jpeg}
+  \caption{\label{fig:Reservar el espacio del montículo} }
+\end{figure}
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/readfile.jpeg}
+  \caption{\label{fig:Leer bytes del archivo original}}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/inserttree.jpeg}
+  \caption{\label{fig:Insertar nodos en la cola de prioridad} }
+\end{figure}
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/pushtree.jpeg}
+  \caption{\label{fig:Insertar datos en los nodos} }
+\end{figure}
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/insertheap.jpeg}
+  \caption{\label{fig:Insercion en la cola de prioridad} }
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/bottop.jpeg}
+  \caption{\label{fig:Hacer bottom top al montículo} }
+\end{figure}
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/mergetrees.jpeg}
+  \caption{\label{fig:Unir todos los arboles en uno principal} }
+\end{figure}
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/popminheap.jpeg}
+  \caption{\label{fig:Eliminar y devolver el menor elemento de la cola} }
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/topbot.jpeg}
+  \caption{\label{fig:Hacer top bottom al montículo} }
+\end{figure}
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/mergenodes.jpeg}
+  \caption{\label{fig:Unir dos nodos a un ancestro comun} }
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/getbits.jpeg}
+  \caption{\label{fig:Obtener la codificación correspondiente} }
+\end{figure}
+\begin{figure}[h!]
+  \includegraphics[scale = 0.75]{complejidad/writeft.jpeg}
+  \caption{\label{fig:Escribir la tabla de frecuencias} }
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \includegraphics[scale = 0.35]{complejidad/writeb.jpeg}
+  \caption{\label{fig:Escribir el archivo compreso} }
+\end{figure}
+\newpage
+\subsection*{Decodificación de Huffman}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/maindecomp.jpeg}
+  \caption{\label{fig:Main de la decodificación} }
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/createheap.jpeg}
+  \caption{\label{fig:Reservar el espacio del montículo} }
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/readft.jpeg}
+  \caption{\label{fig:Leer la tabla de frecuencias}}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/inserttree.jpeg}
+  \caption{\label{fig:Insertar nodos en la cola de prioridad} }
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/pushtree.jpeg}
+  \caption{\label{fig:Insertar datos en los nodos} }
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/insertheap.jpeg}
+  \caption{\label{fig:Insercion en la cola de prioridad} }
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/bottop.jpeg}
+  \caption{\label{fig:Hacer bottom top al montículo} }
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/mergetrees.jpeg}
+  \caption{\label{fig:Unir todos los arboles en uno principal} }
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/popminheap.jpeg}
+  \caption{\label{fig:Eliminar y devolver el menor elemento de la cola} }
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/topbot.jpeg}
+  \caption{\label{fig:Hacer top bottom al montículo} }
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/mergenodes.jpeg}
+  \caption{\label{fig:Unir dos nodos a un ancestro comun} }
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/getbits.jpeg}
+  \caption{\label{fig:Obtener la codificación correspondiente} }
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/readb.jpeg}
+  \caption{\label{fig:Leer el achivo comprimido} }
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/write.jpeg}
+  \caption{\label{fig:Escribir el archivo original decodificando} }
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.75]{complejidad/getchar.jpeg}
+  \caption{\label{fig:Obtener el byte decodificado dada una cadena de bits} }
+\end{figure}
+
+\newpage
+
+
+\section*{Porcentajes de compresion}
+\begin{tabular}{ || c c | c || }
+  \hline
+  Tipo de archivo & \% de compresión alcanzado \\[0.5ex]
+  \hline \hline
+  Txt & 194.7\%\\
+  BMP & 678\%\\
+  PNG & 100\%\\
+  PDF & 100\%\\
+  PPT & 110.69\%\\
+  ZIP & 100\% \\
+  RAR & 102\%\\
+  \hline
+               
+  
+\end{tabular}
+
+
+
+\section*{Tiempos de ejecución}
+\begin{tabular}{ || c c | c | c || }
+  \hline
+  Tamaño & Tipo & tiempo comprimiendo & tiempo descomprimiendo  \\[0.5ex]
+  \hline \hline
+  5 bytes & txt & $2.3698806763\times10^{-4}$ & $1.0299682617\times10^{-4}$\\
+  15 bytes & txt & $1.9407272339\times10^{-4}$ & $8.7022781372\times10^{-5}$\\
+  50 bytes & txt & $1.6713142395\times10^{-4}$ & $1.0800361633\times10^{-4}$\\
+  700 bytes & rar & $2.3603439331\times10^{-4}$ & $2.7418136597\times10^{-4}$\\
+  900 bytes & rar & $2.9397010803\times10^{-4}$ & $3.4594535828\times10^{-4}$\\
+  1 kb & png & $2.6917457581\times10^{-4}$ & $2.5701522827\times10^{-4}$\\
+  35.9 kb & txt & $2.1967887878\times10^{-3}$ & $3.6909580231\times10^{-3}$\\
+  103 kb & pdf & $5.7950019836\times10^{-3}$ & $1.5046119690\times10^{-2}$\\
+  115.5 kb & zip & $ 5.8871030807\times10^{-2}$ & $4.9322843552\times10^{-2}$\\
+  142.8 kb & pdf & $8.2550048828\times10^{-3}$ & $2.3307085037\times10^{-2}$\\
+  248.3 kb & ppt & $1.2196063995\times10^{-2}$ & $2.9481887817\times10^{-2}$\\
+  512.6 kb & png & $2.1743059158\times10^{-2}$ & $6.8802833557\times10^{-2}$\\
+  1 mb & txt &  $4.3466091156\times10^{-2}$ & $7.3101997375\times10^{-2}$\\
+  2.1 mb & txt & $7.6452016830\times10^{-2}$ & $1.4342093468\times10^{-1}$\\
+  5 mb & png & $2.8373908997\times10^{-1}$ & $6.7059397697\times10^{-1}$\\
+  10.7 mb & zip & $7.6861405373\times10^{-1}$ & $1.4399669170$\\
+  11.6 mb & bmp & $9.0315604210\times10^{-1}$ & $3.249371051\times10^{-1}$\\
+  105.3 mb & pdf & $4.6418728828$ & $1.3878057003\times10^{1}$\\
+  615 mb & zip &  $2.0849997044\times10^{1}$ & $8.0337167025\times10^{2}$ \\
+  1 gb & txt & $6.8174697876\times10^{1}$ & $1.2259612106\times10^{2}$ \\
+  [1ex]
+  \hline
+\end{tabular}
+
+
+
+\section*{Cuestionario}
+
+\section*{Anexo}
+
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
