@@ -11,7 +11,7 @@
 \usepackage{minted}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
-
+\usemintedstyle{friendly}
 \pagestyle{fancy}
 \fancyhf{}
 \hypersetup{
@@ -27,7 +27,7 @@
 \author{Victor Federico Torres Trejo}
 %%Inicio del documento
 \date{\today}
-%% \usemintedstyle{friendly}
+
 \begin{document}
 
 \thispagestyle{empty}
@@ -107,7 +107,6 @@ Implementar un algoritmo de codificación voraz ideado por David Huffman, este a
 
 
 \chapter{Actividades y pruebas}
-
 \section{Entorno experimental}
 \begin{figure}[ht]
   \centering
@@ -116,6 +115,31 @@ Implementar un algoritmo de codificación voraz ideado por David Huffman, este a
 \end{figure}
 \newpage
 
+
+
+
+\section{Verificación de la solución}
+\subsection{Foto original}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale = 0.3]{extras/original.png}
+  \caption{\label{fig:Original} }
+\end{figure}
+\subsection{Ejecución del algoritmo}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale = 0.25]{extras/prueba.png}
+  \caption{\label{fig:Ejecución} }
+\end{figure}
+\newpage
+
+\subsection{Foto final}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale = 0.3]{extras/final.png}
+  \caption{\label{fig:Foto final} }
+\end{figure}
+\newpage
 
 
 
@@ -330,11 +354,7 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
   ZIP & 100\% \\
   RAR & 102\%\\
   \hline
-               
-  
 \end{tabular}
-
-
 
 \section{Tiempos de ejecución}
 \begin{tabular}{ || c c | c | c || }
@@ -368,8 +388,57 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
 
 
 \section{Cuestionario}
-
+\begin{enumerate}
+\item ¿Los niveles de codificación de archivos proporcionan una ventaja respecto al tamaño del archivo original en el promedio de los casos?\\
+  Sí.
+\item ¿Los tiempos de codificación o decodificación del archivo son muy grandes?\\
+  No, a menos que se pase el gB, el algoritmo es rápido relativamente.
+\item ¿Cual es la proporción temporal que guardan la codificación vs la decodificación?\\
+  Por lo general, la decodificación es mas tardada que la codificación.
+\item ¿Ocurrieron perdidas de la información al codificar los archivos?\\
+  No.
+\item ¿El comportamiento experimental de los algoritmos era el esperado? ¿Por qué?\\
+  Sí, los pdf o zip son comprimidos en si, es difícil sacarle mas compresión, mientras que los txt o bmp son algoritmos que generalmente se comprimen para enviarse, por lo que era lógico que pudiéramos comprimir dichos archivos de una manera eficiente.
+\item ¿Qué características deberá tener un archivo de imagen para codificarse en menor espacio?\\  
+\item ¿Qué características deberá tener un archivo de texto para tener una codificación en menor espacio?\\
+  Que tenga mucho texto similar, de manera ideal, un archivo con el mismo símbolo a lo largo del mismo.
+\item De 3 aplicaciones posibles en problemas de la vida real a la codificación de Huffman\\
+  \begin{itemize}
+  \item Al enviar txt muy grandes que tardan años en enviarse por internet.
+  \item Para comprimir bmp sin perder su calidad ni información ya que estos archivos son muy grandes de tamaño por lo general
+  \end{itemize}
+\item ¿Existió un entorno controlado para realizar las pruebas experimentales? ¿Cuál fue?\\
+  Sí, scripts para compilar y ejecutar los archivos.
+\item ¿Qué recomendaciones darían a nuevos equipos para realizar esta practica?\\
+  Entender y modularizar el algoritmo lo mas posible, desarrollar las estructuras por separado para después solo cambiar sus campos para aceptar bytes enmascarados, desarrollar pruebas de escritorio ademas de entender corrimientos y operaciones con bits de datos primitivos.
+\end{enumerate}
 \chapter{Anexo}
+\section{Codificación}
+\subsection{Header}
+\inputminted{C}{../CompressHuffman.h}
+\subsection{Codigo}
+
+\inputminted{C}{../CompressHuffman.c}
+
+\section{Decodificación}
+\subsection{Header}
+\inputminted{C}{../DecompressHuffman.h}
+\subsection{Codigo}
+\inputminted{C}{../DecompressHuffman.c}
+
+
+\section{Estructuras de Huffman}
+\subsection{Header}
+\inputminted{C}{../HuffmanStructures.h}
+\subsection{Codigo}
+\inputminted{C}{../HuffmanStructures.c}
+
+
+\section{Tiempo}
+\subsection{Header}
+\inputminted{C}{../tiempo.h}
+\subsection{Codigo}
+\inputminted{C}{../tiempo.c}
 
 \end{document}
 

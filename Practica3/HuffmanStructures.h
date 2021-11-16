@@ -12,11 +12,13 @@
 //Estructuras utilizadas en el programa
 
 /** @struct bits
- * @brief Almacena el byte correspondiente, su tamaño y sus bits de la codificacion de Huffman
+ * @brief Almacena el byte correspondiente, su tamaño y sus bits de la
+ * codificacion de Huffman
  * @var bits::byte
  * 'byte' contiene el valor decimal del byte leido
  * @var bits::bits
- * 'bits' contiene el valor en entero de los bits correspondientes a la codifiacion 
+ * 'bits' contiene el valor en entero de los bits correspondientes a la
+ * codifiacion
  * @var bits::sizeBits
  * 'sizeBits' contiene el tamaño de los bits correspondientes a la codifcacion
  */
@@ -123,7 +125,8 @@ struct node *mergeNodes(struct node *node1, struct node *node2);
  * @param bits los bits con los que inicia el nodo que por defecto es 0
  * @param bitsSize el tamaño de los bits que por defecto es 0
  */
-void getBits(struct node *HuffmanTree, struct bits bytesCode[], int bits, int bitsSize);
+void getBits(struct node *HuffmanTree, struct bits bytesCode[], int bits,
+             int bitsSize);
 /**
  * Obtiene el byte correspondiente a la codificacion de Huffman. Recorre
  * el arbol analizando si es 0 o 1 el bit en el que esta para irse
@@ -138,7 +141,8 @@ void getBits(struct node *HuffmanTree, struct bits bytesCode[], int bits, int bi
  * @param byteToWrite la variable donde guardaremos el byte correspondiente
  * @return la posicion en bits en donde nos quedamos en relacion a un byte
  */
-int getCharacters(struct node *HuffmanTree, unsigned char *cadena, int *posInString, int posInBits, unsigned char *byteToWrite);
+int getCharacters(struct node *HuffmanTree, unsigned char *cadena,
+                  int *posInString, int posInBits, unsigned char *byteToWrite);
 
 //*****************************************************************
 //Funciones con heap

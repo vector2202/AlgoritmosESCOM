@@ -3,40 +3,39 @@
 #include <stdlib.h>
 #include <string.h>
 #include "HuffmanStructures.h"
+#include "CompressHuffman.h"
 #include "tiempo.h"
 
-unsigned char *readFile(const char *fileToOpen, struct data bytesFrecuency[], int *fileSize)
-{
-    int i;
-    FILE *file;
-    unsigned char c;
+unsigned char *readFile(const char *fileToOpen, struct data bytesFrecuency[],
+                        int *fileSize) {
+  int i;
+  FILE *file;
+  unsigned char c;
 
-    //Abrimos y verificamos que si se abrio correctamente
-    file = fopen(fileToOpen, "rb");
-    if (file == NULL)
-    {
-        puts("The file could not be opened.\n");
-        exit(1);
-    }
+  // Abrimos y verificamos que si se abrio correctamente
+  file = fopen(fileToOpen, "rb");
+  if (file == NULL) {
+    puts("The file could not be opened.\n");
+    exit(1);
+  }
 
-    //Obtenemos el tamaño del archivo.
-    fseek(file, 0L, SEEK_END);
-    (*fileSize) = ftell(file);
-    rewind(file);
+  // Obtenemos el tamaño del archivo.
+  fseek(file, 0L, SEEK_END);
+  (*fileSize) = ftell(file);
+  rewind(file);
 
-    //Reservamos memoria para la cadena de bytes leidos
-    unsigned char *bytesRead = malloc((*fileSize) * sizeof(unsigned char));
+  // Reservamos memoria para la cadena de bytes leidos
+  unsigned char *bytesRead = malloc((*fileSize) * sizeof(unsigned char));
 
-    //Guardamos los bytes leidos y su frecuencia con su valor en decimal
-    for (i = 0; i < (*fileSize); i++)
-    {
-        fread(&c, sizeof(unsigned char), 1, file);
-        bytesRead[i] = c;
-        bytesFrecuency[c].byte = c;    // Enmascaramiento
-        bytesFrecuency[c].frequency++; // frecuencia de apariciones
-    }
-    fclose(file);
-    return bytesRead;
+  // Guardamos los bytes leidos y su frecuencia con su valor en decimal
+  for (i = 0; i < (*fileSize); i++) {
+    fread(&c, sizeof(unsigned char), 1, file);
+    bytesRead[i] = c;
+    bytesFrecuency[c].byte = c;    // Enmascaramiento
+    bytesFrecuency[c].frequency++; // frecuencia de apariciones
+  }
+  fclose(file);
+  return bytesRead;
 }
 
 void writeFrecuenyTable(struct data bytesFrecuency[], int fileSize)
@@ -55,115 +54,106 @@ void writeFrecuenyTable(struct data bytesFrecuency[], int fileSize)
     //Escribimos el tamaño original al inicio del txt
     fprintf(frecuencyTable, "%d\n", fileSize);
     for (i = 0; i < 256; i++)
-        if (bytesFrecuency[i].frequency > 0) //Si el simbolo aparecio en el archivo, escribelo
-            fprintf(frecuencyTable, "%d %d\n", bytesFrecuency[i].byte, bytesFrecuency[i].frequency);
+      if (bytesFrecuency[i].frequency > 0) 
+        fprintf(frecuencyTable, "%d %d\n", bytesFrecuency[i].byte,
+                bytesFrecuency[i].frequency);
+    // Si el simbolo aparecio en el archivo, escribelo
 
     fclose(frecuencyTable);
 }
 
-void writeBinaryCode(unsigned char *bytesRead, struct node *mainTree, struct bits *bytesCode, int fileSize, int *compressedFileSize)
-{
-    int i, j, bitsExtraWritten = 0;
-    FILE *binaryCode;
+void writeBinaryCode(unsigned char *bytesRead, struct node *mainTree,
+                     struct bits *bytesCode, int fileSize,
+                     int *compressedFileSize) {
+  int i, j, bitsExtraWritten = 0;
+  FILE *binaryCode;
 
-    //Abrimos y verificamos que si se abrio correctamente
-    binaryCode = fopen("codificacion.dat", "wb+");
-    if (binaryCode == NULL)
-    {
-        puts("The file could not be opened.\n");
-        exit(1);
+  // Abrimos y verificamos que si se abrio correctamente
+  binaryCode = fopen("codificacion.dat", "wb+");
+  if (binaryCode == NULL) {
+    puts("The file could not be opened.\n");
+    exit(1);
+  }
+
+  // Variables para poder escribir los bits
+  int bitsSize, sizeByteToWrite, tempSize = 0;
+  int bits, tempBits, tempBits2, tempBitsAux;
+  unsigned char byteToWrite;
+
+  for (i = 0; i < fileSize; i++) {
+    bitsSize = bytesCode[bytesRead[i]].sizeBits;
+    bits = bytesCode[bytesRead[i]].bits;
+
+    // Checamos si hay bits que no escribimos
+    if (tempSize != 0) {
+      bits = (tempBits << bitsSize) + bits;
+      bitsSize += tempSize;
+      tempBits = 0;
+      tempSize = 0;
     }
 
-    //Variables para poder escribir los bits
-    int bitsSize, sizeByteToWrite, tempSize = 0;
-    int bits, tempBits, tempBits2, tempBitsAux;
-    unsigned char byteToWrite;
-
-    for (i = 0; i < fileSize; i++)
-    {
-        bitsSize = bytesCode[bytesRead[i]].sizeBits;
-        bits = bytesCode[bytesRead[i]].bits;
-
-        //Checamos si hay bits que no escribimos
-        if (tempSize != 0)
-        {
-            bits = (tempBits << bitsSize) + bits;
-            bitsSize += tempSize;
-            tempBits = 0;
-            tempSize = 0;
+    // Podemos escribir o no el byte?
+    if (bitsSize >= 8) {
+      if (bitsSize > 8) {
+        // Tenemos mas bits de los que podemos escribir, hay que reducir
+        // Guardamos lo que no podemos escribir en una variable temporal
+        tempSize = bitsSize - 8;
+        for (j = 0; j < tempSize; j++) {
+          tempBits2 = (CONSULTARBIT(bits, j)) << j;
+          tempBits = tempBits2 + tempBits;
         }
-
-        //Podemos escribir o no el byte?
-        if (bitsSize >= 8)
-        {
-            if (bitsSize > 8)
-            {
-                //Tenemos mas bits de los que podemos escribir, hay que reducir
-                //Guardamos lo que no podemos escribir en una variable temporal
-                tempSize = bitsSize - 8;
-                for (j = 0; j < tempSize; j++)
-                {
-                    tempBits2 = (CONSULTARBIT(bits, j)) << j;
-                    tempBits = tempBits2 + tempBits;
-                }
-                //ajustamos los bits para poder escribir los primeros 8
-                bits = bits >> tempSize;
-            }
-            byteToWrite = bits;
-            sizeByteToWrite = 8; // Podemos escribir en el .dat
-        }
-        else
-        {
-            tempBits = bits;     // Guardamos en una variable temporal
-            tempSize = bitsSize; // lo que no pudimos escribir
-        }
-
-        // Hay bytes por escribir?
-        if (sizeByteToWrite == 8)
-        {
-            sizeByteToWrite = 0; //Escribimos el byte
-            fwrite(&byteToWrite, sizeof(unsigned char), 1, binaryCode);
-        }
-
-        //Checamos que no se desborde tempBits
-        while (tempSize >= 8)
-        {
-            //Ajustamos tempsize para poder escribir los primeros 8
-            tempSize = tempSize - 8;
-            tempBitsAux = tempBits;
-            bits = tempBits >> tempSize;
-            tempBits = 0;
-
-            //Guardamos el exceso en una variable temporal
-            for (j = 0; j < tempSize; j++)
-            {
-                tempBits2 = ((CONSULTARBIT(tempBitsAux, j)) << j);
-                tempBits = tempBits2 + tempBits;
-            }
-            byteToWrite = bits; // Escribimos el byte
-            fwrite(&byteToWrite, sizeof(unsigned char), 1, binaryCode);
-        }
+        // ajustamos los bits para poder escribir los primeros 8
+        bits = bits >> tempSize;
+      }
+      byteToWrite = bits;
+      sizeByteToWrite = 8; // Podemos escribir en el .dat
+    } else {
+      tempBits = bits;     // Guardamos en una variable temporal
+      tempSize = bitsSize; // lo que no pudimos escribir
     }
 
-    //Faltaron bits por escribir?
-    if (tempBits != 0)
-    {
-        tempBits = (tempBits << (8 - tempSize));
-        byteToWrite = tempBits;
-        fwrite(&byteToWrite, sizeof(unsigned char), 1, binaryCode);
-        bitsExtraWritten = 8 - tempSize; //Bits extra escritos
+    // Hay bytes por escribir?
+    if (sizeByteToWrite == 8) {
+      sizeByteToWrite = 0; // Escribimos el byte
+      fwrite(&byteToWrite, sizeof(unsigned char), 1, binaryCode);
     }
 
-    //En el ultimo byte, indica cuantos bits extra escribimos
-    byteToWrite = bitsExtraWritten;
+    // Checamos que no se desborde tempBits
+    while (tempSize >= 8) {
+      // Ajustamos tempsize para poder escribir los primeros 8
+      tempSize = tempSize - 8;
+      tempBitsAux = tempBits;
+      bits = tempBits >> tempSize;
+      tempBits = 0;
+
+      // Guardamos el exceso en una variable temporal
+      for (j = 0; j < tempSize; j++) {
+        tempBits2 = ((CONSULTARBIT(tempBitsAux, j)) << j);
+        tempBits = tempBits2 + tempBits;
+      }
+      byteToWrite = bits; // Escribimos el byte
+      fwrite(&byteToWrite, sizeof(unsigned char), 1, binaryCode);
+    }
+  }
+
+  // Faltaron bits por escribir?
+  if (tempBits != 0) {
+    tempBits = (tempBits << (8 - tempSize));
+    byteToWrite = tempBits;
     fwrite(&byteToWrite, sizeof(unsigned char), 1, binaryCode);
+    bitsExtraWritten = 8 - tempSize; // Bits extra escritos
+  }
 
-    //Obtenemos el tamaño del archivo comprimido
-    fseek(binaryCode, 0L, SEEK_END);
-    (*compressedFileSize) = ftell(binaryCode);
-    rewind(binaryCode);
-    //Cerrar el archivo
-    fclose(binaryCode);
+  // En el ultimo byte, indica cuantos bits extra escribimos
+  byteToWrite = bitsExtraWritten;
+  fwrite(&byteToWrite, sizeof(unsigned char), 1, binaryCode);
+
+  // Obtenemos el tamaño del archivo comprimido
+  fseek(binaryCode, 0L, SEEK_END);
+  (*compressedFileSize) = ftell(binaryCode);
+  rewind(binaryCode);
+  // Cerrar el archivo
+  fclose(binaryCode);
 }
 
 int main(int argc, char *argv[])
@@ -214,7 +204,8 @@ int main(int argc, char *argv[])
 
     printf("Tamaño de %s: %d bytes\n", argv[1], fileSize);
     printf("Tamaño del archivo comprimido: %d bytes\n", compressedFileSize);
-    printf("Porcentaje de compresion alcanzado: %.2f%%\n", ((float)fileSize / (float)compressedFileSize) * 100);
+    printf("Porcentaje de compresion alcanzado: %.2f%%\n",
+           ((float)fileSize / (float)compressedFileSize) * 100);
     printf("Tiempo real de Ejecucion: %.10e s\n\n", wtime1 - wtime0);
 
     return 0;

@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "HuffmanStructures.h"
+#include "DecompressHuffman.h"
 #include "tiempo.h"
 
 void readFrecuencyTable(struct data bytesFrecuency[], int* fileSize){
@@ -58,41 +59,42 @@ unsigned char* readByteCode(int* byteFileSize){
     return bytesRead;
 }
 
-void writeFile(unsigned char* bytesRead, struct node* mainTree, const char* file, int byteFileSize, int* fileSize){
-    FILE* finalFile;
+void writeFile(unsigned char *bytesRead, struct node *mainTree,
+               const char *file, int byteFileSize, int *fileSize) {
+  FILE *finalFile;
 
-    //Abrimos y verificamos que si se abrio correctamente
-    finalFile = fopen(file, "wb+");
-    if(finalFile == NULL){
-        puts("The file could not be opened.\n");
-        exit(1);
-    }
+  // Abrimos y verificamos que si se abrio correctamente
+  finalFile = fopen(file, "wb+");
+  if (finalFile == NULL) {
+    puts("The file could not be opened.\n");
+    exit(1);
+  }
 
-    //Variables para escribir en el archivo
-    int i, posInBits = 7, bytesWritten = 0;
-    unsigned char byteToWrite;
-    
-    //Leemos los bits extra que escribimos
-    int bitsExtraWritten = bytesRead[byteFileSize-1];
-    
-    for(i = 0; i < byteFileSize - 1 && bytesWritten < (*fileSize);){
-	posInBits = getCharacters(mainTree, bytesRead , &i, posInBits, &byteToWrite);
-	//escribimos el byte correspondiente a los bits
-	fwrite(&byteToWrite, sizeof(unsigned char), 1, finalFile);
-	bytesWritten++;//conteo para no escribir de mas
-	
-	//Cuidamos no escribir los bits extra que escribimos al comprimir
-	if(i == (*fileSize) - 2 && 7 - posInBits == bitsExtraWritten)
-	    bytesWritten++;
-	
-	//Checamos que no nos desbordamos de posicion de bits
-	if(posInBits < 0){
-	    posInBits = 7;
-	    i++;
-	}
+  // Variables para escribir en el archivo
+  int i, posInBits = 7, bytesWritten = 0;
+  unsigned char byteToWrite;
+
+  // Leemos los bits extra que escribimos
+  int bitsExtraWritten = bytesRead[byteFileSize - 1];
+
+  for (i = 0; i < byteFileSize - 1 && bytesWritten < (*fileSize);) {
+    posInBits = getCharacters(mainTree, bytesRead, &i, posInBits, &byteToWrite);
+    // escribimos el byte correspondiente a los bits
+    fwrite(&byteToWrite, sizeof(unsigned char), 1, finalFile);
+    bytesWritten++; // conteo para no escribir de mas
+
+    // Cuidamos no escribir los bits extra que escribimos al comprimir
+    if (i == (*fileSize) - 2 && 7 - posInBits == bitsExtraWritten)
+      bytesWritten++;
+
+    // Checamos que no nos desbordamos de posicion de bits
+    if (posInBits < 0) {
+      posInBits = 7;
+      i++;
     }
-    (*fileSize) = bytesWritten;
-    fclose(finalFile);
+  }
+  (*fileSize) = bytesWritten;
+  fclose(finalFile);
 }
 
 int main(int argc, char* argv[]){
