@@ -1,7 +1,7 @@
 \documentclass[12 pt]{report}
 
 \usepackage[spanish, mexico]{babel}
-\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage[export]{adjustbox}
 \usepackage{caption}
@@ -10,8 +10,17 @@
 \usepackage{listings}
 \usepackage{minted}
 \usepackage{fancyhdr}
+\usepackage{hyperref}
+
 \pagestyle{fancy}
 \fancyhf{}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Reporte},
+    }
 %%Titulo
 \title{Reporte algoritmo de Huffman}
 %%Autor
@@ -60,10 +69,10 @@
   \vspace{.3cm}
   \large
   \textbf{Edgardo Adrián Franco Martínez}
-  
+
   \vspace{1cm}
   \normalsize
-  
+
   \vspace{1cm}
   \normalsize	
   ASIGNATURA \\
@@ -71,30 +80,35 @@
   \large
   \textbf{Análisis y Diseño de Algoritmos}
 \end{center}
-
-
 \vspace{1cm}
 \today
 
 
 
-\section*{Objetivo}
+
+\tableofcontents
+\chapter{Planteamiento del problema}
+
+\section{Objetivo}
 Implementar un algoritmo de codificación voraz ideado por David Huffman, este algoritmo permite encontrar un codigo binario eficiente para un tipo de información en un bajo orden de complejidad
 
-\section*{Definición del problema}
+\section{Definición del problema}
 \begin{itemize}
 \item Implementar el algoritmo de codificación de Huffman para codificar archivos de cualquier tipo bajo Lenguaje C.
   \begin{itemize}
   \item Implementar codificación voraz de Huffman
   \item Implementar el algoritmo de codificación
   \end{itemize}
+  
 \item Medir y comprobar las ventajas de tamaño de los archivos una vez realizadas diferentes codificaciones de archivos.
 \item Medir los tiempos de ejecución de las implementaciones (codificador y decodificador).
 \item Analizar y determinar una cota de la complejidad de la codificación y decodificación  
 \end{itemize}
 
 
-\section*{Entorno experimental}
+\chapter{Actividades y pruebas}
+
+\section{Entorno experimental}
 \begin{figure}[ht]
   \centering
   \includegraphics[scale = 0.3]{extras/os.png}
@@ -105,8 +119,8 @@ Implementar un algoritmo de codificación voraz ideado por David Huffman, este a
 
 
 
-\section*{Descripción de la solución}
-\subsection*{Codificación}
+\section{Descripción de la solución}
+\subsection{Descripción de la odificación}
 Para este codigo lo primero que se hizo fue leer los bytes del archivo original, con ayuda de la función fread se logro, para guardar la frecuencia de repetición de cada byte, se le hacia un enmascaramiento del byte a su valor en entero, esto sabíamos que iba a ser de $0-255$ bytes, por lo que pudimos aplicar hash, ya que conocemos que el valor hash de cada byte, será único, por lo que podemos hacer uso de esta estructura, así entonces en su valor correspondiente aumentamos la frecuencia en 1 cada vez que detectamos el byte y guardamos que byte es en la posición correspondiente del arreglo. Al final guardamos también una cadena con todos los bytes leídos, esto para después poder hacer la codificación correspondiente.\\
 Ya después insertamos en un arreglo de arboles de Huffman, todos los bytes cuya frecuencia hayan sido mayor a 0, ya que esto significa que aparecieron en el archivo original, así mismo, cada vez que guardamos un byte en un nodo, formamos dicho nodo en una cola de prioridad usando montículos, de esta manera el montículo ordena cada nodo de acuerdo a su frecuencia, una vez guardado esto, unimos todos los arboles de cada byte aparecido en un árbol de Huffman principal, esto se hace sacando el primer elemento de la cola de prioridad, sacando el segundo y re-insertarlos en el montículo pero ahora con los dos nodos unidos, este ciclo se repite hasta que el tamaño del montículo sea 1, indicando que ya tenemos el árbol de Huffman principal.\\
 Una vez que tenemos el árbol, leemos las codificaciones correspondientes de los bits apoyándonos del recorrido in-order, si nos vamos a la izquierda aumentamos un 0, y si nos vamos a la derecha un 1 a una cadena de bits, usando corrimientos hasta que por fin llegamos un nodo sin algún hijo, después de ahí, preguntamos si es un nodo hoja, porque solo los nodos hoja, son aquellos que traen un bit y su frecuencia valido, los demás solo traen la suma de frecuencias de dos nodos hijos, llegado a este punto, aplicamos igual hash con el enmascaramiento del byte a entero, y guardamos la cadena de bits que llevábamos hasta el momento con corrimientos y añadiendo 0 o 1 si nos íbamos a la izquierda o a la derecha, guardamos su byte correspondiente y guardamos el tamaño de los bits correspondiente, esto es porque si bien guardamos la cadena de bits correspondiente, no podemos guardar solo esos bits, y como las guardamos en un entero, añade 0 para formar sus 32 bits, entonces guardando el tamaño de los bits, le decimos, solo queremos los últimos n bits.\\
@@ -123,13 +137,13 @@ Con el fin de evitar desbordamientos en las variables temporales, tenemos un cic
 Al final de escribir todos los bytes en su codificación, preguntamos si hay bits que no escribimos, si es así, los escribimos y guardamos cuantos bits extras escribimos, ya que si teníamos x bits, necesitamos de $8-x$ bits extra para poder escribirlo en el dat, en el ultimo byte del dat, escribimos precisamente cuantos bits extra no correspondientes a la codificación, escribimos, esto para poder leerlo y descomprimirlo bien.\\
 Como salida extra escribimos en un txt la tabla de frecuencias de aparición de cada byte junto con el tamaño del archivo original.
 
-\subsection*{Decodificación}
+\subsection{Descripción de la decodificación}
 
 Como primer paso, leemos la tabla de frecuencias, esto con el fin de rearmar el árbol, las frecuencias de bytes, el armado del árbol de Huffman y la obtención de la codificación de cada byte, se hacen de la misma manera descrita en la codificación. Una vez con el árbol, leemos todos los bytes del dat que generemos en la compresión, y ya con todo esto, escribimos de vuelta el archivo original. Primero, del ultimo byte escrito en el dat, lo leemos, ya que ese byte nos indica cuantos bits extra escribimos. Ahora recorremos cada byte leído excepto el ultimo.\\
 Esto se hace que a cada byte leído, recorremos el árbol como nos va indicando, si en el byte en el primer bit hay un 1, se va a la derecha y si lee un 0, a la izquierda, esto lo hace preguntando si el nodo actual es nodo hoja, si no lo es, checa que la posición del bit leído no se haya desbordado, ya que sus limites son de 7 a 0, y consulta que bit hay en esa posición del byte que esta leyendo actualmente, como ya mencionamos hacia donde se va dependiendo si es 1 o 0. Si el nodo es hoja, significa que llegamos a un byte correspondiente, así que retorna el byte a escribir en el archivo original, junto con la posición de bit donde se quedo. \\
 Ya que tenemos que byte debemos escribir, lo hacemos, aumentamos nuestro tamaño de archivo original y verificamos que la posición en bits no se haya desbordado, después de la primera iteración, debemos cuidar que no escribamos mas bytes de los que tenía el archivo original, por ello tenemos ese conteo y ademas cuidamos que no escribamos los bits de mas, esto es, si estamos en el penúltimo byte leído y ademas, nuestra posición en bits, corresponde al complemento de los bits extra, entonces ya acabamos de escribir.
 
-\subsection*{Cola de prioridad}
+\subsection{Descripción de la cola de prioridad}
 Usamos un montículo o montón para la cola de prioridad, donde sus funciones son las siguientes:\\
 \begin{itemize}
 \item Insert, insertará nodos a el montón.
@@ -139,9 +153,9 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
 \end{itemize}
 \newpage
 
-\section*{Análisis de complejidad}
+\section{Análisis de complejidad}
 %%checar linea 200
-\subsection*{Codificación de Huffman}
+\subsection{Análisis de la codificación de Huffman}
 \begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.75]{complejidad/maincomp.jpeg}
@@ -206,7 +220,7 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
   \caption{\label{fig:Escribir el archivo compreso} }
 \end{figure}
 \newpage
-\subsection*{Decodificación de Huffman}
+\subsection{Análisis de la decodificación de Huffman}
 \begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.75]{complejidad/maindecomp.jpeg}
@@ -303,7 +317,7 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
 \newpage
 
 
-\section*{Porcentajes de compresion}
+\section{Porcentajes de compresion}
 \begin{tabular}{ || c c | c || }
   \hline
   Tipo de archivo & \% de compresión alcanzado \\[0.5ex]
@@ -322,7 +336,7 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
 
 
 
-\section*{Tiempos de ejecución}
+\section{Tiempos de ejecución}
 \begin{tabular}{ || c c | c | c || }
   \hline
   Tamaño & Tipo & tiempo comprimiendo & tiempo descomprimiendo  \\[0.5ex]
@@ -353,10 +367,9 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
 
 
 
-\section*{Cuestionario}
+\section{Cuestionario}
 
-\section*{Anexo}
-
+\chapter{Anexo}
 
 \end{document}
 
