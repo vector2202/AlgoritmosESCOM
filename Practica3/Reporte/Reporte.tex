@@ -11,9 +11,14 @@
 \usepackage{minted}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
+
 \usemintedstyle{friendly}
 \pagestyle{fancy}
 \fancyhf{}
+\rhead{\leftmark}
+\lhead{Algoritmo de Huffman}
+\rfoot{Page \thepage}
+
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -71,27 +76,21 @@
   \textbf{Edgardo Adrián Franco Martínez}
 
   \vspace{1cm}
-  \normalsize
-
-  \vspace{1cm}
   \normalsize	
   ASIGNATURA \\
   \vspace{.3cm}
   \large
-  \textbf{Análisis y Diseño de Algoritmos}
+  \textbf{Análisis y Diseño de Algoritmos\\}
+  
+  \vspace{1cm}
+  \today
 \end{center}
-\vspace{1cm}
-\today
-
-
-
 
 \tableofcontents
-\chapter{Planteamiento del problema}
 
+\chapter{Planteamiento del problema}
 \section{Objetivo}
 Implementar un algoritmo de codificación voraz ideado por David Huffman, este algoritmo permite encontrar un codigo binario eficiente para un tipo de información en un bajo orden de complejidad
-
 \section{Definición del problema}
 \begin{itemize}
 \item Implementar el algoritmo de codificación de Huffman para codificar archivos de cualquier tipo bajo Lenguaje C.
@@ -99,32 +98,28 @@ Implementar un algoritmo de codificación voraz ideado por David Huffman, este a
   \item Implementar codificación voraz de Huffman
   \item Implementar el algoritmo de codificación
   \end{itemize}
-  
 \item Medir y comprobar las ventajas de tamaño de los archivos una vez realizadas diferentes codificaciones de archivos.
 \item Medir los tiempos de ejecución de las implementaciones (codificador y decodificador).
 \item Analizar y determinar una cota de la complejidad de la codificación y decodificación  
 \end{itemize}
 
-
 \chapter{Actividades y pruebas}
 \section{Entorno experimental}
-\begin{figure}[ht]
+\begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.3]{extras/os.png}
   \caption{\label{Entorno experimental usado} }
 \end{figure}
 \newpage
 
-
-
-
 \section{Verificación de la solución}
 \subsection{Foto original}
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale = 0.3]{extras/original.png}
+  \includegraphics[scale = 0.25]{extras/original.png}
   \caption{\label{fig:Original} }
 \end{figure}
+
 \subsection{Ejecución del algoritmo}
 \begin{figure}[ht]
   \centering
@@ -140,8 +135,6 @@ Implementar un algoritmo de codificación voraz ideado por David Huffman, este a
   \caption{\label{fig:Foto final} }
 \end{figure}
 \newpage
-
-
 
 \section{Descripción de la solución}
 \subsection{Descripción de la odificación}
@@ -244,6 +237,7 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
   \caption{\label{fig:Escribir el archivo compreso} }
 \end{figure}
 \newpage
+
 \subsection{Análisis de la decodificación de Huffman}
 \begin{figure}[h!]
   \centering
@@ -251,13 +245,11 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
   \caption{\label{fig:Main de la decodificación} }
 \end{figure}
 \newpage
-
 \begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.75]{complejidad/createheap.jpeg}
   \caption{\label{fig:Reservar el espacio del montículo} }
 \end{figure}
-
 \begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.75]{complejidad/readft.jpeg}
@@ -282,19 +274,16 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
   \caption{\label{fig:Insercion en la cola de prioridad} }
 \end{figure}
 \newpage
-
 \begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.75]{complejidad/bottop.jpeg}
   \caption{\label{fig:Hacer bottom top al montículo} }
 \end{figure}
-
 \begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.75]{complejidad/mergetrees.jpeg}
   \caption{\label{fig:Unir todos los arboles en uno principal} }
 \end{figure}
-
 \begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.75]{complejidad/popminheap.jpeg}
@@ -306,7 +295,6 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
   \includegraphics[scale = 0.75]{complejidad/topbot.jpeg}
   \caption{\label{fig:Hacer top bottom al montículo} }
 \end{figure}
-
 \begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.75]{complejidad/mergenodes.jpeg}
@@ -318,8 +306,6 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
   \includegraphics[scale = 0.75]{complejidad/getbits.jpeg}
   \caption{\label{fig:Obtener la codificación correspondiente} }
 \end{figure}
-
-
 \begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.75]{complejidad/readb.jpeg}
@@ -331,15 +317,12 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
   \includegraphics[scale = 0.75]{complejidad/write.jpeg}
   \caption{\label{fig:Escribir el archivo original decodificando} }
 \end{figure}
-
 \begin{figure}[h!]
   \centering
   \includegraphics[scale = 0.75]{complejidad/getchar.jpeg}
   \caption{\label{fig:Obtener el byte decodificado dada una cadena de bits} }
 \end{figure}
-
 \newpage
-
 
 \section{Porcentajes de compresion}
 \begin{tabular}{ || c c | c || }
@@ -387,6 +370,25 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
 
 
 
+\newpage
+\section{Pruebas experimentales}
+\subsection{Compresión del archivo}
+$f(t) = 0.047t^2+60.95t$\\
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale = 0.7]{extras/Comprimir.jpeg}
+  \caption{Codificación de Huffman}
+\end{figure}
+\newpage
+\subsection{Descompresión del archivo}
+$f(t) = -0.153t^2+216.5914t$\\
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale = 0.7]{extras/Descomprimir.jpeg}
+  \caption{Decodificación de Huffman}
+\end{figure}
+\newpage
+
 \section{Cuestionario}
 \begin{enumerate}
 \item ¿Los niveles de codificación de archivos proporcionan una ventaja respecto al tamaño del archivo original en el promedio de los casos?\\
@@ -399,7 +401,8 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
   No.
 \item ¿El comportamiento experimental de los algoritmos era el esperado? ¿Por qué?\\
   Sí, los pdf o zip son comprimidos en si, es difícil sacarle mas compresión, mientras que los txt o bmp son algoritmos que generalmente se comprimen para enviarse, por lo que era lógico que pudiéramos comprimir dichos archivos de una manera eficiente.
-\item ¿Qué características deberá tener un archivo de imagen para codificarse en menor espacio?\\  
+\item ¿Qué características deberá tener un archivo de imagen para codificarse en menor espacio?\\
+  Deben contener colores repetidos en gran medida, para que se lean como bytes repetidos y el algoritmo genere una codificación mas eficiente.
 \item ¿Qué características deberá tener un archivo de texto para tener una codificación en menor espacio?\\
   Que tenga mucho texto similar, de manera ideal, un archivo con el mismo símbolo a lo largo del mismo.
 \item De 3 aplicaciones posibles en problemas de la vida real a la codificación de Huffman\\
@@ -417,7 +420,6 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
 \subsection{Header}
 \inputminted{C}{../CompressHuffman.h}
 \subsection{Codigo}
-
 \inputminted{C}{../CompressHuffman.c}
 
 \section{Decodificación}
@@ -426,13 +428,11 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
 \subsection{Codigo}
 \inputminted{C}{../DecompressHuffman.c}
 
-
 \section{Estructuras de Huffman}
 \subsection{Header}
 \inputminted{C}{../HuffmanStructures.h}
 \subsection{Codigo}
 \inputminted{C}{../HuffmanStructures.c}
-
 
 \section{Tiempo}
 \subsection{Header}
@@ -441,9 +441,3 @@ Usamos un montículo o montón para la cola de prioridad, donde sus funciones so
 \inputminted{C}{../tiempo.c}
 
 \end{document}
-
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
