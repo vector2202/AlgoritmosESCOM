@@ -42,8 +42,6 @@ int main() {
   int e[2] = {3, 5};                              // entrada a la linea
   int x[2] = {2, 1};                              // salida de la linea
   // Que camino inicial es mejor?
-  int camino = ((e[0] + a[0][0]) <= (e[1] + a[1][0])) ? (e[0]) : (e[1]);
-  int lp = ((e[0]) == camino) ? 0 : 1; // Que linea elegimos ?
-  printf("%d", solbruta(a, t, x, 0, camino, lp));
+  printf("%d", min(solbruta(a, t, x, 0, e[0], 0), solbruta(a, t, x, 0, e[1], 1)));
   return 0;
 }
