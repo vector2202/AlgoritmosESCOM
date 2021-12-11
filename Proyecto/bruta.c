@@ -24,6 +24,7 @@ int min(int a, int b) { return (a <= b) ? a : b; }
  */
 int solbruta(int a[2][n], int t[2][n - 1], int x[], int i, int camino,
              int linea) {
+    printf("(%d, %d) camino: %d\n", linea, i, camino);
   if (i >= n)
     return camino + x[linea];
   int quedarse = 0, cambiarse = 0;

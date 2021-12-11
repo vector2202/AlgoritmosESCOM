@@ -1,0 +1,21 @@
+0,8
+2,4
+
+valor de carrr += valor de nodo.
+obj eliminas,
+
+int solbruta(int a[2][n], int t[2][n - 1], int x[], int i, int camino,
+             int linea){
+  if (i >= n)	
+    return ;
+    // nos quedamos en la linea
+    eliminar el objeto, cambiamos posicipipn
+    aparecer dos carros
+    mueves el carro a la x y siguiente un ciclo for lentamente
+  quedarse = solbruta(a, t, x, i + 1, camino + a[linea][i], linea);
+  // nos cambiamos de linea
+  meueves el otro carro a x y del cambio yu luego a la estacion 
+  cambiarse = solbruta(a, t, x, i + 1, camino + t[linea][i] + a[linea][i],
+                       (linea == 0) ? 1 : 0);
+  return min(quedarse, cambiarse);
+}
