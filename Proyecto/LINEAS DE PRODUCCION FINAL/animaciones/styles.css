@@ -1,0 +1,126 @@
+
+h2 { 
+    font-family: 'Quicksand', sans-serif;
+    font-size: 43px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 23px; 
+} 
+h3 { 
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 23px; 
+} 
+p { 
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 23px; 
+} 
+
+#texto1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 26px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 23px; 
+}
+
+blockquote { 
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 23px; 
+} 
+pre { 
+    font-family: 'Quicksand', sans-serif;
+    font-size: 11px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 23px; 
+}
+
+td{
+    font-family: 'Quicksand', sans-serif; 
+    font-size: 16px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 23px; 
+}
+
+button{
+	background-color:#6eb8f5;
+	border-radius:23px;
+	border:2px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Quicksand', sans-serif; 
+	font-size:25px;
+	padding:5px 27px;
+	text-decoration:none;
+}
+
+button:hover{
+    background-color:#019ad2;
+}
+
+button:active{
+    position:relative;
+	top:1px;
+}
+
+input{
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px;
+     font-size: 16px;
+     border-width: 3px;
+     border-color: #CCCCCC;
+     background-color: #FFFFFF;
+     color: #000000;
+     border-style: solid;
+     border-radius: 18px;
+     box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+table{
+    border-radius:18px;
+}
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: rgb(47, 85, 150);
+}
+
+.circulo2 {
+    width: 60px;
+    height: 60px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: rgb(143, 170, 221);
+}
+
+.circulo3 {
+    width: 60px;
+    height: 60px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: rgb(32, 56, 100);
+}
