@@ -33,7 +33,7 @@ var y_car8 = 0;
 
 
 //Click de prueba
-document.getElementById('demo').addEventListener('click', bruteSolution);
+document.getElementById('demo').addEventListener('click', dpSolution);
 //car8.addEventListener('click', bruteSolution);
 
 //Mover los carros
@@ -397,19 +397,21 @@ async function wait() {
             animateCar(1, 2.2, currentCar2);
         }
         first = up;
-	    second = down;
+	second = down;
     }
     await sleep(3000);
     animateCar(1, 0.4, currentCar1);
     
     animateCar(1, -0.4, currentCar2);
     await sleep(3000);
+    return (min(first + e[0], second + e[1]));
 }
 function min(a, b){
     return (a <= b) ? a : b;
 }
 //solucion bruta
 
-async function bruteSolution(){
-    wait();
+async function dpSolution(){
+    var result = wait();
+    console.log(result);
 }
