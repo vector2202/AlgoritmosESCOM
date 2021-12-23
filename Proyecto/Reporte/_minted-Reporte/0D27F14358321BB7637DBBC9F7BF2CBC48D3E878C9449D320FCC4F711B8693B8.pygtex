@@ -1,0 +1,66 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/**}
+\PYG{c+cm}{ *@brief Algoritmo que resuelve el problema de lienas de produccion}
+\PYG{c+cm}{ * usando dp}
+\PYG{c+cm}{ * @author Los ultimos}
+\PYG{c+cm}{ */}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+
+\PYG{c+cm}{/**}
+\PYG{c+cm}{ * Devuelve el minimo dados dos enteros dados}
+\PYG{c+cm}{ * @param a primer numero a comparar}
+\PYG{c+cm}{ * @param b el segundo numero a comparar}
+\PYG{c+cm}{ * @return el menor numero de ambos}
+\PYG{c+cm}{ */}
+\PYG{k+kt}{int} \PYG{n+nf}{min}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{a} \PYG{o}{\PYGZlt{}} \PYG{n}{b} \PYG{o}{?} \PYG{n+nl}{a} \PYG{p}{:} \PYG{n}{b}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{c+cm}{/**}
+\PYG{c+cm}{ * Resuelve el problema de lineas de produccion usando Dp}
+\PYG{c+cm}{ *}
+\PYG{c+cm}{ * @param a los tiempos que se tarda cada estacion en hacer un trabajo}
+\PYG{c+cm}{ * @param t los tiempos que tarda cambiarse de una linea a otra}
+\PYG{c+cm}{ * @param e los tiempos de entrada de cada linea}
+\PYG{c+cm}{ * @param x los tiempos de salida de cada linea}
+\PYG{c+cm}{ * @param n el tamaño de lineas a usar}
+\PYG{c+cm}{ * @return el menor tiempo posible de ruta}
+\PYG{c+cm}{ */}
+
+\PYG{k+kt}{int} \PYG{n+nf}{lineasProduccion}\PYG{p}{(}\PYG{k+kt}{int}\PYG{o}{**} \PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{**} \PYG{n}{t}\PYG{p}{,} \PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{e}\PYG{p}{,} \PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{x}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int}\PYG{o}{*} \PYG{n}{linea1} \PYG{o}{=} \PYG{n}{new} \PYG{k+kt}{int}\PYG{p}{[}\PYG{n}{n}\PYG{p}{],} \PYG{o}{*}\PYG{n}{linea2} \PYG{o}{=} \PYG{n}{new} \PYG{k+kt}{int} \PYG{p}{[}\PYG{n}{n}\PYG{p}{],} \PYG{n}{i}\PYG{p}{;}
+
+    \PYG{n}{linea1}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{+} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{];}
+    \PYG{n}{linea2}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{];}
+
+  \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{linea1}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{min}\PYG{p}{(}\PYG{n}{linea1}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{],} \PYG{n}{linea2}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{n}{t}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]} \PYG{o}{+} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]);}
+    \PYG{n}{linea2}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{min}\PYG{p}{(}\PYG{n}{linea2}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{i}\PYG{p}{],} \PYG{n}{linea1}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{n}{t}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]} \PYG{o}{+} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]);}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{min}\PYG{p}{(}\PYG{n}{linea1}\PYG{p}{[}\PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{linea2}\PYG{p}{[}\PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,} \PYG{n}{m}\PYG{p}{;}
+    
+    \PYG{k+kt}{int}\PYG{o}{**} \PYG{n}{a} \PYG{o}{=} \PYG{n}{new} \PYG{k+kt}{int} \PYG{o}{*}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{];}
+    \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n}{new} \PYG{k+kt}{int} \PYG{p}{[}\PYG{n}{n}\PYG{p}{];}
+    \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n}{new} \PYG{k+kt}{int} \PYG{p}{[}\PYG{n}{n}\PYG{p}{];}
+    \PYG{k+kt}{int}\PYG{o}{**} \PYG{n}{t} \PYG{o}{=} \PYG{n}{new} \PYG{k+kt}{int} \PYG{o}{*}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{];}
+    \PYG{n}{t}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n}{new} \PYG{k+kt}{int} \PYG{p}{[}\PYG{n}{n}\PYG{p}{];}
+    \PYG{n}{t}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n}{new} \PYG{k+kt}{int} \PYG{p}{[}\PYG{n}{n}\PYG{p}{];}
+    \PYG{k+kt}{int}\PYG{o}{*} \PYG{n}{e} \PYG{o}{=} \PYG{n}{new} \PYG{k+kt}{int}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{],} \PYG{o}{*} \PYG{n}{x} \PYG{o}{=} \PYG{n}{new} \PYG{k+kt}{int} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{];}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+	\PYG{n}{std}\PYG{o}{::}\PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{];}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+	\PYG{n}{std}\PYG{o}{::}\PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{i}\PYG{p}{];}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+	\PYG{n}{std}\PYG{o}{::}\PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{t}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{i}\PYG{p}{];}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+	\PYG{n}{std}\PYG{o}{::}\PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{t}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{i}\PYG{p}{];}
+    \PYG{n}{std}\PYG{o}{::}\PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{];}
+	\PYG{c+c1}{//int a[][4] = \PYGZob{}\PYGZob{}4, 5, 3, 2\PYGZcb{}, \PYGZob{}2, 10, 1, 4\PYGZcb{}\PYGZcb{};}
+	\PYG{c+c1}{//int t[][4] = \PYGZob{}\PYGZob{}0, 7, 4, 5\PYGZcb{}, \PYGZob{}0, 9, 2, 8\PYGZcb{}\PYGZcb{};}
+\PYG{c+c1}{//    int e[] = \PYGZob{}10, 12\PYGZcb{}, x[] = \PYGZob{}18, 7\PYGZcb{};}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{lineasProduccion}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{t}\PYG{p}{,} \PYG{n}{e}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{n}\PYG{p}{));}
+
+  \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

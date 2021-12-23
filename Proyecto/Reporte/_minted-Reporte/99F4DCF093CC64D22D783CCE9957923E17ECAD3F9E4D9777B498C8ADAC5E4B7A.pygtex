@@ -1,0 +1,523 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{var} \PYG{n+nx}{car1} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}carro1\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{car2} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}carro2\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{car3} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}carro3\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{car4} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}carro4\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{car5} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}carro5\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{car6} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}carro6\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{car7} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}carro7\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{car8} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}carro8\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{naranja} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}naranja\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{azul} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}azul\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{verde} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}verde\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{morado} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}morado\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{caminoo} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}mejor\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{caminoo2} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}mejor2\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{maxi} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}max\PYGZsq{}}\PYG{p}{);}
+\PYG{k+kd}{var} \PYG{n+nx}{llamadas} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{vecesQ} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{n+nx}{car1}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{position} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}relative\PYGZsq{}}\PYG{p}{;}
+\PYG{n+nx}{car2}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{position} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}relative\PYGZsq{}}\PYG{p}{;}
+\PYG{n+nx}{car3}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{position} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}relative\PYGZsq{}}\PYG{p}{;}
+\PYG{n+nx}{car4}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{position} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}relative\PYGZsq{}}\PYG{p}{;}
+\PYG{n+nx}{car5}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{position} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}relative\PYGZsq{}}\PYG{p}{;}
+\PYG{n+nx}{car6}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{position} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}relative\PYGZsq{}}\PYG{p}{;}
+\PYG{n+nx}{car7}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{position} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}relative\PYGZsq{}}\PYG{p}{;}
+\PYG{n+nx}{car8}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{position} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}relative\PYGZsq{}}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{camino\PYGZus{}max} \PYG{o}{=} \PYG{l+m+mf}{10000000}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{camino\PYGZus{}max2} \PYG{o}{=} \PYG{l+m+mf}{10000000}\PYG{p}{;}
+\PYG{c+c1}{//Controlar el carro 1}
+\PYG{k+kd}{var} \PYG{n+nx}{x\PYGZus{}car1} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{y\PYGZus{}car1} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{c+c1}{//Controlar el carro 2}
+\PYG{k+kd}{var} \PYG{n+nx}{x\PYGZus{}car2} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{y\PYGZus{}car2} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{c+c1}{//Controlar el carro 3}
+\PYG{k+kd}{var} \PYG{n+nx}{x\PYGZus{}car3} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{y\PYGZus{}car3} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{c+c1}{//Controlar el carro 4}
+\PYG{k+kd}{var} \PYG{n+nx}{x\PYGZus{}car4} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{y\PYGZus{}car4} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{c+c1}{//Controlar el carro 5}
+\PYG{k+kd}{var} \PYG{n+nx}{x\PYGZus{}car5} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{y\PYGZus{}car5} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{c+c1}{//Controlar el carro 6}
+\PYG{k+kd}{var} \PYG{n+nx}{x\PYGZus{}car6} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{y\PYGZus{}car6} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{c+c1}{//Controlar el carro 7}
+\PYG{k+kd}{var} \PYG{n+nx}{x\PYGZus{}car7} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{y\PYGZus{}car7} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{c+c1}{//Controlar el carro 8}
+\PYG{k+kd}{var} \PYG{n+nx}{x\PYGZus{}car8} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{y\PYGZus{}car8} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{var} \PYG{n+nx}{a} \PYG{o}{=} \PYG{p}{[[}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{],[}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{]];}
+\PYG{k+kd}{var} \PYG{n+nx}{t} \PYG{o}{=} \PYG{p}{[[}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{],[}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{]];}
+\PYG{k+kd}{var} \PYG{n+nx}{e} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{];}
+\PYG{k+kd}{var} \PYG{n+nx}{x} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{];}
+
+\PYG{c+c1}{//Click de prueba}
+\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}demo\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{addEventListener}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}click\PYGZsq{}}\PYG{p}{,} \PYG{n+nx}{demoSolution}\PYG{p}{);}
+\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}aplicar\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{addEventListener}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}click\PYGZsq{}}\PYG{p}{,} \PYG{n+nx}{aplicarSolution}\PYG{p}{);}
+\PYG{c+c1}{//car8.addEventListener(\PYGZsq{}click\PYGZsq{}, bruteSolution);}
+
+\PYG{c+c1}{//Mover los carros}
+\PYG{k+kd}{function} \PYG{n+nx}{moveCar1}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{)\PYGZob{}}
+    \PYG{n+nx}{x\PYGZus{}car1} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car1} \PYG{o}{+} \PYG{n+nx}{x1}\PYG{p}{;}
+    \PYG{n+nx}{car1}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car1} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+
+    \PYG{n+nx}{y\PYGZus{}car1} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car1} \PYG{o}{+} \PYG{n+nx}{y1}\PYG{p}{;}
+    \PYG{n+nx}{car1}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car1} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;} 
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{moveCar2}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{)\PYGZob{}}
+    \PYG{n+nx}{x\PYGZus{}car2} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car2} \PYG{o}{+} \PYG{n+nx}{x1}\PYG{p}{;}
+    \PYG{n+nx}{car2}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car2} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{y\PYGZus{}car2} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car2} \PYG{o}{+} \PYG{n+nx}{y1}\PYG{p}{;}
+    \PYG{n+nx}{car2}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car2} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;} 
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{moveCar3}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{)\PYGZob{}}
+    \PYG{n+nx}{x\PYGZus{}car3} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car3} \PYG{o}{+} \PYG{n+nx}{x1}\PYG{p}{;}
+    \PYG{n+nx}{car3}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car3} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{y\PYGZus{}car3} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car3} \PYG{o}{+} \PYG{n+nx}{y1}\PYG{p}{;}
+    \PYG{n+nx}{car3}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car3} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;} 
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{moveCar4}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{)\PYGZob{}}
+    \PYG{n+nx}{x\PYGZus{}car4} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car4} \PYG{o}{+} \PYG{n+nx}{x1}\PYG{p}{;}
+    \PYG{n+nx}{car4}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car4} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{y\PYGZus{}car4} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car4} \PYG{o}{+} \PYG{n+nx}{y1}\PYG{p}{;}
+    \PYG{n+nx}{car4}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car4} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;} 
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{moveCar5}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{)\PYGZob{}}
+    \PYG{n+nx}{x\PYGZus{}car5} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car5} \PYG{o}{+} \PYG{n+nx}{x1}\PYG{p}{;}
+    \PYG{n+nx}{car5}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car5} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+
+    \PYG{n+nx}{y\PYGZus{}car5} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car5} \PYG{o}{+} \PYG{n+nx}{y1}\PYG{p}{;}
+    \PYG{n+nx}{car5}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car5} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;} 
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{moveCar6}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{)\PYGZob{}}
+    \PYG{n+nx}{x\PYGZus{}car6} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car6} \PYG{o}{+} \PYG{n+nx}{x1}\PYG{p}{;}
+    \PYG{n+nx}{car6}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car6} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{y\PYGZus{}car6} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car6} \PYG{o}{+} \PYG{n+nx}{y1}\PYG{p}{;}
+    \PYG{n+nx}{car6}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car6} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;} 
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{moveCar7}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{)\PYGZob{}}
+    \PYG{n+nx}{x\PYGZus{}car7} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car7} \PYG{o}{+} \PYG{n+nx}{x1}\PYG{p}{;}
+    \PYG{n+nx}{car7}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car7} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{y\PYGZus{}car7} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car7} \PYG{o}{+} \PYG{n+nx}{y1}\PYG{p}{;}
+    \PYG{n+nx}{car7}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car7} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;} 
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{moveCar8}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{)\PYGZob{}}
+    \PYG{n+nx}{x\PYGZus{}car8} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car8} \PYG{o}{+} \PYG{n+nx}{x1}\PYG{p}{;}
+    \PYG{n+nx}{car8}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{x\PYGZus{}car8} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{y\PYGZus{}car8} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car8} \PYG{o}{+} \PYG{n+nx}{y1}\PYG{p}{;}
+    \PYG{n+nx}{car8}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{y\PYGZus{}car8} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;} 
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{function} \PYG{n+nx}{abs}\PYG{p}{(}\PYG{n+nx}{x}\PYG{p}{)\PYGZob{}}\PYG{k}{return} \PYG{p}{(}\PYG{n+nx}{x} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{0}\PYG{p}{)} \PYG{o}{?} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1}\PYG{o}{*}\PYG{n+nx}{x} \PYG{o}{:} \PYG{n+nx}{x}\PYG{p}{;\PYGZcb{}}
+
+\PYG{c+c1}{//Sleep para que se vea animado}
+\PYG{k+kd}{function} \PYG{n+nx}{sleep}\PYG{p}{(}\PYG{n+nx}{ms}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{k}{new} \PYG{n+nb}{Promise}\PYG{p}{(}\PYG{n+nx}{resolve} \PYG{p}{=\PYGZgt{}} \PYG{n+nx}{setTimeout}\PYG{p}{(}\PYG{n+nx}{resolve}\PYG{p}{,} \PYG{n+nx}{ms}\PYG{p}{));}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{//Animar los carros}
+\PYG{k}{async} \PYG{k+kd}{function} \PYG{n+nx}{animateCar}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{,} \PYG{n+nx}{ncar}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kd}{let} \PYG{n+nx}{i} \PYG{o}{=} \PYG{l+m+mf}{0}\PYG{p}{;} \PYG{n+nx}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{20}\PYG{p}{;} \PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{ncar} \PYG{o}{==} \PYG{l+m+mf}{1}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{moveCar1}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{ncar} \PYG{o}{==} \PYG{l+m+mf}{2}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{moveCar2}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{ncar} \PYG{o}{==} \PYG{l+m+mf}{3}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{moveCar3}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{ncar} \PYG{o}{==} \PYG{l+m+mf}{4}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{moveCar4}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{ncar} \PYG{o}{==} \PYG{l+m+mf}{5}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{moveCar5}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{ncar} \PYG{o}{==} \PYG{l+m+mf}{6}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{moveCar6}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{ncar} \PYG{o}{==} \PYG{l+m+mf}{7}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{moveCar7}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{ncar} \PYG{o}{==} \PYG{l+m+mf}{8}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{moveCar8}\PYG{p}{(}\PYG{n+nx}{x1}\PYG{p}{,} \PYG{n+nx}{y1}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{await} \PYG{n+nx}{sleep}\PYG{p}{(}\PYG{l+m+mf}{100}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{bringCar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{x\PYGZus{}car1} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{l+m+mf}{1}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{x\PYGZus{}car2} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car2}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{100} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car2}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{x\PYGZus{}car2} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{100}\PYG{p}{;}
+        \PYG{n+nx}{y\PYGZus{}car2} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mf}{2}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{x\PYGZus{}car3} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car3}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{210}\PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car3}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{x\PYGZus{}car3} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{210}\PYG{p}{;}
+        \PYG{n+nx}{y\PYGZus{}car3} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mf}{3}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{x\PYGZus{}car4} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car4}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{210}\PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car4}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{x\PYGZus{}car4} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{190}\PYG{p}{;}
+        \PYG{n+nx}{y\PYGZus{}car4} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mf}{4}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{x\PYGZus{}car5} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car5}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car5}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{x\PYGZus{}car5} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{);}
+        \PYG{n+nx}{y\PYGZus{}car5} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mf}{5}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{x\PYGZus{}car6} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car6}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mf}{100} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car6}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{x\PYGZus{}car6} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mf}{80}\PYG{p}{;}
+        \PYG{n+nx}{y\PYGZus{}car6} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mf}{6}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{x\PYGZus{}car7} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car7}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{200} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car7}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{x\PYGZus{}car7} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{180}\PYG{p}{;}
+        \PYG{n+nx}{y\PYGZus{}car7} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mf}{7}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{x\PYGZus{}car8} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car8}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{200} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car8}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{x\PYGZus{}car8} \PYG{o}{=} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{200}\PYG{p}{;}
+        \PYG{n+nx}{y\PYGZus{}car8} \PYG{o}{=} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mf}{8}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{returnToStart}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{1}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car1}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car1}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{2}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car2}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car2}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{3}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car3}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car3}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{4}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car4}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car4}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{5}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car5}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car5}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{6}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car6}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car6}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{7}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car7}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car7}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{8}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{car8}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+        \PYG{n+nx}{car8}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{l+m+mf}{0} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{getXcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{1}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{x\PYGZus{}car1}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{2}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{x\PYGZus{}car2}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{3}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{x\PYGZus{}car3}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{4}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{x\PYGZus{}car4}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{5}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{x\PYGZus{}car5}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{6}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{x\PYGZus{}car6}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{7}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{x\PYGZus{}car7}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{8}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{x\PYGZus{}car8}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{getYcar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{1}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{y\PYGZus{}car1}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{2}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{y\PYGZus{}car2}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{3}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{y\PYGZus{}car3}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{4}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{y\PYGZus{}car4}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{5}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{y\PYGZus{}car5}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{6}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{y\PYGZus{}car6}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{7}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{y\PYGZus{}car7}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car} \PYG{o}{==} \PYG{l+m+mf}{8}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{y\PYGZus{}car8}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{printCamino}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{,} \PYG{n+nx}{camino}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car}\PYG{o}{\PYGZpc{}}\PYG{l+m+mf}{4} \PYG{o}{==} \PYG{l+m+mf}{1}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{naranja}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{camino}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car}\PYG{o}{\PYGZpc{}}\PYG{l+m+mf}{4} \PYG{o}{==} \PYG{l+m+mf}{2}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{azul}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{camino}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car}\PYG{o}{\PYGZpc{}}\PYG{l+m+mf}{4} \PYG{o}{==} \PYG{l+m+mf}{3}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{verde}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{camino}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{car}\PYG{o}{\PYGZpc{}}\PYG{l+m+mf}{4} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+        \PYG{n+nx}{morado}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{camino}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{async} \PYG{k+kd}{function} \PYG{n+nx}{wait}\PYG{p}{(}\PYG{n+nx}{i}\PYG{p}{,} \PYG{n+nx}{car}\PYG{p}{,} \PYG{n+nx}{linea}\PYG{p}{,} \PYG{n+nx}{camino}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n+nx}{printCamino}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{,} \PYG{n+nx}{camino}\PYG{p}{);} 
+    
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{i} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mf}{3}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{linea} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{animateCar}\PYG{p}{(}\PYG{l+m+mf}{5.5}\PYG{p}{,} \PYG{l+m+mf}{3.4}\PYG{p}{,} \PYG{n+nx}{car}\PYG{p}{);}
+            \PYG{n+nx}{printCamino}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{,} \PYG{n+nx}{camino} \PYG{o}{+} \PYG{n+nx}{x}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]);}
+            \PYG{n+nx}{meterCamino}\PYG{p}{(}\PYG{n+nx}{camino} \PYG{o}{+} \PYG{n+nx}{x}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]);}
+            \PYG{k}{return}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else}\PYG{p}{\PYGZob{}}
+            \PYG{n+nx}{animateCar}\PYG{p}{(}\PYG{l+m+mf}{5.5}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3.4}\PYG{p}{,} \PYG{n+nx}{car}\PYG{p}{);}
+            \PYG{n+nx}{printCamino}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{,} \PYG{n+nx}{camino} \PYG{o}{+} \PYG{n+nx}{x}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]);}
+            \PYG{n+nx}{meterCamino}\PYG{p}{(}\PYG{n+nx}{camino} \PYG{o}{+} \PYG{n+nx}{x}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]);}
+            \PYG{k}{return}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}  
+        
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{await} \PYG{n+nx}{sleep}\PYG{p}{(}\PYG{l+m+mf}{5000}\PYG{p}{);}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{2}\PYG{p}{)\PYGZob{}}
+    \PYG{k+kd}{var} \PYG{n+nx}{nextCar} \PYG{o}{=} \PYG{n+nx}{bringCar}\PYG{p}{(}\PYG{n+nx}{car}\PYG{p}{);}
+    \PYG{n+nx}{animateCar}\PYG{p}{(}\PYG{l+m+mf}{6}\PYG{p}{,} \PYG{l+m+mf}{0}\PYG{p}{,} \PYG{n+nx}{car}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n+nx}{wait}\PYG{p}{(}\PYG{n+nx}{i}\PYG{o}{+}\PYG{l+m+mf}{1}\PYG{p}{,} \PYG{n+nx}{car}\PYG{p}{,} \PYG{n+nx}{linea}\PYG{p}{,} \PYG{p}{(}\PYG{n+nx}{camino} \PYG{o}{+} \PYG{n+nx}{a}\PYG{p}{[}\PYG{n+nx}{linea}\PYG{p}{][}\PYG{n+nx}{i}\PYG{p}{]));}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{2}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{await} \PYG{n+nx}{sleep}\PYG{p}{(}\PYG{l+m+mf}{5000}\PYG{p}{);}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{linea} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{animateCar}\PYG{p}{(}\PYG{l+m+mf}{6}\PYG{p}{,} \PYG{l+m+mf}{9.5}\PYG{p}{,} \PYG{n+nx}{nextCar}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else}\PYG{p}{\PYGZob{}}
+            \PYG{n+nx}{animateCar}\PYG{p}{(}\PYG{l+m+mf}{4.4}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{9.5}\PYG{p}{,} \PYG{n+nx}{nextCar}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n+nx}{wait}\PYG{p}{(}\PYG{n+nx}{i}\PYG{o}{+}\PYG{l+m+mf}{1}\PYG{p}{,} \PYG{n+nx}{nextCar}\PYG{p}{,} \PYG{p}{(}\PYG{n+nx}{linea} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)} \PYG{o}{?} \PYG{l+m+mf}{1} \PYG{o}{:} \PYG{l+m+mf}{0}\PYG{p}{,(} \PYG{n+nx}{camino} \PYG{o}{+} \PYG{n+nx}{t}\PYG{p}{[}\PYG{n+nx}{linea}\PYG{p}{][}\PYG{n+nx}{i}\PYG{p}{]} \PYG{o}{+} \PYG{n+nx}{a}\PYG{p}{[}\PYG{n+nx}{linea}\PYG{p}{][}\PYG{n+nx}{i}\PYG{p}{]));}
+    \PYG{k+kd}{var} \PYG{n+nx}{minimo} \PYG{o}{=} \PYG{n+nx}{min}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{9}\PYG{p}{);}
+    \PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{log}\PYG{p}{(}\PYG{n+nx}{minimo}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{function} \PYG{n+nx}{min}\PYG{p}{(}\PYG{n+nx}{a}\PYG{p}{,} \PYG{n+nx}{b}\PYG{p}{)\PYGZob{}}
+    \PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{log}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Llamadas: \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{llamadas}\PYG{p}{);}
+    \PYG{n+nx}{llamadas} \PYG{o}{=} \PYG{n+nx}{llamadas} \PYG{o}{+} \PYG{l+m+mf}{1}\PYG{p}{;}
+    \PYG{n+nx}{maxi}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+} \PYG{p}{(}\PYG{n+nx}{llamadas}\PYG{p}{);}
+    \PYG{k}{return} \PYG{p}{(}\PYG{n+nx}{a} \PYG{o}{\PYGZlt{}=} \PYG{n+nx}{b}\PYG{p}{)} \PYG{o}{?} \PYG{n+nx}{a} \PYG{o}{:} \PYG{n+nx}{b}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{//solucion bruta}
+\PYG{k+kd}{function} \PYG{n+nx}{meterCamino}\PYG{p}{(}\PYG{n+nx}{camino}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{vecesQ} \PYG{o}{==} \PYG{l+m+mf}{0}\PYG{p}{)\PYGZob{}}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{camino} \PYG{o}{\PYGZlt{}} \PYG{n+nx}{camino\PYGZus{}max}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{camino\PYGZus{}max} \PYG{o}{=} \PYG{n+nx}{camino}\PYG{p}{;}
+            \PYG{n+nx}{caminoo}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{camino\PYGZus{}max}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else}\PYG{p}{\PYGZob{}}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{camino} \PYG{o}{\PYGZlt{}} \PYG{n+nx}{camino\PYGZus{}max2}\PYG{p}{)\PYGZob{}}
+            \PYG{n+nx}{camino\PYGZus{}max2} \PYG{o}{=} \PYG{n+nx}{camino}\PYG{p}{;}
+            \PYG{n+nx}{caminoo2}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{camino\PYGZus{}max2}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}  
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{async} \PYG{k+kd}{function} \PYG{n+nx}{bruteSolution}\PYG{p}{()\PYGZob{}}
+    \PYG{n+nx}{car1}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}50\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{car1}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}330\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{x\PYGZus{}car1} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{50}\PYG{p}{;}
+    \PYG{n+nx}{y\PYGZus{}car1}  \PYG{o}{=} \PYG{l+m+mf}{330}\PYG{p}{;}
+    \PYG{k}{await} \PYG{n+nx}{sleep}\PYG{p}{(}\PYG{l+m+mf}{1000}\PYG{p}{);}
+    \PYG{n+nx}{animateCar}\PYG{p}{(}\PYG{l+m+mf}{4.5}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3}\PYG{p}{,} \PYG{l+m+mf}{1}\PYG{p}{);}
+    \PYG{n+nx}{wait}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,} \PYG{l+m+mf}{1}\PYG{p}{,} \PYG{l+m+mf}{0}\PYG{p}{,} \PYG{n+nx}{e}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]);}
+    
+    \PYG{k}{await} \PYG{n+nx}{sleep}\PYG{p}{(}\PYG{l+m+mf}{35000}\PYG{p}{);}
+    \PYG{n+nx}{naranja}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{azul}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{verde}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{morado}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{returnToStart}\PYG{p}{(}\PYG{l+m+mf}{1}\PYG{p}{);}
+    \PYG{n+nx}{returnToStart}\PYG{p}{(}\PYG{l+m+mf}{2}\PYG{p}{);}
+    \PYG{n+nx}{returnToStart}\PYG{p}{(}\PYG{l+m+mf}{3}\PYG{p}{);}
+    \PYG{n+nx}{returnToStart}\PYG{p}{(}\PYG{l+m+mf}{4}\PYG{p}{);}
+    \PYG{n+nx}{vecesQ} \PYG{o}{=} \PYG{l+m+mf}{1}\PYG{p}{;}
+    \PYG{n+nx}{car5}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{left} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}50\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{car5}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{.}\PYG{n+nx}{top} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}350\PYGZpc{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{n+nx}{x\PYGZus{}car5} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{50}\PYG{p}{;}
+    \PYG{n+nx}{y\PYGZus{}car5} \PYG{o}{=} \PYG{l+m+mf}{350}\PYG{p}{;}
+
+    \PYG{k}{await} \PYG{n+nx}{sleep}\PYG{p}{(}\PYG{l+m+mf}{1000}\PYG{p}{);}
+    \PYG{n+nx}{animateCar}\PYG{p}{(}\PYG{l+m+mf}{4.5}\PYG{p}{,} \PYG{l+m+mf}{3}\PYG{p}{,} \PYG{l+m+mf}{5}\PYG{p}{);}
+    \PYG{n+nx}{wait}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,} \PYG{l+m+mf}{5}\PYG{p}{,} \PYG{l+m+mf}{1}\PYG{p}{,} \PYG{n+nx}{e}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]);}
+    \PYG{k+kd}{var} \PYG{n+nx}{hola} \PYG{o}{=} \PYG{n+nx}{min}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{1}\PYG{p}{);}
+    \PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{log}\PYG{p}{(}\PYG{n+nx}{hola}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{async} \PYG{k+kd}{function} \PYG{n+nx}{demoSolution}\PYG{p}{()\PYGZob{}}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion1} \PYG{o}{=} \PYG{l+m+mf}{8}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion2} \PYG{o}{=} \PYG{l+m+mf}{10}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion3} \PYG{o}{=} \PYG{l+m+mf}{4}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion4} \PYG{o}{=} \PYG{l+m+mf}{9}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion5} \PYG{o}{=} \PYG{l+m+mf}{6}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion6} \PYG{o}{=} \PYG{l+m+mf}{7}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion7} \PYG{o}{=} \PYG{l+m+mf}{3}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion8} \PYG{o}{=} \PYG{l+m+mf}{5}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion9} \PYG{o}{=} \PYG{l+m+mf}{2}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion10} \PYG{o}{=} \PYG{l+m+mf}{1}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion11} \PYG{o}{=} \PYG{l+m+mf}{2}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion12} \PYG{o}{=} \PYG{l+m+mf}{3}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion13} \PYG{o}{=} \PYG{l+m+mf}{2}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion14} \PYG{o}{=} \PYG{l+m+mf}{1}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt1} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion1obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a00}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt2} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion2obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a01}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt3} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion3obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a02}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt4} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion4obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a10}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt5} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion5obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a11}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt6} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion6obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a12}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt7} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion7obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//e0}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt8} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion8obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//e1}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt9} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion9obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//s0}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt10} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion10obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//s1}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt11} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion11obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//t00}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt12} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion12obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//t01}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt13} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion13obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//t10}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt14} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion14obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//t11}
+    \PYG{n+nx}{estacionobt1}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{estacion1}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt2}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion2}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt3}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion3}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt4}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion4}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt5}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion5}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt6}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion6}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt7}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion7}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt8}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion8}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt9}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion9}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt10}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion10}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt11}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion11}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt12}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion12}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt13}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion13}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt14}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion14}\PYG{p}{;}
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion1}\PYG{p}{;}
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion2}\PYG{p}{;}
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{2}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion3}\PYG{p}{;}
+
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion4}\PYG{p}{;}
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion5}\PYG{p}{;}
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{2}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion6}\PYG{p}{;}
+
+    \PYG{n+nx}{t}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion11}\PYG{p}{;}
+    \PYG{n+nx}{t}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion12}\PYG{p}{;}
+
+    \PYG{n+nx}{t}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion13}\PYG{p}{;}
+    \PYG{n+nx}{t}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion14}\PYG{p}{;}
+
+    \PYG{n+nx}{e}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion7}\PYG{p}{;}
+    \PYG{n+nx}{e}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion8}\PYG{p}{;}
+
+    \PYG{n+nx}{x}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion9}\PYG{p}{;}
+    \PYG{n+nx}{x}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{estacion10}\PYG{p}{;}
+    \PYG{n+nx}{sleep}\PYG{p}{(}\PYG{l+m+mf}{100}\PYG{p}{);}
+    \PYG{n+nx}{bruteSolution}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{async} \PYG{k+kd}{function} \PYG{n+nx}{aplicarSolution}\PYG{p}{()\PYGZob{}}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion1} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion1\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion2} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion2\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion3} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion3\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion4} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion4\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion5} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion5\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion6} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion6\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion7} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion7\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion8} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion8\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion9} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion9\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion10} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion10\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion11} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion11\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion12} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion12\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion13} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion13\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacion14} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}estacion14\PYGZsq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt1} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion1obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a00}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt2} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion2obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a01}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt3} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion3obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a02}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt4} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion4obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a10}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt5} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion5obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a11}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt6} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion6obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//a12}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt7} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion7obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//e0}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt8} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion8obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//e1}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt9} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion9obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//s0}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt10} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion10obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//s1}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt11} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion11obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//t00}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt12} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion12obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//t01}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt13} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion13obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//t10}
+    \PYG{k+kd}{var} \PYG{n+nx}{estacionobt14} \PYG{o}{=} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}estacion14obtenida\PYGZdq{}}\PYG{p}{);}\PYG{c+c1}{//t11}
+    \PYG{n+nx}{estacionobt1}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{estacion1}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt2}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion2}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt3}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion3}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt4}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion4}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt5}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion5}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt6}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion6}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt7}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion7}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt8}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion8}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt9}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion9}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt10}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Costo:   \PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion10}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt11}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion11}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt12}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion12}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt13}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion13}\PYG{p}{;}
+    \PYG{n+nx}{estacionobt14}\PYG{p}{.}\PYG{n+nx}{value} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{+} \PYG{n+nx}{estacion14}\PYG{p}{;}
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion1}\PYG{p}{);}
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion2}\PYG{p}{);}
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{2}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion3}\PYG{p}{);}
+
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion4}\PYG{p}{);}
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion5}\PYG{p}{);}
+    \PYG{n+nx}{a}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{2}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion6}\PYG{p}{);}
+
+    \PYG{n+nx}{t}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion11}\PYG{p}{);}
+    \PYG{n+nx}{t}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{2}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion12}\PYG{p}{);}
+
+    \PYG{n+nx}{t}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion13}\PYG{p}{);}
+    \PYG{n+nx}{t}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{2}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion14}\PYG{p}{);}
+
+    \PYG{n+nx}{e}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion7}\PYG{p}{);}
+    \PYG{n+nx}{e}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion8}\PYG{p}{);}
+
+    \PYG{n+nx}{x}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion9}\PYG{p}{);}
+    \PYG{n+nx}{x}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{parseInt}\PYG{p}{(}\PYG{n+nx}{estacion10}\PYG{p}{);}
+    \PYG{n+nx}{sleep}\PYG{p}{(}\PYG{l+m+mf}{100}\PYG{p}{);}
+    \PYG{n+nx}{bruteSolution}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

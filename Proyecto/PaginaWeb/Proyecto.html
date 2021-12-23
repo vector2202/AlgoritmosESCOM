@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Proyecto</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        function m1() {
+            alert("Lo que se hace en este algoritmo es recordar los mejores caminos posibles en cada linea, si nos sale mas barato quedarnos o de la otra linea cambiarnos a la actual, esto se hace para ambas lineas, de tal manera que el algoritmo recorre todas las estaciones y termina devolviendo el tiempo minimo entre la linea 1 y 2 considerando entrada y salida");
+        }
+        function m2() {
+            alert("Se denomina un algoritmo de programacion dinamica porque recordamos el mejor camino posible para cada estacion y esa solucion parcial la usamos para construir la general, a partir de la mejor ruta posible que recordamos vamos construyendo el camino mas corto");
+        }
+    </script>
+    <style type="text/css">
+        #animacion {
+            position: relative;
+        }
+
+        .sobre {
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            right: 300px;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body style="background-color:#e8f5ff;">
+
+    <h2 style="text-align: center;">
+        Animaci&oacute;n Programaci&oacute;n Dinamica
+    </h2>
+    <table style="height: 87px; float: right;" width="140">
+        <tbody>
+            <tr>
+                <td style=" text-align: center;"><button onclick="m1()">SOLUCION</button></td>
+            </tr>
+            <tr>
+                <td style=" text-align: center;"><button onclick="m2()">&iquest;PORQUE ES DP?</button></td>
+            </tr>
+            <tr>
+                <td style=" text-align: center;"><button id = "demo">DEMO</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p id="texto1" style="text-align: center;">Ingrese datos:</p>
+    <table style="height: 182px; background-color: #2196f3; margin-left: auto; margin-right: auto;" width="990">
+        <tbody>
+            <tr style="text-align: center;">
+                <td style="width: 200px; text-align: center;">Estaciones 1</td>
+                <td><input type="text" placeholder="1.1" name="estacion1" id="estacion1"></td>
+                <td><input type="text" placeholder="1.2" name="estacion2" id="estacion2"></td>
+                <td><input type="text" placeholder="1.3" name="estacion3" id="estacion3"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td style=" width: 200px; text-align: center;">Estaciones 2</td>
+                <td><input type="text" placeholder="2.1" name="estacion4" id="estacion4"></td>
+                <td><input type="text" placeholder="2.2" name="estacion5" id="estacion5"></td>
+                <td><input type="text" placeholder="2.3" name="estacion6" id="estacion6"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td style=" width: 200px; text-align: center;">Entrada</td>
+                <td><input type="text" placeholder="E1" name="estacion7" id="estacion7"></td>
+                <td><input type="text" placeholder="E2" name="estacion8" id="estacion8"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td style=" width: 200px; text-align: center;">Salida</td>
+                <td><input type="text" placeholder="S1" name="estacion9" id="estacion9"></td>
+                <td><input type="text" placeholder="S2" name="estacion10" id="estacion10"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td style=" width: 200px; text-align: center;">Intercambio 1-2</td>
+                <td><input type="text" placeholder="t 1.1" name="estacion11" id="estacion11"></td>
+                <td><input type="text" placeholder="t 1.2" name="estacion12" id="estacion12"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td style=" width: 200px; text-align: center;">Intercambio 2-1</td>
+                <td><input type="text" placeholder="t 2.1" name="estacion13" id="estacion13"></td>
+                <td><input type="text" placeholder="t 2.2" name="estacion14" id="estacion14"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td style=" width: 200px; text-align: center;">Llamadas a minimo</td>
+                <td><input type="text" name="max" id="max"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+
+                <td><button id="aplicar" onclick="obtenerdatos()"> Aplicar </button></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <table style="height: 88px; margin-left: auto; margin-right: auto;" width="400">
+        <tbody>
+            <tr>
+                <td style="width: 170px; height: 160px; background-color: #2196f3; text-align: center;"">&nbsp;
+                    <img id="carro1" src="IMG/C2.png" alt="C1" height="60px" />
+                    <img id="carro2" src="IMG/C2.png" alt="C1" height="60px" />
+                    <img id="carro3" src="IMG/C2.png" alt="C1" height="60px" />
+                    <img id="carro4" src="IMG/C2.png" alt="C1" height="60px" />
+                </td>
+                <td>&nbsp;</td>
+
+                <td style="width: 170px; height: 160px; background-color: #2196f3; text-align: center;"">&nbsp;
+                    <img id="carro5" src="IMG/C4.png" alt="C1" height="60px" />
+                    <img id="carro6" src="IMG/C4.png" alt="C1" height="60px" />
+                    <img id="carro7" src="IMG/C4.png" alt="C1" height="60px" />
+                    <img id="carro8" src="IMG/C4.png" alt="C1" height="60px" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="animacion">
+        <tr>
+            <!--Estaciones arriba e1-->
+        <td><input class="sobre" type="text"  style="width : 100px; heigth : 100px" name="estacion1obtenida" id="estacion1obtenida" hspace="420" 
+                     vspace="150"></td>
+             <!--Estaciones arriba e2-->       
+            <td><input type="text" class="sobre"style="width : 100px; heigth : 100px" name="estacion2obtenida" id="estacion2obtenida"width="2" hspace="575"
+                height="10" vspace="150" ></td>
+                <!--Estaciones arriba e3-->
+                <td><input type="text" class="sobre" style="width : 100px; heigth : 100px"name="estacion3obtenida" id="estacion3obtenida"width="2" hspace="725"
+                height="10" vspace="150" ></td>
+                <!--Estaciones abajo e1-->
+                <td><input type="text" class="sobre" style="width : 100px; heigth : 100px"name="estacion4obtenida" id="estacion4obtenida"width="2" hspace="420"
+                height="10" vspace="560" ></td>
+                <!--Estaciones abajo e2-->
+                <td><input type="text" class="sobre" style="width : 100px; heigth : 100px"name="estacion5obtenida" id="estacion5obtenida"width="2" hspace="575"
+                height="10" vspace="560" ></td>
+                <!--Estaciones abajo e3-->
+                <td><input type="text" class="sobre" style="width : 100px; heigth : 100px"name="estacion6obtenida" id="estacion6obtenida"width="2" hspace="725"
+                height="10" vspace="560" ></td>
+                <!--Estaciones entrada e1-->
+                <td><input type="text" class="sobre" style="width : 100px; heigth : 100px"name="estacion7obtenida" id="estacion7obtenida"width="2" hspace="285"
+                height="10" vspace="250" ></td>
+               <!--Estaciones entrada e2-->
+                <td><input type="text" class="sobre"style="width : 100px; heigth : 100px" name="estacion8obtenida" id="estacion8obtenida"width="2" hspace="285"
+                height="10" vspace="460" ></td>
+                <!--Estaciones de salida s1-->
+                <td><input type="text" class="sobre"style="width : 100px; heigth : 100px" name="estacion9obtenida" id="estacion9obtenida"width="2" hspace="845  "
+                height="10" vspace="250" ></td>
+                <!--Estaciones de salida s2-->
+                <td><input type="text" class="sobre" style="width : 100px; heigth : 100px"name="estacion10obtenida" id="estacion10obtenida"width="2" hspace="845"
+                height="10" vspace="460" ></td>
+                <!--Estacion de intercambio 1-2  e1-->
+                <td><input type="text" class="sobre"style="width : 30px; heigth : 100px" name="estacion11obtenida" id="estacion11obtenida"width="2" hspace="485" 
+                    height="10" vspace="300" ></td>
+                <!--Estacion de intercambio 1-2  e2-->
+                <td><input type="text" class="sobre"style="width : 30px; heigth : 100px"name="estacion12obtenida" id="estacion12obtenida"width="2" hspace="635"
+                    height="10" vspace="300" ></td>
+                    
+                <!--Estacion de intercambio 2-1  e1-->
+                <td><input type="text" class="sobre" style="width : 30px; heigth : 100px"name="estacion13obtenida" id="estacion13obtenida"width="2" hspace="485"
+                height="10" vspace="410" ></td>
+                <!--Estacion de intercambio 2-1  e2-->
+                <td><input type="text" class="sobre"style="width : 30px; heigth : 100px"name="estacion14obtenida" id="estacion14obtenida"width="2" hspace="635"
+                height="10" vspace="410" ></td>
+        </tr>
+    </div>
+    <p>&nbsp;</p>
+    <table style="height: 57px; margin-left: 1000px; width: 373px; background-color: #2193f3;">
+        <tbody>
+            <tr style="height: 22.675px;">
+                <td style="width: 69px; height: 22.675px; text-align: center;">First</td>
+                <td style="width: 87.5px; "><input id="first" type="text"></td>
+                <td style="width: 68.675px; height: 22.675px; text-align: center;">Second</td>
+                <td style="width: 87.5px; "><input id="second" type="text"></td>
+            </tr>
+            <tr style="height: 20px;">
+                <td style="width: 68.675px; height: 20px; text-align: center;">Up</td>
+                <td style="width: 87.5px; "><input id="up" type="text"></td>
+                <td style="width: 69px; height: 20px; text-align: center;">Down</td>
+                <td style="width: 87.5px; "><input id="down" type="text"></td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="text-align: center;">&nbsp;</p>
+    <table style="height: 257px; margin-left: auto; margin-right: auto;" width="632">
+        <tbody>
+            <tr>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">
+                    <div class="circulo"></div>
+                </td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">
+                    <div class="circulo"></div>
+                </td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">
+                    <div class="circulo"></div>
+                </td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.3px; text-align: center;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 64.2125px; text-align: center;">
+                    <div class="circulo2"></div>
+                </td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.3px; text-align: center;">
+                    <div class="circulo3"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.3px; text-align: center;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 64.2125px; text-align: center;">
+                    <div class="circulo2"></div>
+                </td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.3px; text-align: center;">
+                    <div class="circulo3"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">
+                    <div class="circulo"></div>
+                </td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">
+                    <div class="circulo"></div>
+                </td>
+                <td style="width: 64.2125px; text-align: center;">&nbsp;</td>
+                <td style="width: 64.2125px; text-align: center;">
+                    <div class="circulo"></div>
+                </td>
+        </tbody>
+    </table>
+    <p style="text-align: right;">&nbsp;</p>
+    <script src="js/dp.js"></script>
+</body>
+
+</html>
+
+</body>
+
+</html>
